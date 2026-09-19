@@ -1,72 +1,257 @@
-# L-PoPI ESP32 SRAM-PUF
+# L-PoPI — Revised Implementation and Reproducibility Artifacts
 
-This project captures candidate ESP32 SRAM startup regions from a bootloader
-hook, characterises reset stability, and now includes a reproducible Phase-1
-fuzzy-extractor enrollment workflow.
+This repository contains the implementation and experimental artifacts
+supporting the revised evaluation of L-PoPI.
 
-## What the current data establishes
+The repository accompanies the revised manuscript:
 
-The existing 30 reset captures establish *intra-device reset stability*. They
-do not establish PUF uniqueness, min-entropy, cold-boot behaviour, or security
-against physical access. Do not use the resulting key for production assets.
+**L-PoPI: A Lightweight Four-Layer Architecture Anchoring Silicon
+Fingerprints, Zero-Knowledge Proofs, and Behavioral AI for DePIN IoT
+Attestation**
 
-## Enroll the current device
+## Scope
 
-From this directory and the Python virtual environment:
+The revised evaluation is organized into five validation stages:
 
-```bash
-python3 enroll_puf.py
-```
+- **J1 — Physical SRAM-PUF characterization**
+- **J2 — BCH-C fuzzy extractor and physical reproduction**
+- **J3 — Physical FE-to-ZK binding and Groth16 evaluation**
+- **J4 — EVM verification, freshness, replay protection, and gas evaluation**
+- **J5 — Behavioral Cog-GAT/AE evaluation and risk-adaptive DPI gating**
 
-The command consumes `puf_results/reset_capture_*.txt`, uses region 1, retains
-bits with at least 95% observed reliability, and writes:
+J1–J4 form the experimentally linked physical-to-ledger validation path.
 
-- `enrollment/puf_helper.json`: public helper data, HKDF salt, and a key
-  commitment; it contains neither the random secret nor the derived key.
-- `main/puf_enrollment_generated.h`: the public helper data embedded in the
-  ESP-IDF application.
+J5 is a separately evaluated behavioral branch intended to complement,
+rather than replace, cryptographic attestation.
 
-The default uses 128 secret bits and a 13-bit repetition code (1,664 selected
-SRAM bits). It is intentionally a measurable baseline; replace it with a
-reviewed BCH secure sketch before a production deployment.
+The repository does **not** claim a single physically continuous
+end-to-end deployment integrating all five stages.
 
-## Firmware API
+---
 
-`lpofi_puf_reproduce_key(raw_region, 256, key)` decodes the selected SRAM bits,
-derives a 32-byte key with HKDF-SHA-256, and checks it against the enrollment
-commitment. A mismatch returns `ESP_ERR_INVALID_CRC` and zeroes the output key.
+## J1 — Physical SRAM-PUF Characterization
 
-`raw_region` is now copied by the early bootloader hook into a versioned RTC
-`NOINIT` handoff record. The application verifies the magic value, metadata and
-CRC, runs the extractor, then zeroes both the handoff and temporary key. The
-firmware logs only `PUF_REPRODUCTION,PASS` or a failure code; it never prints a
-raw response or key.
+### Platform
 
-This build assumes RTC slow memory starts at `0x50000000` with no ULP-reserved
-prefix. The application rejects the handoff if the linker places its RTC record
-elsewhere, rather than reading an ambiguous memory location.
+- ESP32
+- 4 MB flash
+- CPU frequency: 160 MHz
+- ESP-IDF experimental environment
+- SRAM capture region: `0x3FFF2000`
+- Capture size: 256 bytes / 2048 bits
 
-## Secure re-enrollment procedure
+SRAM is captured through an early boot hook before normal application
+initialization.
 
-The previously logged regions `0`–`3` are demonstration data only. Do not use
-them to protect a production identity. Region `4` (`0x3FFF5000`) is a new
-candidate that is outside the currently linked bootloader data range; it still
-must be characterised before use.
+### Cold-Power Experiment
 
-1. Temporarily configure region `4` and debug capture with:
-   `python3 configure_puf.py --region 4 --debug-capture on`.
-2. Build/flash and privately collect 30 reset captures with:
-   `python3 collect_private_region.py --port /dev/ttyUSB1 --region 4`.
-   Never upload or paste those raw records.
-3. Enroll the new region with:
-   `python3 enroll_puf.py --capture-dir puf_private_results --region 4`.
-4. Disable raw capture while retaining source region `4` with:
-   `python3 configure_puf.py --region 4 --debug-capture off`.
-   Build/flash, then validate `PUF_REPRODUCTION,PASS`.
+Thirty cold-power captures were collected.
 
-## Required validation before attestation
+The first 20 captures were used for enrollment and captures 21–30 were
+held out for evaluation.
 
-1. Repeat captures after complete power removal (not only EN/reset).
-2. Repeat under temperature and supply-voltage variation.
-3. Measure inter-device Hamming distance on at least three ESP32 devices.
-4. Re-enroll every device separately; helper data is device-specific.
+Observed results include:
+
+- mean per-bit reliability: 96.1442%
+- median per-bit reliability: 100%
+- 1643 / 2048 cells with reliability >= 97%
+- pairwise BER mean: 5.5452%
+- pairwise BER maximum: 6.8848%
+
+For the enrollment-selected stable cells, the held-out BER was:
+
+- mean: 0.3335%
+- maximum: 0.7743%
+
+The 0.3335% value refers specifically to enrollment-selected cells and
+must not be interpreted as the raw SRAM-PUF BER.
+
+### Limitations
+
+The physical characterization was performed on one ESP32 prototype.
+Population-level uniqueness, inter-device Hamming distance, bit aliasing,
+and environmental temperature/voltage/aging characterization are not
+claimed.
+
+---
+
+## J2 — BCH-C Fuzzy Extractor
+
+The revised fuzzy-extractor backend uses a shortened BCH configuration:
+
+- `m = 9`
+- `t = 16`
+- `n = 511`
+- 144 parity bits
+- 16-byte secret
+- shortened codeword: 272 bits
+
+The helper construction combines enrollment-selected SRAM-PUF bits with
+the BCH codeword. Successful reproduction additionally requires the
+derived-key commitment check.
+
+### Prospective Physical Cold-Power Validation
+
+Ten prospectively recorded cold-power trials were evaluated using the
+frozen enrollment/helper configuration.
+
+Decoder error counts:
+
+`1, 1, 1, 2, 1, 2, 1, 3, 5, 0`
+
+Results:
+
+- 10 / 10 BCH decoding successes
+- 10 / 10 commitment checks passed
+- 10 / 10 key reproductions passed
+- corrected errors: 0–5
+- mean corrected errors: 1.7
+- BCH correction capability: `t = 16`
+
+These results characterize the evaluated ESP32 prototype only.
+
+### Adversarial Checks
+
+The repository also contains controlled helper/salt/commitment
+perturbation experiments.
+
+Important interpretation:
+
+- correctable helper perturbations can still decode successfully;
+- helper data are therefore not described as universally authenticated;
+- salt or commitment perturbations were rejected by the final key
+  validation in the tested experiments.
+
+Synthetic independent bit-flip experiments are provided separately and
+must not be interpreted as physical BER measurements.
+
+---
+
+## J3 — Physical FE-to-ZK Binding
+
+The fuzzy-extractor-derived key is deterministically mapped to the
+BN254 scalar field using domain-separated HKDF-based rejection sampling.
+
+The resulting scalar is used as the private witness of the Groth16
+circuit.
+
+The optimized circuit uses:
+
+Private input:
+
+- `k`
+
+Public inputs:
+
+- `deviceID`
+- `nonce`
+- `enrollmentCommitment`
+- `sessionCommitment`
+
+Commitments:
+
+- `C_E = Poseidon(k, deviceID)`
+- `C_S = Poseidon(C_E, nonce)`
+
+The evaluated circuit contains:
+
+- 1038 wires
+- 4 public inputs
+- 1 private input
+- 1034 constraints
+
+A physical ESP32 run was also used to verify cross-implementation
+agreement of the FE-to-BN254 derivation.
+
+This demonstrates deterministic cross-layer binding; it is **not**
+presented as a production-secure witness transport mechanism.
+
+### Host Benchmark
+
+For runs 2–30, after treating the first run as initialization/warm-up:
+
+- witness mean: 24.137 ms
+- witness median: 23.538 ms
+- proving mean: 64.367 ms
+- proving median: 64.156 ms
+- verification mean: 10.108 ms
+- verification median: 10.084 ms
+
+These are host-side measurements. They are not ESP32 proving times.
+
+---
+
+## J4 — EVM Verification and Freshness
+
+The final FE-derived Groth16 proof was evaluated with the actual
+verifier and stateful freshness wrapper.
+
+Final gas measurements using `gasleft()` instrumentation:
+
+- verifier-only FE proof: 215,569 gas
+- first stateful FE verification: 241,121 gas
+- subsequent stateful verification: 212,179 gas
+- stale replay rejection: 3,241 gas
+
+The replay rejection is provided by protocol state and nonce tracking;
+it is not an intrinsic property of Groth16.
+
+Historical optimization experiments are retained separately from the
+final FE-derived measurement path.
+
+---
+
+## J5 — Behavioral Evaluation and Adaptive DPI
+
+The behavioral experiments use BoT-IoT data with disjoint CSV-file
+groups for training, validation, and testing.
+
+The controlled cohort retains all available benign records and applies
+deterministic attack undersampling. No SMOTE is used.
+
+Reported metrics include:
+
+- balanced accuracy
+- macro-F1
+- MCC
+- ROC-AUC
+- class-specific recall
+- false-positive rate
+
+The repository includes MLP, GATv2, and causal-history Cog-GAT
+experiments.
+
+The behavioral model is not used as a substitute for cryptographic
+authentication.
+
+Cryptographic proof/freshness failure remains a hard rejection
+condition. Behavioral risk is evaluated after the hard cryptographic
+gate and can drive additional monitoring, challenge, restriction, or
+quarantine decisions.
+
+### DPI Gating
+
+The repository includes validation-selected DPI-gating experiments and
+distribution-shift tests.
+
+The reported DPI reductions refer to flow-count reduction in the
+evaluated cohorts. They must not be interpreted as direct energy
+measurements.
+
+The late-file challenge is an internal BoT-IoT split and is not claimed
+to be an external or pristine dataset.
+
+---
+
+## Repository Organization
+
+Key directories include:
+
+```text
+main/                    ESP32 SRAM-PUF and fuzzy-extractor firmware
+puf_analysis*/           Physical SRAM-PUF analysis
+puf_results*/            Physical capture artifacts
+j2_adversarial/          BCH-C, physical FE, and adversarial validation
+j3_cross_layer/          FE-to-ZK binding artifacts
+j3_zk/                   Circom/Groth16/EVM experiments
+j5_ai/                   Behavioral AI, CLSE, and DPI experiments
