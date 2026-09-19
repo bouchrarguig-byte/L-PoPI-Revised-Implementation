@@ -1,0 +1,64 @@
+============================================================================
+ESP32 SRAM-PUF ENROLLMENT / HELD-OUT ANALYSIS
+============================================================================
+Region       : 1
+Enrollment   : captures 001-020 (N=20)
+Held-out     : captures 021-030 (N=10)
+Region size  : 2048 bits
+============================================================================
+
+Loaded:
+  Enrollment : (20, 2048)
+  Held-out   : (10, 2048)
+
+============================================================================
+ENROLLMENT BIT STABILITY
+============================================================================
+Mean reliability   : 96.2671%
+Median reliability : 100.0000%
+Bits >=  90.0% : 1821/2048 (88.92%)
+Bits >=  95.0% : 1771/2048 (86.47%)
+Bits >=  97.0% : 1679/2048 (81.98%)
+Bits >=  99.0% : 1679/2048 (81.98%)
+Bits >= 100.0% : 1679/2048 (81.98%)
+
+============================================================================
+HELD-OUT BER AGAINST ENROLLMENT MAJORITY REFERENCE
+============================================================================
+
+RAW -- all 2048 bits
+  Mean BER   : 4.2090%
+  Median BER : 4.1748%
+  Min BER    : 3.8086%
+  Max BER    : 4.6387%
+
+Per held-out capture:
+  Capture 021: 4.5410%
+  Capture 022: 3.8086%
+  Capture 023: 4.4922%
+  Capture 024: 3.9062%
+  Capture 025: 3.8086%
+  Capture 026: 4.0039%
+  Capture 027: 4.3457%
+  Capture 028: 4.5898%
+  Capture 029: 3.9551%
+  Capture 030: 4.6387%
+
+============================================================================
+STABLE-BIT SELECTION -- HELD-OUT RESULTS
+============================================================================
+ Threshold    Bits     Mean BER       Median          Min          Max
+----------------------------------------------------------------------------
+     90.0%    1821      0.8402%      0.9061%      0.4393%      1.2081%
+     95.0%    1771      0.6211%      0.6211%      0.3388%      1.0164%
+     97.0%    1679      0.3335%      0.3276%      0.0000%      0.7743%
+     99.0%    1679      0.3335%      0.3276%      0.0000%      0.7743%
+    100.0%    1679      0.3335%      0.3276%      0.0000%      0.7743%
+
+============================================================================
+INTERPRETATION
+============================================================================
+Stable-bit selection was derived exclusively from captures 001-020.
+Captures 021-030 were not used for bit selection or reference construction.
+Therefore the held-out BER measures stability on unseen cold-power cycles.
+This is an intra-device experiment and does not measure inter-device uniqueness.

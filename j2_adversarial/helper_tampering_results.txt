@@ -1,0 +1,18 @@
+============================================================================
+L-PoPI J2 -- HELPER-DATA TAMPERING TEST
+============================================================================
+Capture      : puf_results/capture_021.txt
+Region       : 1
+Selected bits: 1664
+Group size   : 13
+
+T0 original helper                           -> PASS
+T1 flip 1 helper bit in group 0              -> PASS
+T2 flip 6 helper bits in group 0             -> PASS
+T3 flip 7 helper bits in group 0             -> FAIL
+T4 tamper HKDF salt                          -> FAIL
+T5 tamper key commitment                     -> FAIL
+
+Interpretation:
+PASS = reconstructed key matches stored enrollment commitment
+FAIL = reconstructed key does not match stored enrollment commitment

@@ -1,0 +1,11 @@
+Python: 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+Platform: Linux-7.0.0-31-generic-x86_64-with-glibc2.39
+NumPy: 2.5.3
+Pandas: 3.0.5
+scikit-learn: 1.9.1
+SciPy: 1.18.1
+Matplotlib: 3.11.2
+NetworkX: 3.6.1
+PyTorch: 2.14.0+cu130
+PyG: 2.8.0.post1
+CUDA: True

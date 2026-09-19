@@ -1,0 +1,44 @@
+=== L-PoPI Poseidon Constraint Audit ===
+Sun Sep 13 07:30:02 PM +01 2026
+
+=== Poseidon(2) ===
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 520
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 517
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 2
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 0
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 771
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 1
+
+=== Poseidon(3) ===
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 609
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 605
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 3
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 0
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 939
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 1
+
+=== Original L-PoPI ===
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 1126
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 1122
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 1
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 4
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 1707
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
+
+=== Optimized L-PoPI ===
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 1038
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 1034
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 1
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 4
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 1540
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
+
+Derived:
+Poseidon(3) - Poseidon(2) = 605 - 517 = 88 constraints
+Original - optimized       = 1122 - 1034 = 88 constraints
+Optimized                  = 2 x 517 = 1034 constraints
+Reduction                  = 88 / 1122 = 7.84%

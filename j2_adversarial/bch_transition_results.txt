@@ -1,0 +1,90 @@
+==================================================================================
+L-PoPI J2 -- BCH SYNTHETIC CONTROLLED-NOISE ROBUSTNESS
+==================================================================================
+Enrollment captures : 001-020
+Held-out captures   : 021-030
+Stable-cell pool    : 1664 bits
+Secret size         : 128 bits
+Trials/capture/rate : 100
+Trials/rate/scheme  : 1000
+RNG seed            : 20260913
+
+----------------------------------------------------------------------------------
+BCH-A
+----------------------------------------------------------------------------------
+m              : 8
+t              : 8
+ecc_bits       : 64
+ecc_bytes      : 8
+PUF bits used  : 192
+
+Baseline capture 021: PASS | decoder=0
+Baseline capture 022: PASS | decoder=0
+Baseline capture 023: PASS | decoder=0
+Baseline capture 024: PASS | decoder=1
+Baseline capture 025: PASS | decoder=0
+Baseline capture 026: PASS | decoder=0
+Baseline capture 027: PASS | decoder=1
+Baseline capture 028: PASS | decoder=0
+Baseline capture 029: PASS | decoder=0
+Baseline capture 030: PASS | decoder=1
+Baseline reconstruction: 10/10
+
+Noise   2.00% | flips=  4 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   2.50% | flips=  5 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   3.00% | flips=  6 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   3.50% | flips=  7 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   4.00% | flips=  8 | success= 711/1000 |  71.100% | 95% CI [ 68.214,  73.825]
+Noise   4.50% | flips=  9 | success=  11/1000 |   1.100% | 95% CI [  0.615,   1.959]
+Noise   5.00% | flips= 10 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   5.50% | flips= 11 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   6.00% | flips= 12 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   6.50% | flips= 12 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   7.00% | flips= 13 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   7.50% | flips= 14 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   8.00% | flips= 15 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   9.00% | flips= 17 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  10.00% | flips= 19 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+
+----------------------------------------------------------------------------------
+BCH-C
+----------------------------------------------------------------------------------
+m              : 9
+t              : 16
+ecc_bits       : 144
+ecc_bytes      : 18
+PUF bits used  : 272
+
+Baseline capture 021: PASS | decoder=1
+Baseline capture 022: PASS | decoder=0
+Baseline capture 023: PASS | decoder=0
+Baseline capture 024: PASS | decoder=2
+Baseline capture 025: PASS | decoder=0
+Baseline capture 026: PASS | decoder=0
+Baseline capture 027: PASS | decoder=1
+Baseline capture 028: PASS | decoder=1
+Baseline capture 029: PASS | decoder=2
+Baseline capture 030: PASS | decoder=2
+Baseline reconstruction: 10/10
+
+Noise   2.00% | flips=  5 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   2.50% | flips=  7 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   3.00% | flips=  8 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   3.50% | flips= 10 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   4.00% | flips= 11 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   4.50% | flips= 12 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   5.00% | flips= 14 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   5.50% | flips= 15 | success= 733/1000 |  73.300% | 95% CI [ 70.473,  75.949]
+Noise   6.00% | flips= 16 | success= 456/1000 |  45.600% | 95% CI [ 42.536,  48.698]
+Noise   6.50% | flips= 18 | success=   2/1000 |   0.200% | 95% CI [  0.055,   0.726]
+Noise   7.00% | flips= 19 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   7.50% | flips= 20 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   8.00% | flips= 22 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise   9.00% | flips= 24 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  10.00% | flips= 27 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+
+==================================================================================
+CSV written to: j2_adversarial/bch_controlled_noise_results.csv
+
+IMPORTANT: synthetic independent bit-flip injection only. These noise levels are not physical environmental BER measurements.
+==================================================================================

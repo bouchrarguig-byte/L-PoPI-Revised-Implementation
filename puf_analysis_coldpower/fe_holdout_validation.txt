@@ -1,0 +1,29 @@
+====================================================================================
+L-PoPI SRAM-PUF FUZZY EXTRACTOR -- HELD-OUT VALIDATION
+====================================================================================
+Region              : 1
+Selected SRAM bits  : 1664
+Group size          : 13
+Secret bits         : 128
+Held-out captures   : 021-030
+====================================================================================
+Capture 021: PASS | max group errors=1/13 | failing groups=0 | group minority errors=7
+Capture 022: PASS | max group errors=1/13 | failing groups=0 | group minority errors=4
+Capture 023: PASS | max group errors=1/13 | failing groups=0 | group minority errors=13
+Capture 024: PASS | max group errors=1/13 | failing groups=0 | group minority errors=6
+Capture 025: PASS | max group errors=0/13 | failing groups=0 | group minority errors=0
+Capture 026: PASS | max group errors=1/13 | failing groups=0 | group minority errors=1
+Capture 027: PASS | max group errors=1/13 | failing groups=0 | group minority errors=8
+Capture 028: PASS | max group errors=1/13 | failing groups=0 | group minority errors=7
+Capture 029: PASS | max group errors=2/13 | failing groups=0 | group minority errors=5
+Capture 030: PASS | max group errors=1/13 | failing groups=0 | group minority errors=5
+
+====================================================================================
+FINAL HELD-OUT RESULT
+====================================================================================
+PASS                 : 10/10
+FAIL                 : 0/10
+Reconstruction rate  : 100.00%
+Worst observed group : 2/13
+====================================================================================
+RESULT: all unseen cold-power captures reconstructed a key matching the enrollment commitment.

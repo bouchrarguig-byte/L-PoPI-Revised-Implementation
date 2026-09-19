@@ -1,0 +1,6 @@
+m=9
+t=16
+n=511
+prim_poly=0x211
+degree=144
+generator=0x12b6bd0545db34c1e01d5296e58c8ed2701ad

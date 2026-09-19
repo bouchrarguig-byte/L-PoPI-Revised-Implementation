@@ -1,0 +1,41 @@
+{
+  "selection_rule": "maximum validation macro-F1; ROC-AUC tie-break",
+  "mode": "src",
+  "alpha": 0.1,
+  "lambda": 0.5,
+  "threshold_validation_only": 0.321,
+  "val_macro_f1": 0.8553102430089136,
+  "val_roc_auc": 0.7373036418054729,
+  "test_accuracy": 0.8369239267676768,
+  "test_balanced_accuracy": 0.8265190972222223,
+  "test_macro_f1": 0.6895765385963976,
+  "test_mcc": 0.4531004228077579,
+  "test_roc_auc": 0.8922090883608218,
+  "test_pr_auc_attack": 0.9813517342419447,
+  "benign_precision": 0.33608173507797096,
+  "benign_recall": 0.8138020833333334,
+  "benign_f1": 0.47570721806418875,
+  "attack_precision": 0.9782949658487224,
+  "attack_recall": 0.8392361111111111,
+  "attack_f1": 0.9034458591286064,
+  "tn": 1875,
+  "fp": 429,
+  "fn": 3704,
+  "tp": 19336,
+  "fpr": 0.18619791666666666,
+  "fnr": 0.1607638888888889,
+  "category_attack_recall": {
+    "DDoS": {
+      "n": 5347,
+      "attack_recall": 0.9971946886104358
+    },
+    "DoS": {
+      "n": 3494,
+      "attack_recall": 0.9939896966227819
+    },
+    "Reconnaissance": {
+      "n": 14199,
+      "attack_recall": 0.7416719487287837
+    }
+  }
+}

@@ -1,0 +1,60 @@
+==============================================================================
+L-PoPI J2 -- BCH HELD-OUT RECONSTRUCTION
+==============================================================================
+Enrollment captures : 001-020
+Held-out captures   : 021-030
+Stable-cell pool    : 1664 bits
+Secret size         : 128 bits
+Benchmark RNG seed  : 20260913
+
+------------------------------------------------------------------------------
+BCH-A
+------------------------------------------------------------------------------
+m                  : 8
+t                  : 8
+n                  : 255
+ecc_bits           : 64
+ecc_bytes          : 8
+codeword bytes     : 24
+PUF bits used      : 192
+
+Capture 021: PASS | raw_errors= 0 | decoder=0
+Capture 022: PASS | raw_errors= 0 | decoder=0
+Capture 023: PASS | raw_errors= 0 | decoder=0
+Capture 024: PASS | raw_errors= 1 | decoder=1
+Capture 025: PASS | raw_errors= 0 | decoder=0
+Capture 026: PASS | raw_errors= 0 | decoder=0
+Capture 027: PASS | raw_errors= 1 | decoder=1
+Capture 028: PASS | raw_errors= 0 | decoder=0
+Capture 029: PASS | raw_errors= 0 | decoder=0
+Capture 030: PASS | raw_errors= 1 | decoder=1
+
+Held-out reconstruction: 10/10
+
+------------------------------------------------------------------------------
+BCH-C
+------------------------------------------------------------------------------
+m                  : 9
+t                  : 16
+n                  : 511
+ecc_bits           : 144
+ecc_bytes          : 18
+codeword bytes     : 34
+PUF bits used      : 272
+
+Capture 021: PASS | raw_errors= 1 | decoder=1
+Capture 022: PASS | raw_errors= 0 | decoder=0
+Capture 023: PASS | raw_errors= 0 | decoder=0
+Capture 024: PASS | raw_errors= 2 | decoder=2
+Capture 025: PASS | raw_errors= 0 | decoder=0
+Capture 026: PASS | raw_errors= 0 | decoder=0
+Capture 027: PASS | raw_errors= 1 | decoder=1
+Capture 028: PASS | raw_errors= 1 | decoder=1
+Capture 029: PASS | raw_errors= 2 | decoder=2
+Capture 030: PASS | raw_errors= 2 | decoder=2
+
+Held-out reconstruction: 10/10
+
+==============================================================================
+Results written to: j2_adversarial/bch_holdout_results.json
+==============================================================================

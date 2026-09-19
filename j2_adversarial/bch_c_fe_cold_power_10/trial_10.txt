@@ -1,0 +1,90 @@
+--- esp-idf-monitor 1.10.0 on /dev/ttyUSB0 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+Executing action: monitor
+Running idf_monitor in directory /home/rguig/esp/sram_puf_clean
+Executing "/home/rguig/.espressif/python_env/idf6.2_py3.12_env/bin/python /home/rguig/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/rguig/esp/sram_puf_clean/build/sram_puf.elf /home/rguig/esp/sram_puf_clean/build/bootloader/bootloader.elf -m '/home/rguig/.espressif/python_env/idf6.2_py3.12_env/bin/python' '/home/rguig/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'"...
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6332
+ho 0 tail 12 room 4
+load:0x40078000,len:15712
+load:0x40080400,len:4152
+--- 0x40080400: _invalid_pc_placeholder at /home/rguig/esp/esp-idf/components/xtensa/xtensa_vectors.S:2259
+entry 0x4008064c
+--- 0x4008064c: call_start_cpu0 at /home/rguig/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+
+L-POPI EARLY SRAM CAPTURE
+PUF_CAPTURE_START
+PUF_REGIONS,1
+PUF_REGION_SIZE,256
+PUF_REGION_START,1,0x3FFF2000,256
+PUF_DATA,1,D6D8FA1C470ED34920225743F5626C12B879A973C317B89408C33F17C901A9E10AC2F0FF3303A938B30A5EE6C876A2B29003783FDD282B888ED5A6B4E772E47886F2FB7EA9F441B4E4039D705B4DCB196556DF6AA1262622D4C01FBD1288801821D07625307370D2C75249AA13DA84556708279EA0499764E6713FB3A8FA8709110011F1FEBB017F23C9A1FD038A1201A84B63DFAAF7C33B16FFBF512202C43B2E6FF6DE788346C7CE883D6A8F8C305A8984E4FAE276E1AC84D844B65FFE22B4D03237966FD64FA0913DDC9EDFEAC8238803F97EEA388BAB3DCDDD1FF7BECF3E0F03E70B2EDB06115864CA0335BD14666893AA350BDA5A850227B9077AFAB2DC
+PUF_REGION_END,1
+PUF_CAPTURE_END
+[0;32mI (88) boot: ESP-IDF v6.1-dev-7562-g85c826ecb1d 2nd stage bootloader[0m
+[0;32mI (88) boot: compile time Sep 18 2026 18:34:11[0m
+[0;32mI (89) boot: chip revision: v3.0[0m
+[0;32mI (91) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (95) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (98) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (102) boot: Partition Table:[0m
+[0;32mI (105) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (111) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (118) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (124) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (131) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0d668h ( 54888) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=0001d690 vaddr=3ffb0000 size=02988h ( 10632) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=20fach (135084) map[0m
+[0;32mI (214) esp_image: segment 3: paddr=00040fd4 vaddr=3ffb2988 size=002a4h (   676) load[0m
+[0;32mI (214) esp_image: segment 4: paddr=00041280 vaddr=40080000 size=0b244h ( 45636) load[0m
+[0;32mI (237) esp_image: segment 5: paddr=0004c4cc vaddr=50000110 size=00028h (    40) load[0m
+[0;32mI (243) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (251) cpu_start: Multicore app[0m
+[0;32mI (259) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (259) cpu_start: Pro cpu start user code[0m
+[0;32mI (259) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (261) app_init: Application information:[0m
+[0;32mI (265) app_init: Project name:     sram_puf[0m
+[0;32mI (269) app_init: App version:      1[0m
+[0;32mI (272) app_init: Compile time:     Sep 18 2026 18:34:13[0m
+[0;32mI (277) app_init: ELF file SHA256:  41c6810a2...[0m
+[0;32mI (282) app_init: ESP-IDF:          v6.1-dev-7562-g85c826ecb1d[0m
+[0;32mI (287) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (291) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (295) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (299) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (305) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (310) heap_init: At 3FFB3EA8 len 0002C158 (176 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (321) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (326) heap_init: At 4008B244 len 00014DBC (83 KiB): IRAM[0m
+[0;32mI (333) spi_flash: detected chip: generic[0m
+[0;32mI (335) spi_flash: flash io: dio[0m
+[0;32mI (340) main_task: Started on CPU0[0m
+[0;32mI (340) main_task: Calling app_main()[0m
+BCH_VECTOR,zero,PASS
+BCH_VECTOR,ff,PASS
+BCH_VECTOR,incrementing,PASS
+BCH_VECTOR,golden,PASS
+BCH_VECTOR,walking_msb,PASS
+BCH_VECTOR,walking_lsb,PASS
+BCH_VECTOR_SUMMARY,6/6,PASS
+[0;32mI (360) SRAM_PUF: BCH_C_ENCODER_SELFTEST,PASS[0m
+BCH_DECODE,clean,0,PASS
+BCH_DECODE,one_data_bit,1,PASS
+BCH_DECODE,one_ecc_bit,1,PASS
+BCH_DECODE,eight_spread,8,PASS
+BCH_DECODE,sixteen_spread,16,PASS
+BCH_DECODE,seventeen_spread,-1,PASS
+BCH_DECODE_SUMMARY,6/6,PASS
+[0;32mI (400) SRAM_PUF: BCH_C_DECODER_SELFTEST,PASS[0m
+[0;32mI (400) SRAM_PUF: L-PoPI SRAM-PUF fuzzy-extractor reproduction mode[0m
+[0;32mI (400) SRAM_PUF: PUF_SOURCE_REGION,1[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=0[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+

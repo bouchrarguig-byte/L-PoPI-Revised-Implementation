@@ -1,0 +1,12 @@
+BCH-C independent decoder
+m=9 t=16 n=511 prim=0x211
+
+clean              expected=  0 actual=  0 secret_match=True  packet_match=True  PASS
+one_data_bit       expected=  1 actual=  1 secret_match=True  packet_match=True  PASS
+one_ecc_bit        expected=  1 actual=  1 secret_match=True  packet_match=True  PASS
+eight_spread       expected=  8 actual=  8 secret_match=True  packet_match=True  PASS
+sixteen_spread     expected= 16 actual= 16 secret_match=True  packet_match=True  PASS
+seventeen_spread   expected= -1 actual= -1 secret_match=False packet_match=False PASS
+
+RESULT 6/6
+BCH_C_INDEPENDENT_DECODER_OK

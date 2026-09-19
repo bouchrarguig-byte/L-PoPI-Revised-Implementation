@@ -1,0 +1,37 @@
+=== FROZEN DPI POLICY ===
+tau_fast = 0.416452
+threshold selected using VALIDATION only
+no TEST-dependent threshold adjustment
+
+=== LOCKED TEST DPI GATING ===
+policy = two_path_cog_gat_dpi_gating
+tau_fast = 0.416452
+threshold_source = validation_only
+validation_attack_fast_budget = 0.01
+n_total = 25344
+n_fast_path = 7168
+n_dpi = 18176
+fast_path_rate = 0.2828282828282828
+dpi_trigger_rate = 0.7171717171717171
+dpi_workload_reduction = 0.2828282828282829
+n_benign = 2304
+n_attack = 23040
+benign_fast_path_rate = 0.9301215277777778
+benign_dpi_rate = 0.06987847222222222
+attack_fast_path_rate = 0.21809895833333334
+attack_dpi_rate = 0.7819010416666666
+n_benign_fast = 2143
+n_benign_dpi = 161
+n_attack_fast = 5025
+n_attack_dpi = 18015
+
+=== ATTACK CATEGORY TEST ===
+DDoS: N=5347 FAST=63 (1.178%) DPI=5284 (98.822%)
+DoS: N=3494 FAST=51 (1.460%) DPI=3443 (98.540%)
+Reconnaissance: N=14199 FAST=4911 (34.587%) DPI=9288 (65.413%)
+
+=== SHA256 ===
+locked_dpi_test_metrics.json 6aa14b3edc6e19e5ab27b97906669a0ea0ea22fde09be9f32eb03795e4b17a32
+locked_dpi_test_decisions.parquet 066d4e063e66733dac43bd76f17943fd531d8afe9161fe77a9e51e90d56f912a
+
+J5_LOCKED_DPI_POLICY_OK

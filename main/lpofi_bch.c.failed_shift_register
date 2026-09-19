@@ -1,0 +1,233 @@
+#include "lpofi_bch.h"
+
+#include <string.h>
+
+/*
+ * Generator polynomial, degree 144:
+ *
+ * 0x12b6bd0545db34c1e01d5296e58c8ed2701ad
+ *
+ * Stored MSB-first as 145 bits.
+ *
+ * Byte 0 contains only the leading coefficient in bit 0.
+ * Bytes 1..18 contain the remaining 144 coefficients.
+ */
+static const uint8_t generator[19] = {
+    0x01,
+    0x2b, 0x6b, 0xd0, 0x54, 0x5d, 0xb3,
+    0x4c, 0x1e, 0x01, 0xd5, 0x29, 0x6e,
+    0x58, 0xc8, 0xed, 0x27, 0x01, 0xad
+};
+
+static uint8_t get_generator_bit(unsigned index)
+{
+    /*
+     * index = 0 corresponds to x^144.
+     * index = 144 corresponds to x^0.
+     */
+    if (index == 0) {
+        return 1U;
+    }
+
+    index -= 1U;
+
+    return (generator[1U + index / 8U] >>
+            (7U - (index % 8U))) & 1U;
+}
+
+bool lpofi_bch_encode(const uint8_t data[LPOFI_BCH_DATA_BYTES],
+                      uint8_t ecc[LPOFI_BCH_ECC_BYTES])
+{
+    if (data == NULL || ecc == NULL) {
+        return false;
+    }
+
+    /*
+     * Polynomial long division of:
+     *
+     *     data(x) * x^144
+     *
+     * by the fixed degree-144 generator.
+     *
+     * remainder[] is a 145-bit shift register.
+     * Index 0 is the current x^144 coefficient.
+     */
+    uint8_t remainder[145] = {0};
+
+    /*
+     * Feed the 128 data bits MSB-first.
+     */
+    for (unsigned bit = 0;
+         bit < LPOFI_BCH_DATA_BYTES * 8U;
+         ++bit) {
+
+        uint8_t input =
+            (data[bit / 8U] >>
+             (7U - (bit % 8U))) & 1U;
+
+        uint8_t feedback = remainder[0] ^ input;
+
+        memmove(&remainder[0],
+                &remainder[1],
+                sizeof(remainder) - 1U);
+
+        remainder[144] = 0;
+
+        if (feedback) {
+            for (unsigned j = 0; j <= 144U; ++j) {
+                remainder[j] ^= get_generator_bit(j);
+            }
+        }
+    }
+
+    /*
+     * Append 144 zero bits corresponding to multiplication by x^144.
+     */
+    for (unsigned bit = 0; bit < LPOFI_BCH_ECC_BITS; ++bit) {
+        uint8_t feedback = remainder[0];
+
+        memmove(&remainder[0],
+                &remainder[1],
+                sizeof(remainder) - 1U);
+
+        remainder[144] = 0;
+
+        if (feedback) {
+            for (unsigned j = 0; j <= 144U; ++j) {
+                remainder[j] ^= get_generator_bit(j);
+            }
+        }
+    }
+
+    /*
+     * After division the leading coefficient must be zero;
+     * remainder[1..144] are the 144 ECC bits.
+     */
+    if (remainder[0] != 0) {
+        memset(remainder, 0, sizeof(remainder));
+        memset(ecc, 0, LPOFI_BCH_ECC_BYTES);
+        return false;
+    }
+
+    memset(ecc, 0, LPOFI_BCH_ECC_BYTES);
+
+    for (unsigned bit = 0; bit < LPOFI_BCH_ECC_BITS; ++bit) {
+        if (remainder[1U + bit]) {
+            ecc[bit / 8U] |=
+                (uint8_t)(1U << (7U - (bit % 8U)));
+        }
+    }
+
+    memset(remainder, 0, sizeof(remainder));
+
+    return true;
+}
+
+
+/* ---------- conformance self-test ---------- */
+
+typedef struct {
+    uint8_t data[LPOFI_BCH_DATA_BYTES];
+    uint8_t expected[LPOFI_BCH_ECC_BYTES];
+} bch_vector_t;
+
+
+static const bch_vector_t vectors[] = {
+    /* zero */
+    {
+        {0},
+        {0}
+    },
+
+    /* ff */
+    {
+        {
+            0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,
+            0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff
+        },
+        {
+            0x42,0xcc,0xf4,0x45,0x0f,0x0f,
+            0xf4,0x32,0xe2,0xcc,0x16,0x50,
+            0x10,0xb1,0xe4,0x52,0xa2,0x34
+        }
+    },
+
+    /* incrementing */
+    {
+        {
+            0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,
+            0x08,0x09,0x0a,0x0b,0x0c,0x0d,0x0e,0x0f
+        },
+        {
+            0xc4,0xc6,0x7b,0x82,0x86,0xcd,
+            0x86,0x01,0xc7,0xdf,0x5b,0xc1,
+            0xb1,0xfa,0x01,0xff,0xd4,0xfd
+        }
+    },
+
+    /* golden */
+    {
+        {
+            0x00,0x11,0x22,0x33,0x44,0x55,0x66,0x77,
+            0x88,0x99,0xaa,0xbb,0xcc,0xdd,0xee,0xff
+        },
+        {
+            0x55,0x3b,0xd0,0x0d,0x2c,0xf1,
+            0xfa,0x8b,0xb2,0x02,0x20,0x7f,
+            0x53,0xf6,0x2e,0x81,0x91,0x5c
+        }
+    },
+
+    /* walking_msb */
+    {
+        {
+            0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+            0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00
+        },
+        {
+            0xe3,0xaa,0x8e,0x67,0x88,0x88,
+            0x0e,0x2b,0x93,0xaa,0x1d,0x78,
+            0x18,0xe9,0x16,0x7b,0xf3,0x2e
+        }
+    },
+
+    /* walking_lsb */
+    {
+        {
+            0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+            0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01
+        },
+        {
+            0x2b,0x6b,0xd0,0x54,0x5d,0xb3,
+            0x4c,0x1e,0x01,0xd5,0x29,0x6e,
+            0x58,0xc8,0xed,0x27,0x01,0xad
+        }
+    }
+};
+
+
+bool lpofi_bch_selftest(void)
+{
+    uint8_t ecc[LPOFI_BCH_ECC_BYTES];
+
+    for (unsigned i = 0;
+         i < sizeof(vectors) / sizeof(vectors[0]);
+         ++i) {
+
+        if (!lpofi_bch_encode(vectors[i].data, ecc)) {
+            memset(ecc, 0, sizeof(ecc));
+            return false;
+        }
+
+        if (memcmp(ecc,
+                   vectors[i].expected,
+                   LPOFI_BCH_ECC_BYTES) != 0) {
+            memset(ecc, 0, sizeof(ecc));
+            return false;
+        }
+    }
+
+    memset(ecc, 0, sizeof(ecc));
+
+    return true;
+}

@@ -1,0 +1,500 @@
+/home/rguig/smote.py:11:from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, f1_score, precision_recall_fscore_support
+/home/rguig/smote.py:12:from sklearn.metrics import roc_curve, auc, precision_recall_curve, average_precision_score
+/home/rguig/smote.py:209:accuracy = accuracy_score(all_labels, all_preds)
+/home/rguig/smote.py:210:weighted_f1 = f1_score(all_labels, all_preds, average='weighted')
+/home/rguig/smote.py:211:print(f"[RESULTS] Accuracy: {accuracy:.6f}, Weighted F1: {weighted_f1:.6f}")
+/home/rguig/smote.py:221:prec, rec, f1, support = precision_recall_fscore_support(all_labels, all_preds, labels=list(range(num_classes)), zero_division=0)
+/home/rguig/smote.py:224:    f.write("Class & Precision & Recall & F1-score & Support \\\\\n\\hline\n")
+/home/rguig/smote.py:226:        f.write(f"{cls} & {prec[i]:.4f} & {rec[i]:.4f} & {f1[i]:.4f} & {support[i]} \\\\\n")
+/home/rguig/smote.py:230:# NORMALIZED CONFUSION MATRIX (FIXED)
+/home/rguig/smote.py:232:cm = confusion_matrix(all_labels, all_preds)
+/home/rguig/smote.py:242:plt.title("Normalized Confusion Matrix")
+/home/rguig/smote.py:246:plt.savefig(os.path.join(RESULTS_DIR, "confusion_matrix_normalized.png"))
+/home/rguig/smote.py:251:df_cm.to_latex(os.path.join(RESULTS_DIR, "confusion_matrix_normalized.tex"), float_format="%.2f")
+/home/rguig/smote.py:268:# ROC & PRECISION-RECALL CURVES
+/home/rguig/smote.py:276:    roc_auc = auc(fpr, tpr)
+/home/rguig/smote.py:277:    plt.plot(fpr, tpr, label=f"{class_labels[i]} (AUC={roc_auc:.2f})")
+/home/rguig/smote.py:279:plt.xlabel("False Positive Rate")
+/home/rguig/smote.py:288:# Precision-Recall Curves
+/home/rguig/smote.py:291:    precision, recall, _ = precision_recall_curve(y_bin[:,i], all_probs[:,i])
+/home/rguig/smote.py:292:    ap_score = average_precision_score(y_bin[:,i], all_probs[:,i])
+/home/rguig/smote.py:293:    plt.plot(recall, precision, label=f"{class_labels[i]} (AP={ap_score:.2f})")
+/home/rguig/smote.py:294:plt.xlabel("Recall")
+/home/rguig/smote.py:295:plt.ylabel("Precision")
+/home/rguig/smote.py:296:plt.title("Per-Class Precision-Recall Curves")
+/home/rguig/smote.py:300:plt.savefig(os.path.join(RESULTS_DIR, "precision_recall_curves.png"))
+/home/rguig/eos/plugins/resource_monitor_plugin/test/CMakeLists.txt:1:add_executable( test_threshold test_threshold.cpp )
+/home/rguig/eos/plugins/resource_monitor_plugin/test/CMakeLists.txt:2:target_link_libraries( test_threshold resource_monitor_plugin )
+/home/rguig/eos/plugins/resource_monitor_plugin/test/CMakeLists.txt:3:target_include_directories( test_threshold PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include" )
+/home/rguig/eos/plugins/resource_monitor_plugin/test/CMakeLists.txt:5:add_test(NAME test_threshold COMMAND plugins/resource_monitor_plugin/test/test_threshold WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
+/home/rguig/eos/tutorials/bios-boot-tutorial/bios-boot-tutorial.py:224:            'threshold': 1, 'keys': [], 'waits': [],
+/home/rguig/eos/tutorials/bios-boot-tutorial/bios-boot-tutorial.py:351:    retry(args.cleos + 'push action eosio activate \'["299dcb6af692324b899b39f16d5a530a33062804e41f09dc97e9f156b4476707"]\' -p eosio@active')
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:529:        self.assertRunOK("put cf1_1 1 --create_if_missing", "OK")
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:530:        self.assertRunOK("put cf1_2 2 --create_if_missing", "OK")
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:531:        self.assertRunOK("put cf1_3 3 --try_load_options", "OK")
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:533:        self.assertRunFAIL("get cf1_1 --column_family=two")
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:539:        self.assertRunOK("delete cf1_2", "OK")
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:545:        self.assertRunOK("get cf1_1 --column_family=default", "1")
+/home/rguig/eos/libraries/rocksdb/tools/ldb_test.py:551:                         "cf1_1 ==> 1\ncf1_3 ==> 3\nKeys in range: 2")
+/home/rguig/eos/libraries/builtins/README.txt:243:// adds two 128-bit double-double precision values ( x + y )
+/home/rguig/eos/libraries/builtins/README.txt:246:// subtracts two 128-bit double-double precision values ( x - y )
+/home/rguig/eos/libraries/builtins/README.txt:249:// multiples two 128-bit double-double precision values ( x * y )
+/home/rguig/eos/libraries/builtins/README.txt:252:// divides two 128-bit double-double precision values ( x / y )
+/home/rguig/eos/libraries/builtins/CMakeLists.txt:8:set(C_DEFINES, "-D__wasm__ -DQUAD_PRECISION")
+/home/rguig/eos/libraries/chain/CMakeLists.txt:124:             platform_timer_accuracy.cpp
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:43:  source/8086-SSE/s_f16UIToCommonNaN.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:44:  source/8086-SSE/s_commonNaNToF16UI.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:45:  source/8086-SSE/s_propagateNaNF16UI.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:56:  source/8086-SSE/f128M_isSignalingNaN.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:57:  source/8086-SSE/s_f128UIToCommonNaN.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:58:  source/8086-SSE/s_commonNaNToF128UI.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:59:  source/8086-SSE/s_propagateNaNF128UI.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:64:  source/s_normSubnormalF16Sig.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:65:  source/s_roundPackToF16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:66:  source/s_normRoundPackToF16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:67:  source/s_addMagsF16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:68:  source/s_subMagsF16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:69:  source/s_mulAddF16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:87:  source/s_normSubnormalF128Sig.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:88:  source/s_roundPackToF128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:89:  source/s_normRoundPackToF128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:90:  source/s_addMagsF128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:91:  source/s_subMagsF128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:92:  source/s_mulAddF128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:94:  source/ui32_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:99:  source/ui32_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:100:  source/ui32_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:101:  source/ui64_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:106:  source/ui64_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:107:  source/ui64_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:108:  source/i32_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:113:  source/i32_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:114:  source/i32_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:115:  source/i64_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:120:  source/i64_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:121:  source/i64_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:122:  source/f16_to_ui32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:123:  source/f16_to_ui64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:124:  source/f16_to_i32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:125:  source/f16_to_i64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:126:  source/f16_to_ui32_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:127:  source/f16_to_ui64_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:128:  source/f16_to_i32_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:129:  source/f16_to_i64_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:130:  source/f16_to_f32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:131:  source/f16_to_f64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:132:  source/f16_to_extF80.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:133:  source/f16_to_extF80M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:134:  source/f16_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:135:  source/f16_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:136:  source/f16_roundToInt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:137:  source/f16_add.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:138:  source/f16_sub.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:139:  source/f16_mul.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:140:  source/f16_mulAdd.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:141:  source/f16_div.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:142:  source/f16_rem.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:143:  source/f16_sqrt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:144:  source/f16_eq.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:145:  source/f16_le.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:146:  source/f16_lt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:147:  source/f16_eq_signaling.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:148:  source/f16_le_quiet.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:149:  source/f16_lt_quiet.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:150:  source/f16_isSignalingNaN.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:159:  source/f32_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:163:  source/f32_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:164:  source/f32_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:188:  source/f64_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:192:  source/f64_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:193:  source/f64_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:217:  source/extF80_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:220:  source/extF80_to_f128.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:243:  source/extF80M_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:246:  source/extF80M_to_f128M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:260:  source/f128_to_ui32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:261:  source/f128_to_ui64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:262:  source/f128_to_i32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:263:  source/f128_to_i64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:264:  source/f128_to_ui32_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:265:  source/f128_to_ui64_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:266:  source/f128_to_i32_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:267:  source/f128_to_i64_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:268:  source/f128_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:269:  source/f128_to_f32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:270:  source/f128_to_extF80.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:271:  source/f128_to_f64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:272:  source/f128_roundToInt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:273:  source/f128_add.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:274:  source/f128_sub.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:275:  source/f128_mul.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:276:  source/f128_mulAdd.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:277:  source/f128_div.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:278:  source/f128_rem.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:279:  source/f128_sqrt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:280:  source/f128_eq.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:281:  source/f128_le.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:282:  source/f128_lt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:283:  source/f128_eq_signaling.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:284:  source/f128_le_quiet.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:285:  source/f128_lt_quiet.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:286:  source/f128_isSignalingNaN.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:287:  source/f128M_to_ui32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:288:  source/f128M_to_ui64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:289:  source/f128M_to_i32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:290:  source/f128M_to_i64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:291:  source/f128M_to_ui32_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:292:  source/f128M_to_ui64_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:293:  source/f128M_to_i32_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:294:  source/f128M_to_i64_r_minMag.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:295:  source/f128M_to_f16.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:296:  source/f128M_to_f32.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:297:  source/f128M_to_extF80M.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:298:  source/f128M_to_f64.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:299:  source/f128M_roundToInt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:300:  source/f128M_add.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:301:  source/f128M_sub.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:302:  source/f128M_mul.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:303:  source/f128M_mulAdd.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:304:  source/f128M_div.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:305:  source/f128M_rem.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:306:  source/f128M_sqrt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:307:  source/f128M_eq.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:308:  source/f128M_le.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:309:  source/f128M_lt.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:310:  source/f128M_eq_signaling.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:311:  source/f128M_le_quiet.c
+/home/rguig/eos/libraries/eos-vm/external/softfloat/CMakeLists.txt:312:  source/f128M_lt_quiet.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:43:  source/8086-SSE/s_f16UIToCommonNaN.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:44:  source/8086-SSE/s_commonNaNToF16UI.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:45:  source/8086-SSE/s_propagateNaNF16UI.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:56:  source/8086-SSE/f128M_isSignalingNaN.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:57:  source/8086-SSE/s_f128UIToCommonNaN.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:58:  source/8086-SSE/s_commonNaNToF128UI.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:59:  source/8086-SSE/s_propagateNaNF128UI.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:64:  source/s_normSubnormalF16Sig.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:65:  source/s_roundPackToF16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:66:  source/s_normRoundPackToF16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:67:  source/s_addMagsF16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:68:  source/s_subMagsF16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:69:  source/s_mulAddF16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:87:  source/s_normSubnormalF128Sig.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:88:  source/s_roundPackToF128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:89:  source/s_normRoundPackToF128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:90:  source/s_addMagsF128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:91:  source/s_subMagsF128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:92:  source/s_mulAddF128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:94:  source/ui32_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:99:  source/ui32_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:100:  source/ui32_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:101:  source/ui64_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:106:  source/ui64_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:107:  source/ui64_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:108:  source/i32_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:113:  source/i32_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:114:  source/i32_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:115:  source/i64_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:120:  source/i64_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:121:  source/i64_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:122:  source/f16_to_ui32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:123:  source/f16_to_ui64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:124:  source/f16_to_i32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:125:  source/f16_to_i64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:126:  source/f16_to_ui32_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:127:  source/f16_to_ui64_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:128:  source/f16_to_i32_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:129:  source/f16_to_i64_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:130:  source/f16_to_f32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:131:  source/f16_to_f64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:132:  source/f16_to_extF80.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:133:  source/f16_to_extF80M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:134:  source/f16_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:135:  source/f16_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:136:  source/f16_roundToInt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:137:  source/f16_add.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:138:  source/f16_sub.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:139:  source/f16_mul.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:140:  source/f16_mulAdd.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:141:  source/f16_div.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:142:  source/f16_rem.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:143:  source/f16_sqrt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:144:  source/f16_eq.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:145:  source/f16_le.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:146:  source/f16_lt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:147:  source/f16_eq_signaling.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:148:  source/f16_le_quiet.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:149:  source/f16_lt_quiet.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:150:  source/f16_isSignalingNaN.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:159:  source/f32_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:163:  source/f32_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:164:  source/f32_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:188:  source/f64_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:192:  source/f64_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:193:  source/f64_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:217:  source/extF80_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:220:  source/extF80_to_f128.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:243:  source/extF80M_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:246:  source/extF80M_to_f128M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:260:  source/f128_to_ui32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:261:  source/f128_to_ui64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:262:  source/f128_to_i32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:263:  source/f128_to_i64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:264:  source/f128_to_ui32_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:265:  source/f128_to_ui64_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:266:  source/f128_to_i32_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:267:  source/f128_to_i64_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:268:  source/f128_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:269:  source/f128_to_f32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:270:  source/f128_to_extF80.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:271:  source/f128_to_f64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:272:  source/f128_roundToInt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:273:  source/f128_add.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:274:  source/f128_sub.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:275:  source/f128_mul.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:276:  source/f128_mulAdd.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:277:  source/f128_div.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:278:  source/f128_rem.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:279:  source/f128_sqrt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:280:  source/f128_eq.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:281:  source/f128_le.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:282:  source/f128_lt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:283:  source/f128_eq_signaling.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:284:  source/f128_le_quiet.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:285:  source/f128_lt_quiet.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:286:  source/f128_isSignalingNaN.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:287:  source/f128M_to_ui32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:288:  source/f128M_to_ui64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:289:  source/f128M_to_i32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:290:  source/f128M_to_i64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:291:  source/f128M_to_ui32_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:292:  source/f128M_to_ui64_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:293:  source/f128M_to_i32_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:294:  source/f128M_to_i64_r_minMag.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:295:  source/f128M_to_f16.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:296:  source/f128M_to_f32.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:297:  source/f128M_to_extF80M.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:298:  source/f128M_to_f64.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:299:  source/f128M_roundToInt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:300:  source/f128M_add.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:301:  source/f128M_sub.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:302:  source/f128M_mul.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:303:  source/f128M_mulAdd.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:304:  source/f128M_div.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:305:  source/f128M_rem.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:306:  source/f128M_sqrt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:307:  source/f128M_eq.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:308:  source/f128M_le.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:309:  source/f128M_lt.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:310:  source/f128M_eq_signaling.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:311:  source/f128M_le_quiet.c
+/home/rguig/eos/libraries/softfloat/CMakeLists.txt:312:  source/f128M_lt_quiet.c
+/home/rguig/eos/tests/nodeos_run_test.py:107:    testerbAccount.ownerPublicKey = '{"threshold":1, "accounts":[{"permission":{"actor": "' + testeraAccount.name + '", "permission":"owner"}, "weight": 1}],"keys":[{"key": "' +testerbOwner +  '", "weight": 1}],"waits":[]}'
+/home/rguig/eos/tests/nodeos_run_test.py:344:    data="{\"issuer\":\"currency1111\",\"maximum_supply\":\"100000.0000 CUR\",\"can_freeze\":\"0\",\"can_recall\":\"0\",\"can_whitelist\":\"0\"}"
+/home/rguig/eos/tests/ship_test.py:184:                            threshold=-500   # set negative to guarantee the block analysis gets returned
+/home/rguig/eos/tests/ship_test.py:185:                            blockAnalysis = node.analyzeProduction(specificBlockNum=blockNum, thresholdMs=threshold)
+/home/rguig/eos/tests/TestHelper.py:156:        def reportProductionAnalysis(thresholdMs):
+/home/rguig/eos/tests/TestHelper.py:159:                missedBlocks=node.analyzeProduction(thresholdMs=thresholdMs)
+/home/rguig/eos/tests/TestHelper.py:168:            reportProductionAnalysis(thresholdMs=0)
+/home/rguig/eos/tests/TestHelper.py:172:            reportProductionAnalysis(thresholdMs=200)
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:144:def fillFS(dir, threshold):
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:146:    warningAvailable = total * (100 - threshold) // 100
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:153:def testInterval(title, extraNodeosArgs, interval, expectedMsgs, warningThreshold):
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:159:    fillFS(dataDir, warningThreshold)
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:174:    testCommon("Resmon enabled: all arguments", "--plugin  eosio::resource_monitor_plugin --resource-monitor-space-threshold=85 --resource-monitor-interval-seconds=5 --resource-monitor-not-shutdown-on-threshold-exceeded", ["threshold set to 85", "interval set to 5", "Shutdown flag when threshold exceeded set to false", "Creating and starting monitor thread"])
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:177:    testCommon("Resmon not enabled: no arguments", "", ["interval set to 2", "threshold set to 90", "Shutdown flag when threshold exceeded set to true", "Creating and starting monitor thread", "snapshots's file system to be monitored", "blocks's file system to be monitored", "state's file system to be monitored"])
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:180:    testCommon("Resmon not enabled: Producer, Chain, State History and Trace Api", "--plugin eosio::state_history_plugin --state-history-dir=/tmp/state-history --disable-replay-opts --plugin eosio::trace_api_plugin --trace-dir=/tmp/trace --trace-no-abis", ["interval set to 2", "threshold set to 90", "Shutdown flag when threshold exceeded set to true", "snapshots's file system to be monitored", "blocks's file system to be monitored", "state's file system to be monitored", "state-history's file system to be monitored", "trace's file system to be monitored", "Creating and starting monitor thread"])
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:182:    testCommon("Resmon enabled: Producer, Chain, State History and Trace Api", "--plugin  eosio::resource_monitor_plugin --plugin eosio::state_history_plugin --state-history-dir=/tmp/state-history --disable-replay-opts --plugin eosio::trace_api_plugin --trace-dir=/tmp/trace --trace-no-abis --resource-monitor-space-threshold=80 --resource-monitor-interval-seconds=3", ["snapshots's file system to be monitored", "blocks's file system to be monitored", "state's file system to be monitored", "state-history's file system to be monitored", "trace's file system to be monitored", "Creating and starting monitor thread", "threshold set to 80", "interval set to 3", "Shutdown flag when threshold exceeded set to true"])
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:184:    # Only test minimum warning threshold (i.e. 6) to trigger warning as much as possible
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:186:        "--plugin eosio::resource_monitor_plugin --resource-monitor-space-threshold=6 --resource-monitor-warning-interval=5 --resource-monitor-not-shutdown-on-threshold-exceeded", 
+/home/rguig/eos/tests/resource_monitor_plugin_test.py:192:        "--plugin eosio::resource_monitor_plugin --resource-monitor-space-threshold=6 --resource-monitor-interval-seconds=1 --resource-monitor-not-shutdown-on-threshold-exceeded", 
+/home/rguig/eos/tests/Node.py:1530:    def analyzeProduction(self, specificBlockNum=None, thresholdMs=500):
+/home/rguig/eos/tests/Node.py:1569:                        limit = timedelta(milliseconds=thresholdMs)
+/home/rguig/.config/Codex/Subresource Filter/Unindexed Rules/9.71.0/LICENSE.txt:291:   LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:388:asdf1234
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:1381:asdf123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:2054:fordf150
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:2203:gandalf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:3067:fuckoff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:3822:asdf12
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:7045:gaucho
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:7550:chief1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:8526:f15eagle
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:8753:golf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:9544:hotsauce
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:10424:dbrf134
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:10988:fffff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:11235:abcdef1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:11281:asdf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:11493:golf12
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:11641:golf18
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:11744:vfvf123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:12204:ffffff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:12213:stuff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:12369:wolf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:12399:gznybwf13
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:12607:fffffff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:13148:chaucer
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:13619:abcdef123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:14548:gfif1991
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:14884:m1sf1t
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:15045:jeff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:15537:applesauce
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:15544:f123456
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:15848:smurf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:16102:tauchen
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:17073:asdf12345
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:17223:golf11
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:17862:wolf12
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:18127:f1f2f3
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19122:auckland2010
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19187:cfif123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19380:jeff123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19433:jeff1234
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19718:asdf11
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19836:cliff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:19932:taucher
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:20494:golf123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:20543:ffff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:21076:klapaucius
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:21983:dwarf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:22965:f12345
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:23108:vfvfgfgf123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:23381:mclarenf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:23538:asdfasdf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:23868:armyof1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:23930:gfgf1234
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:24064:abcdef12
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:24408:semperf1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:24478:sf161pn
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:24603:gbplf123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:24871:vfif123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:24949:f14tomcat
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:25169:1s1h1e1f1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:25587:jeff12
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:25695:golf1234
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:25998:jackoff1
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:26686:rfnthbyf1988
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:27154:f1f2f3f4
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:27804:vfvf12
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:28222:rauchen
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:29036:wolf13
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:29090:wolf100
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:29489:wolf123
+/home/rguig/.config/Codex/ZxcvbnData/3/passwords.txt:29961:chief123
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:1473:recall
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:1798:sauce
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:2372:auction
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:6041:caucasian
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:6278:saucer
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:6922:faucet
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:8403:beaucoup
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:9250:saucy
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:9834:debauchery
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:10820:saucers
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:11813:bureaucrats
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:14117:sauces
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:15417:bureaucrat
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:15485:auctioning
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:16238:drey'auc
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:16475:auctioneer
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:17308:glaucoma
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:18064:sha'nauc
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:18077:secaucus
+/home/rguig/.config/Codex/ZxcvbnData/3/us_tv_and_film.txt:18763:faucets
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:1717:saucedo
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:2427:beauchamp
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:2933:saucier
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:3382:rauch
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:4310:sauceda
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:4416:aucoin
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:4819:hauck
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:6442:baucom
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:7089:faucher
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:9153:strauch
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:9215:faucett
+/home/rguig/.config/Codex/ZxcvbnData/3/surnames.txt:9677:mauck
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:3018:recalled
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:3186:auckland
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:3374:confusion
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:3792:accuracy
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:4646:precision
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:5226:threshold
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:5905:caucus
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:5942:caucasus
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:6202:recalls
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:8956:bureaucracy
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:9374:recalling
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:10264:bureaucratic
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:10421:auctioned
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:10890:auctions
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:13964:cauchy
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:15938:caucuses
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:16119:thresholds
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:19323:cauca
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:20001:raucous
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:21593:vaucluse
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:24489:inaccuracy
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:25246:gauche
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:25338:caucasians
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:26657:paucity
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:28286:transcaucasian
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:28855:transcaucasia
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:29035:auchinleck
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:29479:glauca
+/home/rguig/.config/Codex/ZxcvbnData/3/english_wikipedia.txt:29645:gauchos
+/home/rguig/wgan2.py:17:from sklearn.metrics import accuracy_score, f1_score, classification_report
+/home/rguig/wgan2.py:250:class RecallAwareLoss(nn.Module):
+/home/rguig/wgan2.py:262:            recall = (preds[mask] == cls).float().mean()
+/home/rguig/wgan2.py:263:            penalty += (1.0 - recall)
+/home/rguig/wgan2.py:277:criterion = RecallAwareLoss(class_weights)
+/home/rguig/wgan2.py:280:best_f1, patience, counter = 0.0, 7, 0
+/home/rguig/wgan2.py:281:train_losses, val_f1 = [], []
+/home/rguig/wgan2.py:304:    macro_f1 = f1_score(y_t, y_p, average="macro", zero_division=0)
+/home/rguig/wgan2.py:306:    val_f1.append(macro_f1)
+/home/rguig/wgan2.py:308:    if macro_f1 > best_f1:
+/home/rguig/wgan2.py:309:        best_f1 = macro_f1
+/home/rguig/wgan2.py:320:    "macro_f1": val_f1
+/home/rguig/wgan2.py:337:accuracy = accuracy_score(y_true, y_pred)
+/home/rguig/wgan2.py:338:weighted_f1 = f1_score(y_true, y_pred, average="weighted", zero_division=0)
+/home/rguig/wgan2.py:339:macro_f1 = f1_score(y_true, y_pred, average="macro", zero_division=0)
+/home/rguig/wgan2.py:342:    "accuracy": accuracy,
+/home/rguig/wgan2.py:343:    "weighted_f1": weighted_f1,
+/home/rguig/wgan2.py:344:    "macro_f1": macro_f1
+/home/rguig/ToN-IoT/train_test_network.csv:20102:192.168.1.30,41328,192.168.1.184,443,tcp,-,60.968158,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:20138:192.168.1.30,41400,192.168.1.184,443,tcp,-,60.984071,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:20145:192.168.1.30,41414,192.168.1.184,443,tcp,-,60.964603,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:20154:192.168.1.30,41432,192.168.1.184,443,tcp,-,60.965624,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:20157:192.168.1.30,41438,192.168.1.184,443,tcp,-,60.960237,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:20164:192.168.1.30,41452,192.168.1.184,443,tcp,-,60.963491,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:20637:192.168.1.30,42334,192.168.1.184,443,tcp,-,60.965743,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21200:192.168.1.30,43466,192.168.1.184,443,tcp,ssl,60.984868,534,1791,S3,0,9,1022,10,2372,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21205:192.168.1.30,43476,192.168.1.184,443,tcp,-,60.982663,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21207:192.168.1.30,43480,192.168.1.184,443,tcp,-,60.969586,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21209:192.168.1.30,43484,192.168.1.184,443,tcp,-,60.960569,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21576:192.168.1.30,44200,192.168.1.184,443,tcp,-,60.984667,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21580:192.168.1.30,44208,192.168.1.184,443,tcp,-,60.961591,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21595:192.168.1.30,44238,192.168.1.184,443,tcp,-,60.960253,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21627:192.168.1.30,44318,192.168.1.184,443,tcp,-,60.988897,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21628:192.168.1.30,44320,192.168.1.184,443,tcp,-,60.986573,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21639:192.168.1.30,44342,192.168.1.184,443,tcp,-,60.969709,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21642:192.168.1.30,44348,192.168.1.184,443,tcp,-,60.965921,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21646:192.168.1.30,44356,192.168.1.184,443,tcp,-,60.960409,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21648:192.168.1.30,44360,192.168.1.184,443,tcp,-,60.960159,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21798:192.168.1.30,44656,192.168.1.184,443,tcp,-,60.188466,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21836:192.168.1.30,44732,192.168.1.184,443,tcp,-,60.980616,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:21839:192.168.1.30,44738,192.168.1.184,443,tcp,-,60.969531,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:22482:192.168.1.30,46008,192.168.1.184,443,tcp,-,60.988492,0,1,S1,1,3,164,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:23190:192.168.1.30,47408,192.168.1.184,443,tcp,-,60.987518,0,0,S3,0,2,112,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:23538:192.168.1.30,48080,192.168.1.184,443,tcp,-,60.964996,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:23541:192.168.1.30,48086,192.168.1.184,443,tcp,-,60.962444,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:23848:192.168.1.30,49450,192.168.1.184,80,tcp,http,20.960035,192,107,S3,0,5,460,4,323,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:31122:192.168.1.30,36596,192.168.1.190,80,tcp,-,0.045757,0,0,S1,0,2,112,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:33669:192.168.1.30,38522,192.168.1.190,80,tcp,-,0.045597,0,0,S1,0,2,112,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:33978:192.168.1.30,38610,192.168.1.190,80,tcp,-,0.045551,0,0,S1,0,2,112,1,60,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:34183:192.168.1.30,35784,192.168.1.184,80,tcp,http,20.963703,232,107,S3,0,5,500,4,323,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:34751:192.168.1.30,35638,192.168.1.184,443,tcp,-,60.988532,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:34752:192.168.1.30,35640,192.168.1.184,443,tcp,-,60.988563,0,0,S3,0,3,164,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:34903:192.168.1.31,34538,192.168.1.184,443,tcp,-,60.045525,0,0,S3,0,2,112,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:34918:192.168.1.31,57630,192.168.1.184,80,tcp,http,20.960896,206,107,S3,0,6,538,4,323,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:35325:192.168.1.30,36246,192.168.1.184,443,tcp,-,60.969741,0,0,S3,0,2,112,2,112,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos
+/home/rguig/ToN-IoT/train_test_network.csv:35395:192.168.1.30,56178,192.168.1.194,80,tcp,-,10.96466,0,0,OTH,0,2,104,2,120,-,0,0,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,-,-,-,-,-,-,1,ddos

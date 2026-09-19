@@ -1,0 +1,151 @@
+[0/1] Re-running CMake...
+-- Minimal build - OFF
+-- esp-idf-configdep will be used for faster recompilation
+-- Compiler launcher chain: esp-idf-configdep
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file /home/rguig/esp/sram_puf_clean/sdkconfig
+NOTE: Kconfig parser version: 1
+NOTE: Kconfig defaults policy: use sdkconfig
+NOTE: Status: Finished successfully
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_hal_regi2c/esp32/rom.regi2c.ld
+-- App "sram_puf" version: 1
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_system/ld/esp32/memory.ld.in
+--   -> Preprocessing .in script: /home/rguig/esp/esp-idf/components/esp_system/ld/esp32/memory.ld.in
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Preprocessing .in script: /home/rguig/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+--   -> Applying ldgen processing: /home/rguig/esp/sram_puf_clean/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/rguig/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libc-funcs.ld
+-- Adding linker script /home/rguig/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+CMake Warning at /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/rguig/esp/esp-idf/components/esp_wifi/wifi_apps/roaming_app/include'
+  belongs to component esp_wifi but is being used by component
+  wpa_supplicant.  It is recommended to define the component dependency for
+  wpa_supplicant on the component esp_wifi, i.e.  'idf_component_register(...
+  PRIV_REQUIRES esp_wifi)' in the CMakeLists.txt of wpa_supplicant, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component esp_wifi.
+Call Stack (most recent call first):
+  /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/rguig/esp/esp-idf/CMakeLists.txt:437 (__component_validation_run_checks)
+
+
+CMake Warning at /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/rguig/esp/esp-idf/components/esp_wifi/wifi_apps/roaming_app/src'
+  belongs to component esp_wifi but is being used by component
+  wpa_supplicant.  It is recommended to define the component dependency for
+  wpa_supplicant on the component esp_wifi, i.e.  'idf_component_register(...
+  PRIV_REQUIRES esp_wifi)' in the CMakeLists.txt of wpa_supplicant, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component esp_wifi.
+Call Stack (most recent call first):
+  /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/rguig/esp/esp-idf/CMakeLists.txt:437 (__component_validation_run_checks)
+
+
+CMake Warning at /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/rguig/esp/esp-idf/components/esp_wifi/wifi_apps/include/apps_private'
+  belongs to component esp_wifi but is being used by component
+  wpa_supplicant.  It is recommended to define the component dependency for
+  wpa_supplicant on the component esp_wifi, i.e.  'idf_component_register(...
+  PRIV_REQUIRES esp_wifi)' in the CMakeLists.txt of wpa_supplicant, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component esp_wifi.
+Call Stack (most recent call first):
+  /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/rguig/esp/esp-idf/CMakeLists.txt:437 (__component_validation_run_checks)
+
+
+CMake Warning at /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/rguig/esp/esp-idf/components/wpa_supplicant/src' belongs to
+  component wpa_supplicant but is being used by component esp_wifi.  It is
+  recommended to define the component dependency for esp_wifi on the
+  component wpa_supplicant, i.e.  'idf_component_register(...  PRIV_REQUIRES
+  wpa_supplicant)' in the CMakeLists.txt of esp_wifi, and specify the
+  included directory as idf_component_register(...  PRIV_INCLUDE_DIRS <dir
+  relative to component>) in the CMakeLists.txt of component wpa_supplicant.
+Call Stack (most recent call first):
+  /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/rguig/esp/esp-idf/CMakeLists.txt:437 (__component_validation_run_checks)
+
+
+CMake Warning at /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:106 (message):
+  Private include directory
+  '/home/rguig/esp/esp-idf/components/wpa_supplicant/esp_supplicant/src'
+  belongs to component wpa_supplicant but is being used by component
+  esp_wifi.  It is recommended to define the component dependency for
+  esp_wifi on the component wpa_supplicant, i.e.  'idf_component_register(...
+  PRIV_REQUIRES wpa_supplicant)' in the CMakeLists.txt of esp_wifi, and
+  specify the included directory as idf_component_register(...
+  PRIV_INCLUDE_DIRS <dir relative to component>) in the CMakeLists.txt of
+  component wpa_supplicant.
+Call Stack (most recent call first):
+  /home/rguig/esp/esp-idf/tools/cmake/component_validation.cmake:130 (__component_validation_check_include_dirs)
+  /home/rguig/esp/esp-idf/CMakeLists.txt:437 (__component_validation_run_checks)
+
+
+-- Component idf::esp_trace will be linked with -Wl,--whole-archive
+-- Linker: /home/rguig/.espressif/tools/xtensa-esp-elf/esp-16.1.0_20260609/xtensa-esp-elf/bin/xtensa-esp32-elf-ld (GNU ld (crosstool-NG esp-16.1.0_20260609) 2.46)
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_asrc_adapter esp_blockdev esp_blockdev_util esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_cam esp_driver_cordic esp_driver_dac esp_driver_dma esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_i3c esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sd_intf esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hal_ana_cmpr esp_hal_ana_conv esp_hal_asrc esp_hal_cam esp_hal_clock esp_hal_cordic esp_hal_debug_assist esp_hal_dma esp_hal_emac esp_hal_gpio esp_hal_gpspi esp_hal_i2c esp_hal_i2s esp_hal_i3c esp_hal_ieee802154 esp_hal_jpeg esp_hal_lcd esp_hal_ledc esp_hal_mcpwm esp_hal_mspi esp_hal_parlio esp_hal_pcnt esp_hal_pmu esp_hal_ppa esp_hal_regi2c esp_hal_rmt esp_hal_rtc_timer esp_hal_sd esp_hal_security esp_hal_systimer esp_hal_timg esp_hal_touch_sens esp_hal_twai esp_hal_uart esp_hal_usb esp_hal_wdt esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_image_verify esp_lcd esp_libc esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_riscv_trace esp_rom esp_security esp_stdio esp_system esp_timer esp_trace esp_usb_cdc_rom_console esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser ieee802154 log lwip main mbedtls nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread puf_boot_hooks rt sdmmc soc spi_flash spiffs tcp_transport ulp unity vfs wear_levelling wpa_supplicant xtensa
+-- Component paths: /home/rguig/esp/esp-idf/components/app_trace /home/rguig/esp/esp-idf/components/app_update /home/rguig/esp/esp-idf/components/bootloader /home/rguig/esp/esp-idf/components/bootloader_support /home/rguig/esp/esp-idf/components/bt /home/rguig/esp/esp-idf/components/cmock /home/rguig/esp/esp-idf/components/console /home/rguig/esp/esp-idf/components/cxx /home/rguig/esp/esp-idf/components/driver /home/rguig/esp/esp-idf/components/efuse /home/rguig/esp/esp-idf/components/esp-tls /home/rguig/esp/esp-idf/components/esp_adc /home/rguig/esp/esp-idf/components/esp_app_format /home/rguig/esp/esp-idf/components/esp_asrc_adapter /home/rguig/esp/esp-idf/components/esp_blockdev /home/rguig/esp/esp-idf/components/esp_blockdev_util /home/rguig/esp/esp-idf/components/esp_bootloader_format /home/rguig/esp/esp-idf/components/esp_coex /home/rguig/esp/esp-idf/components/esp_common /home/rguig/esp/esp-idf/components/esp_driver_ana_cmpr /home/rguig/esp/esp-idf/components/esp_driver_bitscrambler /home/rguig/esp/esp-idf/components/esp_driver_cam /home/rguig/esp/esp-idf/components/esp_driver_cordic /home/rguig/esp/esp-idf/components/esp_driver_dac /home/rguig/esp/esp-idf/components/esp_driver_dma /home/rguig/esp/esp-idf/components/esp_driver_gpio /home/rguig/esp/esp-idf/components/esp_driver_gptimer /home/rguig/esp/esp-idf/components/esp_driver_i2c /home/rguig/esp/esp-idf/components/esp_driver_i2s /home/rguig/esp/esp-idf/components/esp_driver_i3c /home/rguig/esp/esp-idf/components/esp_driver_isp /home/rguig/esp/esp-idf/components/esp_driver_jpeg /home/rguig/esp/esp-idf/components/esp_driver_ledc /home/rguig/esp/esp-idf/components/esp_driver_mcpwm /home/rguig/esp/esp-idf/components/esp_driver_parlio /home/rguig/esp/esp-idf/components/esp_driver_pcnt /home/rguig/esp/esp-idf/components/esp_driver_ppa /home/rguig/esp/esp-idf/components/esp_driver_rmt /home/rguig/esp/esp-idf/components/esp_driver_sd_intf /home/rguig/esp/esp-idf/components/esp_driver_sdio /home/rguig/esp/esp-idf/components/esp_driver_sdm /home/rguig/esp/esp-idf/components/esp_driver_sdmmc /home/rguig/esp/esp-idf/components/esp_driver_sdspi /home/rguig/esp/esp-idf/components/esp_driver_spi /home/rguig/esp/esp-idf/components/esp_driver_touch_sens /home/rguig/esp/esp-idf/components/esp_driver_tsens /home/rguig/esp/esp-idf/components/esp_driver_twai /home/rguig/esp/esp-idf/components/esp_driver_uart /home/rguig/esp/esp-idf/components/esp_driver_usb_serial_jtag /home/rguig/esp/esp-idf/components/esp_eth /home/rguig/esp/esp-idf/components/esp_event /home/rguig/esp/esp-idf/components/esp_gdbstub /home/rguig/esp/esp-idf/components/esp_hal_ana_cmpr /home/rguig/esp/esp-idf/components/esp_hal_ana_conv /home/rguig/esp/esp-idf/components/esp_hal_asrc /home/rguig/esp/esp-idf/components/esp_hal_cam /home/rguig/esp/esp-idf/components/esp_hal_clock /home/rguig/esp/esp-idf/components/esp_hal_cordic /home/rguig/esp/esp-idf/components/esp_hal_debug_assist /home/rguig/esp/esp-idf/components/esp_hal_dma /home/rguig/esp/esp-idf/components/esp_hal_emac /home/rguig/esp/esp-idf/components/esp_hal_gpio /home/rguig/esp/esp-idf/components/esp_hal_gpspi /home/rguig/esp/esp-idf/components/esp_hal_i2c /home/rguig/esp/esp-idf/components/esp_hal_i2s /home/rguig/esp/esp-idf/components/esp_hal_i3c /home/rguig/esp/esp-idf/components/esp_hal_ieee802154 /home/rguig/esp/esp-idf/components/esp_hal_jpeg /home/rguig/esp/esp-idf/components/esp_hal_lcd /home/rguig/esp/esp-idf/components/esp_hal_ledc /home/rguig/esp/esp-idf/components/esp_hal_mcpwm /home/rguig/esp/esp-idf/components/esp_hal_mspi /home/rguig/esp/esp-idf/components/esp_hal_parlio /home/rguig/esp/esp-idf/components/esp_hal_pcnt /home/rguig/esp/esp-idf/components/esp_hal_pmu /home/rguig/esp/esp-idf/components/esp_hal_ppa /home/rguig/esp/esp-idf/components/esp_hal_regi2c /home/rguig/esp/esp-idf/components/esp_hal_rmt /home/rguig/esp/esp-idf/components/esp_hal_rtc_timer /home/rguig/esp/esp-idf/components/esp_hal_sd /home/rguig/esp/esp-idf/components/esp_hal_security /home/rguig/esp/esp-idf/components/esp_hal_systimer /home/rguig/esp/esp-idf/components/esp_hal_timg /home/rguig/esp/esp-idf/components/esp_hal_touch_sens /home/rguig/esp/esp-idf/components/esp_hal_twai /home/rguig/esp/esp-idf/components/esp_hal_uart /home/rguig/esp/esp-idf/components/esp_hal_usb /home/rguig/esp/esp-idf/components/esp_hal_wdt /home/rguig/esp/esp-idf/components/esp_hid /home/rguig/esp/esp-idf/components/esp_http_client /home/rguig/esp/esp-idf/components/esp_http_server /home/rguig/esp/esp-idf/components/esp_https_ota /home/rguig/esp/esp-idf/components/esp_https_server /home/rguig/esp/esp-idf/components/esp_hw_support /home/rguig/esp/esp-idf/components/esp_image_verify /home/rguig/esp/esp-idf/components/esp_lcd /home/rguig/esp/esp-idf/components/esp_libc /home/rguig/esp/esp-idf/components/esp_local_ctrl /home/rguig/esp/esp-idf/components/esp_mm /home/rguig/esp/esp-idf/components/esp_netif /home/rguig/esp/esp-idf/components/esp_netif_stack /home/rguig/esp/esp-idf/components/esp_partition /home/rguig/esp/esp-idf/components/esp_phy /home/rguig/esp/esp-idf/components/esp_pm /home/rguig/esp/esp-idf/components/esp_psram /home/rguig/esp/esp-idf/components/esp_ringbuf /home/rguig/esp/esp-idf/components/esp_riscv_trace /home/rguig/esp/esp-idf/components/esp_rom /home/rguig/esp/esp-idf/components/esp_security /home/rguig/esp/esp-idf/components/esp_stdio /home/rguig/esp/esp-idf/components/esp_system /home/rguig/esp/esp-idf/components/esp_timer /home/rguig/esp/esp-idf/components/esp_trace /home/rguig/esp/esp-idf/components/esp_usb_cdc_rom_console /home/rguig/esp/esp-idf/components/esp_wifi /home/rguig/esp/esp-idf/components/espcoredump /home/rguig/esp/esp-idf/components/esptool_py /home/rguig/esp/esp-idf/components/fatfs /home/rguig/esp/esp-idf/components/freertos /home/rguig/esp/esp-idf/components/hal /home/rguig/esp/esp-idf/components/heap /home/rguig/esp/esp-idf/components/http_parser /home/rguig/esp/esp-idf/components/ieee802154 /home/rguig/esp/esp-idf/components/log /home/rguig/esp/esp-idf/components/lwip /home/rguig/esp/sram_puf_clean/main /home/rguig/esp/esp-idf/components/mbedtls /home/rguig/esp/esp-idf/components/nvs_flash /home/rguig/esp/esp-idf/components/nvs_sec_provider /home/rguig/esp/esp-idf/components/openthread /home/rguig/esp/esp-idf/components/partition_table /home/rguig/esp/esp-idf/components/perfmon /home/rguig/esp/esp-idf/components/protobuf-c /home/rguig/esp/esp-idf/components/protocomm /home/rguig/esp/esp-idf/components/pthread /home/rguig/esp/sram_puf_clean/bootloader_components/puf_boot_hooks /home/rguig/esp/esp-idf/components/rt /home/rguig/esp/esp-idf/components/sdmmc /home/rguig/esp/esp-idf/components/soc /home/rguig/esp/esp-idf/components/spi_flash /home/rguig/esp/esp-idf/components/spiffs /home/rguig/esp/esp-idf/components/tcp_transport /home/rguig/esp/esp-idf/components/ulp /home/rguig/esp/esp-idf/components/unity /home/rguig/esp/esp-idf/components/vfs /home/rguig/esp/esp-idf/components/wear_levelling /home/rguig/esp/esp-idf/components/wpa_supplicant /home/rguig/esp/esp-idf/components/xtensa
+-- Configuring done (7.5s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/rguig/esp/sram_puf_clean/build
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lpofi_zk_binding.c.obj
+[2/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sram_puf.c.obj
+/home/rguig/esp/sram_puf_clean/main/sram_puf.c:20:13: warning: 'print_puf_capture' defined but not used [-Wunused-function]
+   20 | static void print_puf_capture(void)
+      |             ^~~~~~~~~~~~~~~~~
+[3/10] Linking C static library esp-idf/main/libmain.a
+[4/10] Performing build step for 'bootloader'
+[1/1] cd /home/rguig/esp/sram_puf_clean/build/bootloader && /home/rguig/.espressif/python_env/idf6.2_py3.12_env/bin/python /home/rguig/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/rguig/esp/sram_puf_clean/build/bootloader/bootloader.bin
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[5/10] No install step for 'bootloader'
+[6/10] Completed 'bootloader'
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+Skipping linker fragment parsing, fragment files unchanged
+[8/10] Linking CXX executable sram_puf.elf
+[9/10] Generating binary image from built executable
+esptool v5.4.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Generated /home/rguig/esp/sram_puf_clean/build/sram_puf.bin
+[10/10] cd /home/rguig/esp/sram_puf_clean/build && /home/rguig/.espressif/python_env/idf6.2_py3.12_env/bin/python /home/rguig/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/rguig/esp/sram_puf_clean/build/partition_table/partition-table.bin /home/rguig/esp/sram_puf_clean/build/sram_puf.bin
+sram_puf.bin binary size 0x3d130 bytes. Smallest app partition is 0x100000 
+bytes. 0xc2ed0 bytes (76%) free.
+Executing action: all (aliases: build)
+Running ninja in directory /home/rguig/esp/sram_puf_clean/build
+Executing "ninja all"...
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32 -b 460800 --before default-reset --after hard-reset write-flash --flash-mode dio --flash-size 4MB --flash-freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/sram_puf.bin
+or from the "/home/rguig/esp/sram_puf_clean/build" directory
+ python -m esptool --chip esp32 -b 460800 --before default-reset --after hard-reset write-flash "@flash_args"

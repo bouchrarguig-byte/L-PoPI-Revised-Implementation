@@ -1,0 +1,40 @@
+
+========================================================================
+data_1.csv
+========================================================================
+rows: 1000000
+stime min: 1526344031.66514
+stime max: 1526949252.645503
+monotonic after sort: True
+
+Chronological deciles:
+B0: N=100,000 benign=671 attack=99,329 categories={'Reconnaissance': 99329, 'Normal': 671}
+B1: N=100,000 benign=550 attack=99,450 categories={'Reconnaissance': 99450, 'Normal': 550}
+B2: N=100,000 benign=1 attack=99,999 categories={'Reconnaissance': 99999, 'Normal': 1}
+B3: N=100,000 benign=0 attack=100,000 categories={'Reconnaissance': 100000}
+B4: N=100,000 benign=393 attack=99,607 categories={'Reconnaissance': 99607, 'Normal': 393}
+B5: N=100,000 benign=5 attack=99,995 categories={'Reconnaissance': 99995, 'Normal': 5}
+B6: N=100,000 benign=0 attack=100,000 categories={'Reconnaissance': 100000}
+B7: N=100,000 benign=198 attack=99,802 categories={'Reconnaissance': 99802, 'Normal': 198}
+B8: N=100,000 benign=175 attack=99,825 categories={'Reconnaissance': 99825, 'Normal': 175}
+B9: N=100,000 benign=0 attack=100,000 categories={'Reconnaissance': 100000}
+
+========================================================================
+data_2.csv
+========================================================================
+rows: 1000000
+stime min: 1526875505.554498
+stime max: 1529381833.932704
+monotonic after sort: True
+
+Chronological deciles:
+B0: N=100,000 benign=1,106 attack=98,894 categories={'Reconnaissance': 98894, 'Normal': 1106}
+B1: N=100,000 benign=872 attack=99,128 categories={'Reconnaissance': 99128, 'Normal': 872}
+B2: N=100,000 benign=441 attack=99,559 categories={'Reconnaissance': 99559, 'Normal': 441}
+B3: N=100,000 benign=1,210 attack=98,790 categories={'Reconnaissance': 98790, 'Normal': 1210}
+B4: N=100,000 benign=66 attack=99,934 categories={'Reconnaissance': 99934, 'Normal': 66}
+B5: N=100,000 benign=1 attack=99,999 categories={'Reconnaissance': 99999, 'Normal': 1}
+B6: N=100,000 benign=7 attack=99,993 categories={'Reconnaissance': 99993, 'Normal': 7}
+B7: N=100,000 benign=662 attack=99,338 categories={'Reconnaissance': 99338, 'Normal': 662}
+B8: N=100,000 benign=332 attack=99,668 categories={'DoS': 71671, 'Reconnaissance': 27997, 'Normal': 332}
+B9: N=100,000 benign=244 attack=99,756 categories={'DoS': 98169, 'Theft': 1587, 'Normal': 244}

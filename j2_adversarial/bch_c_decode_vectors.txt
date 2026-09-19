@@ -1,0 +1,6 @@
+clean              flips= 0 decoder=  0 match=True
+one_data_bit       flips= 1 decoder=  1 match=True
+one_ecc_bit        flips= 1 decoder=  1 match=True
+eight_spread       flips= 8 decoder=  8 match=True
+sixteen_spread     flips=16 decoder= 16 match=True
+seventeen_spread   flips=17 decoder= -1 match=False

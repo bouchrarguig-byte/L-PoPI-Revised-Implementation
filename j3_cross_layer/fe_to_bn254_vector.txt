@@ -1,0 +1,9 @@
+scheme: lpofi-fe-key-to-bn254-fr-v1
+FE key SHA256: 8cd7f4ba23dcd232ca29dfda2129a89fe107899609c645c8116dcf8e9f9b771d
+counter: 16
+candidate: 2d0f8b26238c2b74c819a98f00ddc09ee4cd1bb9d486fdffc0342182d699daa2
+scalar decimal: 20381541263182433181125994181280330857900782190627183313278923050233798187682
+scalar < r: True
+scalar != 0: True
+output: j3_cross_layer/fe_to_bn254_vector.json
+J3_FE_TO_BN254_VECTOR_OK

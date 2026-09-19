@@ -1,0 +1,49 @@
+/home/rguig/smote.py:10:from sklearn.model_selection import train_test_split
+/home/rguig/smote.py:15:from torch_geometric.loader import DataLoader as PyGLoader
+/home/rguig/smote.py:37:# LOAD DATASET
+/home/rguig/smote.py:39:print("[INFO] Loading dataset...")
+/home/rguig/smote.py:40:df = pd.read_csv("/home/rguig/Downloads/RT-IoT2022/rt_iot2022_prepared.csv")
+/home/rguig/smote.py:84:X_train, X_test, y_train, y_test = train_test_split(X_win, y_win, test_size=0.2, random_state=SEED, stratify=y_win)
+/home/rguig/final.py:10:from sklearn.model_selection import train_test_split
+/home/rguig/final.py:13:from torch_geometric.loader import DataLoader as PyGLoader
+/home/rguig/final.py:35:# LOAD DATASET
+/home/rguig/final.py:37:print("[INFO] Loading dataset...")
+/home/rguig/final.py:38:df = pd.read_csv("/home/rguig/Downloads/RT-IoT2022/rt_iot2022_prepared.csv")
+/home/rguig/final.py:77:X_train, X_test, y_train, y_test = train_test_split(X_win, y_win, test_size=0.2, random_state=SEED, stratify=y_win)
+/home/rguig/full2.py:3:Ultimate optimized NF-UNSW-NB15 v2 MLP Training Pipeline (Patched for AMP Safety)
+/home/rguig/full2.py:22:from torch.utils.data import TensorDataset, DataLoader
+/home/rguig/full2.py:24:from sklearn.model_selection import train_test_split
+/home/rguig/full2.py:42:DATA_PATH = "/home/rguig/Downloads/fe6cb615d161452c_MOHANAD_A4706/data/NF-UNSW-NB15-v2.csv"
+/home/rguig/full2.py:58:df = pd.read_csv(DATA_PATH)
+/home/rguig/full2.py:59:print(f"[INFO] Loaded dataset: {df.shape} rows")
+/home/rguig/full2.py:101:X_train, X_test, y_train, y_test = train_test_split(
+/home/rguig/full2.py:139:train_ds = TensorDataset(torch.tensor(X_train), torch.tensor(y_train))
+/home/rguig/full2.py:140:test_ds = TensorDataset(torch.tensor(X_test), torch.tensor(y_test))
+/home/rguig/full2.py:142:train_loader = DataLoader(train_ds, batch_size=BATCH_SIZE, shuffle=True)
+/home/rguig/full2.py:143:test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False)
+/home/rguig/dataset.py:44:class BoTIoTFullLoader:
+/home/rguig/dataset.py:61:        data_files = [f for f in all_csvs if "data_names" not in f]
+/home/rguig/dataset.py:65:            df = pd.read_csv(file, low_memory=False).sample(n=50000, random_state=42, replace=True)
+/home/rguig/dataset.py:104:    DATA_PATH = "/home/rguig/BoT-IoT"
+/home/rguig/dataset.py:107:    loader = BoTIoTFullLoader(DATA_PATH)
+/home/rguig/dataset_smt.py:44:class BoTIoTFullLoader:
+/home/rguig/dataset_smt.py:45:    def __init__(self, base_path="/home/rguig/BoT-IoT"):
+/home/rguig/dataset_smt.py:47:        names_path = os.path.join(self.base_path, "data_names.csv")
+/home/rguig/dataset_smt.py:48:        names_df = pd.read_csv(names_path)
+/home/rguig/dataset_smt.py:64:        data_files = [f for f in all_csvs if "data_names" not in f]
+/home/rguig/dataset_smt.py:67:            df = pd.read_csv(file, header=None, names=self.headers, low_memory=False)
+/home/rguig/dataset_smt.py:102:    loader = BoTIoTFullLoader()
+/home/rguig/f2.py:10:from sklearn.model_selection import train_test_split
+/home/rguig/f2.py:13:from torch_geometric.loader import DataLoader as PyGLoader
+/home/rguig/f2.py:35:# LOAD DATASET
+/home/rguig/f2.py:37:print("[INFO] Loading dataset...")
+/home/rguig/f2.py:38:df = pd.read_csv("/home/rguig/Downloads/RT-IoT2022/rt_iot2022_prepared.csv")
+/home/rguig/f2.py:80:X_train, X_test, y_train, y_test = train_test_split(X_win, y_win, test_size=0.2, random_state=SEED, stratify=y_win)
+/home/rguig/v2.py:81:        print("Loading and Balancing ToN_IoT Dataset...")
+/home/rguig/v2.py:82:        df = pd.read_csv(self.file_path)
+/home/rguig/test.py:6:from sklearn.model_selection import train_test_split
+/home/rguig/test.py:12:from torch_geometric.loader import DataLoader as PyGLoader
+/home/rguig/test.py:29:# LOAD DATASET
+/home/rguig/test.py:31:print("[INFO] Loading dataset...")
+/home/rguig/test.py:32:df = pd.read_csv("/home/rguig/Downloads/RT-IoT2022/rt_iot2022_prepared.csv")  # update path
+/home/rguig/test.py:99:train_graphs, test_graphs = train_test_split(graphs, test_size=0.2, random_state=42)

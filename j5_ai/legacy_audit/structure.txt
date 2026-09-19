@@ -1,0 +1,80 @@
+
+======================================================================
+/home/rguig/smote.py
+======================================================================
+FUNCTION create_windows line= 67
+FUNCTION windows_to_graphs line= 96
+CLASS    CBIDIPS bases= nn.Module line= 115
+
+======================================================================
+/home/rguig/final.py
+======================================================================
+FUNCTION create_windows line= 62
+FUNCTION windows_to_graphs line= 88
+CLASS    CBIDIPS bases= nn.Module line= 107
+
+======================================================================
+/home/rguig/full2.py
+======================================================================
+CLASS    ResidualBlock bases= nn.Module line= 149
+CLASS    ResidualMLP bases= nn.Module line= 163
+
+======================================================================
+/home/rguig/dataset.py
+======================================================================
+CLASS    CognitiveGAT bases= torch.nn.Module line= 15
+CLASS    BoTIoTFullLoader bases=  line= 44
+
+======================================================================
+/home/rguig/dataset_smt.py
+======================================================================
+CLASS    CognitiveGAT bases= torch.nn.Module line= 16
+CLASS    BoTIoTFullLoader bases=  line= 44
+
+======================================================================
+/home/rguig/2.py
+======================================================================
+FUNCTION generate_separated_distribution line= 5
+FUNCTION generate_evolution_plot line= 37
+
+======================================================================
+/home/rguig/b.py
+======================================================================
+FUNCTION run_sensitivity_analysis line= 4
+
+======================================================================
+/home/rguig/f2.py
+======================================================================
+FUNCTION create_windows line= 63
+FUNCTION windows_to_graphs line= 92
+CLASS    CBIDIPS bases= nn.Module line= 111
+
+======================================================================
+/home/rguig/v2.py
+======================================================================
+CLASS    CogGATLayer bases= torch.nn.Module line= 13
+CLASS    CogGAT bases= torch.nn.Module line= 42
+CLASS    ToNIoTProcessor bases=  line= 67
+
+======================================================================
+/home/rguig/test.py
+======================================================================
+FUNCTION create_windows line= 59
+FUNCTION windows_to_graphs line= 86
+CLASS    CBIDIPS bases= nn.Module line= 106
+
+======================================================================
+/home/rguig/Desktop/L-PoPI_Project/main_lpopi.py
+======================================================================
+CLASS    PacketProfileAutoencoder bases= nn.Module line= 20
+FUNCTION run_command line= 47
+FUNCTION start_ids_sniffer line= 56
+FUNCTION main line= 97
+
+======================================================================
+/home/rguig/Desktop/L-PoPI_Project/main_lpopi-humainlog.py
+======================================================================
+CLASS    PacketProfileAutoencoder bases= nn.Module line= 20
+FUNCTION run_command line= 47
+FUNCTION start_ids_sniffer line= 54
+FUNCTION main line= 89

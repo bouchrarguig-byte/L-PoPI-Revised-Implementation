@@ -1,0 +1,66 @@
+=== J5-B FROZEN CHALLENGE ===
+MODEL_SHA256 = 62abe9e985cadb5c4a5c09c76e3bd4736b0600e69428e32207856bd7db851211
+POLICY_SHA256 = 4f9c26e8e9f98e69a50bb2d399a411f6f3bf5d9eac7927f1de613e2a7e0216b9
+Frozen artifact hashes: PASS
+
+alpha = 0.1
+lambda = 0.5
+tau_fast = 0.3502524895843741
+u_limit = 0.7
+
+Challenge N = 33683
+Challenge categories:
+category
+Reconnaissance    23814
+Normal             4941
+DoS                4888
+Theft                40
+
+Challenge graph: nodes=33,683 directed_edges=134,268
+
+=== PRIMARY FROZEN CHALLENGE RESULTS ===
+
+B1
+  benign_FAST = 7.893139%
+  attack_FAST = 0.678450%
+  total_FAST  = 1.736781%
+  DPI         = 98.263219%
+
+B2
+  benign_FAST = 7.893139%
+  attack_FAST = 0.678450%
+  total_FAST  = 1.736781%
+  DPI         = 98.263219%
+
+=== CATEGORY ROUTING ===
+
+DoS N= 4888
+  B1: FAST=0.613748% DPI=99.386252%
+  B2: FAST=0.613748% DPI=99.386252%
+
+Normal N= 4941
+  B1: FAST=7.893139% DPI=92.106861%
+  B2: FAST=7.893139% DPI=92.106861%
+
+Reconnaissance N= 23814
+  B1: FAST=0.587889% DPI=99.412111%
+  B2: FAST=0.587889% DPI=99.412111%
+
+Theft N= 40
+  B1: FAST=62.500000% DPI=37.500000%
+  B2: FAST=62.500000% DPI=37.500000%
+
+=== RECON SUBCATEGORY ROUTING ===
+
+OS_Fingerprint N= 10320
+  B1: FAST=0.843023% DPI=99.156977%
+  B2: FAST=0.843023% DPI=99.156977%
+
+Service_Scan N= 13494
+  B1: FAST=0.392767% DPI=99.607233%
+  B2: FAST=0.392767% DPI=99.607233%
+
+PREDICTIONS_SHA256 = 197bd90c8eadb756c731980f2b69cb53e9f1c1fb58001eee5d9d23d9680750c1
+METRICS_SHA256 = 38adde54976fe713f1de155273757469a78a727e14e383bfb53faa1cf7720231
+
+J5B_FROZEN_CHALLENGE_OPENED_OK

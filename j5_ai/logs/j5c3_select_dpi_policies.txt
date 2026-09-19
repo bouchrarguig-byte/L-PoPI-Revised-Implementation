@@ -1,0 +1,26 @@
+=== J5-C3 VAL BASELINE ===
+tau_fast = 0.461821713918829
+benign_FAST = 84.656085%
+attack_FAST = 0.730331%
+total_FAST  = 4.099841%
+DPI         = 95.900159%
+
+=== J5-C3 VAL ADAPTIVE ===
+beta                   0.050000
+min_history            2.000000
+tau_trust              0.700000
+elevated_tau           0.816655
+benign_fast            0.846561
+attack_fast            0.007303
+total_fast             0.040998
+dpi_rate               0.959002
+privileged_fraction    0.020074
+
+Benign FAST gain vs baseline = 0.000000 percentage points
+
+GRID_SHA256 = f1c063aa84b3c1533744b3ef3e3ba3ce49796385aac8c07309976a0f257a2b92
+POLICY_SHA256 = 8ec219d8fe6031e94f4458cef92aa2c03842747a91d5b75a4505f1176f497899
+TEST_C_SEALED_SHA256 = fd098dd3c5bdaffc0432101f32f657f505dd4053072054979cdec8c334f2343c
+
+TEST-C remains unopened.
+J5C3_DPI_POLICIES_FROZEN_OK

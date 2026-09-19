@@ -1,0 +1,15 @@
+{
+  "seed": 20260916,
+  "attack_to_benign_ratio_cap": 10,
+  "features": [
+    "pkts",
+    "bytes",
+    "seq",
+    "dur"
+  ],
+  "split_manifest_sha256": "747d142f5eb6a1b9b829edf776691e0d014d008ad23c9dbdeab3039c60fd0550",
+  "preprocessing": "StandardScaler fitted exclusively on TRAIN",
+  "smote": false,
+  "synthetic_samples": false,
+  "evaluation_note": "Controlled evaluation cohort; natural BoT-IoT prevalence is reported separately."
+}

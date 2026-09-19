@@ -1,0 +1,29 @@
+{
+  "experiment": "J5-B attack-family-shift",
+  "seed": 20260916,
+  "excluded_from_training": "data_2.csv",
+  "challenge_opened": false,
+  "original_j5_test_used": false,
+  "train_files": 51,
+  "train_nodes": 38730,
+  "val_files": 11,
+  "val_nodes": 7216,
+  "best_epoch": 100,
+  "val_roc_auc": 0.7772129219958358,
+  "val_threshold_macro_f1": 0.29800000000000004,
+  "val_macro_f1": 0.7634828799566924,
+  "architecture": {
+    "input_features": 4,
+    "conv1_out": 16,
+    "conv1_heads": 4,
+    "conv2_out": 16,
+    "conv2_heads": 2,
+    "output_classes": 2,
+    "dropout": 0.2
+  },
+  "optimizer": {
+    "name": "Adam",
+    "lr": 0.001,
+    "weight_decay": 1e-05
+  }
+}

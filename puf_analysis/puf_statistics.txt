@@ -1,0 +1,143 @@
+ESP32 SRAM-PUF EXPERIMENTAL ANALYSIS
+======================================================================
+
+Experimental configuration
+----------------------------------------------------------------------
+Number of captures: 30
+Regions analyzed: [1, 2, 3]
+Region size: 256 bytes
+Region size: 2048 bits
+Enrollment reference: Capture 1
+Capture type: RESET captures
+
+IMPORTANT LIMITATION
+----------------------------------------------------------------------
+The experiment evaluates intra-device stability under repeated reset captures.
+It does not establish inter-device uniqueness because only one physical ESP32 was evaluated.
+
+======================================================================
+REGION 1
+======================================================================
+
+BIT-LEVEL RELIABILITY
+----------------------------------------------------------------------
+Mean reliability: 96.1751%
+Median reliability: 100.0000%
+Minimum reliability: 50.0000%
+Maximum reliability: 100.0000%
+
+Bits >= 90%: 1812 (88.48%)
+Bits >= 95%: 1727 (84.33%)
+Bits >= 97%: 1614 (78.81%)
+Bits >= 99%: 1614 (78.81%)
+Bits < 90%: 236 (11.52%)
+
+PAIRWISE HAMMING DISTANCE
+----------------------------------------------------------------------
+Mean: 113.9126
+Median: 114.0000
+Standard deviation: 9.5913
+Minimum: 87
+Maximum: 151
+95th percentile: 129.0000
+99th percentile: 136.6400
+
+PAIRWISE BER
+----------------------------------------------------------------------
+Mean: 5.5621%
+Median: 5.5664%
+Standard deviation: 0.4683%
+Minimum: 4.2480%
+Maximum: 7.3730%
+95th percentile: 6.2988%
+99th percentile: 6.6719%
+
+REFERENCE CAPTURE BER
+----------------------------------------------------------------------
+Mean BER vs Capture 1: 5.2539%
+Maximum BER vs Capture 1: 6.2500%
+
+======================================================================
+REGION 2
+======================================================================
+
+BIT-LEVEL RELIABILITY
+----------------------------------------------------------------------
+Mean reliability: 96.1556%
+Median reliability: 100.0000%
+Minimum reliability: 50.0000%
+Maximum reliability: 100.0000%
+
+Bits >= 90%: 1800 (87.89%)
+Bits >= 95%: 1707 (83.35%)
+Bits >= 97%: 1616 (78.91%)
+Bits >= 99%: 1616 (78.91%)
+Bits < 90%: 248 (12.11%)
+
+PAIRWISE HAMMING DISTANCE
+----------------------------------------------------------------------
+Mean: 116.4598
+Median: 117.0000
+Standard deviation: 8.8507
+Minimum: 85
+Maximum: 139
+95th percentile: 130.0000
+99th percentile: 135.6600
+
+PAIRWISE BER
+----------------------------------------------------------------------
+Mean: 5.6865%
+Median: 5.7129%
+Standard deviation: 0.4322%
+Minimum: 4.1504%
+Maximum: 6.7871%
+95th percentile: 6.3477%
+99th percentile: 6.6240%
+
+REFERENCE CAPTURE BER
+----------------------------------------------------------------------
+Mean BER vs Capture 1: 5.8008%
+Maximum BER vs Capture 1: 6.7871%
+
+======================================================================
+REGION 3
+======================================================================
+
+BIT-LEVEL RELIABILITY
+----------------------------------------------------------------------
+Mean reliability: 95.9880%
+Median reliability: 100.0000%
+Minimum reliability: 50.0000%
+Maximum reliability: 100.0000%
+
+Bits >= 90%: 1801 (87.94%)
+Bits >= 95%: 1700 (83.01%)
+Bits >= 97%: 1622 (79.20%)
+Bits >= 99%: 1622 (79.20%)
+Bits < 90%: 247 (12.06%)
+
+PAIRWISE HAMMING DISTANCE
+----------------------------------------------------------------------
+Mean: 119.3172
+Median: 120.0000
+Standard deviation: 8.4285
+Minimum: 92
+Maximum: 144
+95th percentile: 133.0000
+99th percentile: 136.6600
+
+PAIRWISE BER
+----------------------------------------------------------------------
+Mean: 5.8260%
+Median: 5.8594%
+Standard deviation: 0.4115%
+Minimum: 4.4922%
+Maximum: 7.0312%
+95th percentile: 6.4941%
+99th percentile: 6.6729%
+
+REFERENCE CAPTURE BER
+----------------------------------------------------------------------
+Mean BER vs Capture 1: 5.7373%
+Maximum BER vs Capture 1: 6.4941%
+

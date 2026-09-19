@@ -1,0 +1,15 @@
+# ========================= L-PoPI Git exclusions ========================= ESP-IDF generated files
+build/ managed_components/ sdkconfig.old
+# Python
+.venv/ venv/ __pycache__/ *.pyc *.pyo .pytest_cache/
+# Node.js
+node_modules/
+# Circom / snarkjs generated large files
+*.ptau
+# Secrets / credentials
+.env .env.* *.pem *.key *.p12 *.pfx
+# IDE / OS
+.vscode/ .idea/ .DS_Store Thumbs.db
+# Temporary files
+*.tmp *.swp
+*~

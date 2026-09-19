@@ -1,0 +1,13 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 180.22ms
+Compiler run successful!
+
+Ran 5 tests for test/LPoPIAttestationVerifierFEFinal.t.sol:LPoPIAttestationVerifierFEFinalTest
+[PASS] testFEProof1001CryptographicallyValid() (gas: 216873)
+[PASS] testFEProof1002CryptographicallyValid() (gas: 216895)
+[PASS] testFEReplay1001RejectedAfter1002() (gas: 459737)
+[PASS] testOldFEProofWithHigherNonceRejected() (gas: 225694)
+[PASS] testTwoSequentialFEAttestations() (gas: 457715)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 23.40ms (34.50ms CPU time)
+
+Ran 1 test suite in 39.36ms (23.40ms CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)

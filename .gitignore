@@ -1,0 +1,56 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# ESP-IDF / build
+build/
+sdkconfig.old
+
+# Circom / generated heavy artifacts
+*.ptau
+
+# OS / editors
+.DS_Store
+.vscode/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Datasets
+datasets/
+data/raw/
+
+# Additional generated/cache directories
+**/.venv/
+**/venv/
+**/__pycache__/
+**/build/
+**/node_modules/
+.pytest_cache/
+**/.pytest_cache/
+*.pyo
+*.swp
+*~
+
+# Nested environments / dependencies
+**/.venv/
+**/venv/
+**/node_modules/
+
+# Generated build directories
+**/build/
+**/build_opt/
+**/build_audit/
+**/build_3pub/
+
+# Python caches
+**/__pycache__/
+**/.pytest_cache/

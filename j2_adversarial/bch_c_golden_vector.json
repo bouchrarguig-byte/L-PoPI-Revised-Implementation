@@ -1,0 +1,15 @@
+{
+  "library": "bchlib",
+  "library_version": "2.1.3",
+  "scheme": "BCH-C",
+  "m": 9,
+  "t": 16,
+  "n": 511,
+  "ecc_bits": 144,
+  "ecc_bytes": 18,
+  "bit_order": "MSB-first within each byte",
+  "data_hex": "00112233445566778899aabbccddeeff",
+  "ecc_hex": "553bd00d2cf1fa8bb202207f53f62e81915c",
+  "packet_hex": "00112233445566778899aabbccddeeff553bd00d2cf1fa8bb202207f53f62e81915c",
+  "packet_sha256": "fade29dc9bd4a628dd6c80e7b443a37528ce7b9e34cd61ea71cc237a22ac8e58"
+}

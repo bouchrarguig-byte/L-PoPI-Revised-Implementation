@@ -1,0 +1,37 @@
+L-PoPI BCH-C FUZZY EXTRACTOR -- PHYSICAL COLD-POWER RESULT
+
+Platform: ESP32 rev v3.0
+CPU: 160 MHz
+ESP-IDF: v6.1-dev-7562-g85c826ecb1d
+
+BCH-C:
+m=9
+t=16
+n=511
+ecc_bits=144
+secret_bits=128
+shortened_packet_bits=272
+selected_sram_bits=272
+
+Protocol:
+10 prospectively recorded physical cold-power trials.
+Frozen enrollment/helper.
+No reflashing between trials.
+
+Corrected errors:
+1,1,1,2,1,2,1,3,5,0
+
+Trials:                  10
+Successful BCH decode:   10/10
+Commitment PASS:         10/10
+PUF reproduction PASS:   10/10
+Minimum corrected:       0
+Maximum corrected:       5
+Mean corrected:          1.7
+
+Firmware binary SHA256:
+dea116278ae42d51384c06deb3897b26dfd2208fb3d2ea8e421414d7da068edb
+
+Scope:
+Results characterize the evaluated ESP32 prototype and these trials only.
+They do not establish cross-device PUF uniqueness or population-level reliability.

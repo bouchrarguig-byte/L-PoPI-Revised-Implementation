@@ -1,0 +1,10 @@
+
+ data_1.csv
+Normal N= 1993 stime_min= 1526344031.66514 stime_max= 1526949243.996163
+Reconnaissance N= 998007 stime_min= 1526344326.389036 stime_max= 1526949252.645503
+
+ data_2.csv
+DoS N= 169840 stime_min= 1528081321.636679 stime_max= 1528090077.785131
+Normal N= 4941 stime_min= 1526875505.554498 stime_max= 1529381722.053556
+Reconnaissance N= 823632 stime_min= 1526876109.391454 stime_max= 1526983416.729573
+Theft N= 1587 stime_min= 1529283907.8517 stime_max= 1529381833.932704

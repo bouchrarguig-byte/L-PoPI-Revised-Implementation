@@ -1,0 +1,127 @@
+DEVICE: cuda
+train: nodes=86,226 directed_edges=341,978 files=50
+val: nodes=9,415 directed_edges=37,290 files=12
+CLASS_WEIGHTS: [1.0, 0.11334056407213211]
+epoch=001 loss=0.724788 val_auc=0.685267
+epoch=002 loss=0.714493 val_auc=0.783189
+epoch=003 loss=0.673813 val_auc=0.835424
+epoch=004 loss=0.655522 val_auc=0.863307
+epoch=005 loss=0.632145 val_auc=0.875466
+epoch=006 loss=0.619261 val_auc=0.881005
+epoch=007 loss=0.606873 val_auc=0.884072
+epoch=008 loss=0.592648 val_auc=0.886260
+epoch=009 loss=0.584730 val_auc=0.888024
+epoch=010 loss=0.572512 val_auc=0.889471
+epoch=011 loss=0.561831 val_auc=0.890757
+epoch=012 loss=0.555595 val_auc=0.891920
+epoch=013 loss=0.547387 val_auc=0.892959
+epoch=014 loss=0.543494 val_auc=0.893975
+epoch=015 loss=0.538438 val_auc=0.894905
+epoch=016 loss=0.535697 val_auc=0.895865
+epoch=017 loss=0.529187 val_auc=0.896758
+epoch=018 loss=0.524161 val_auc=0.897666
+epoch=019 loss=0.521463 val_auc=0.898455
+epoch=020 loss=0.520569 val_auc=0.899192
+epoch=021 loss=0.520060 val_auc=0.899940
+epoch=022 loss=0.513633 val_auc=0.900643
+epoch=023 loss=0.511440 val_auc=0.901341
+epoch=024 loss=0.514330 val_auc=0.901985
+epoch=025 loss=0.508485 val_auc=0.902604
+epoch=026 loss=0.510113 val_auc=0.903207
+epoch=027 loss=0.512252 val_auc=0.903782
+epoch=028 loss=0.508615 val_auc=0.904359
+epoch=029 loss=0.506577 val_auc=0.904919
+epoch=030 loss=0.505177 val_auc=0.905431
+epoch=031 loss=0.504314 val_auc=0.905938
+epoch=032 loss=0.504360 val_auc=0.906442
+epoch=033 loss=0.501681 val_auc=0.906929
+epoch=034 loss=0.505095 val_auc=0.907386
+epoch=035 loss=0.502695 val_auc=0.907838
+epoch=036 loss=0.500590 val_auc=0.908285
+epoch=037 loss=0.501064 val_auc=0.908698
+epoch=038 loss=0.501202 val_auc=0.909093
+epoch=039 loss=0.498412 val_auc=0.909486
+epoch=040 loss=0.498363 val_auc=0.909853
+epoch=041 loss=0.499222 val_auc=0.910221
+epoch=042 loss=0.497580 val_auc=0.910566
+epoch=043 loss=0.500547 val_auc=0.910897
+epoch=044 loss=0.494777 val_auc=0.911220
+epoch=045 loss=0.497546 val_auc=0.911524
+epoch=046 loss=0.497203 val_auc=0.911824
+epoch=047 loss=0.496849 val_auc=0.912110
+epoch=048 loss=0.498253 val_auc=0.912375
+epoch=049 loss=0.495276 val_auc=0.912647
+epoch=050 loss=0.495816 val_auc=0.912913
+epoch=051 loss=0.490267 val_auc=0.913168
+epoch=052 loss=0.490439 val_auc=0.913389
+epoch=053 loss=0.490585 val_auc=0.913611
+epoch=054 loss=0.490169 val_auc=0.913846
+epoch=055 loss=0.487679 val_auc=0.914071
+epoch=056 loss=0.487417 val_auc=0.914290
+epoch=057 loss=0.487741 val_auc=0.914503
+epoch=058 loss=0.491139 val_auc=0.914724
+epoch=059 loss=0.483905 val_auc=0.914927
+epoch=060 loss=0.488396 val_auc=0.915138
+epoch=061 loss=0.486195 val_auc=0.915324
+epoch=062 loss=0.485580 val_auc=0.915503
+epoch=063 loss=0.488680 val_auc=0.915678
+epoch=064 loss=0.485718 val_auc=0.915849
+epoch=065 loss=0.485661 val_auc=0.916025
+epoch=066 loss=0.484625 val_auc=0.916200
+epoch=067 loss=0.483987 val_auc=0.916355
+epoch=068 loss=0.484086 val_auc=0.916509
+epoch=069 loss=0.483737 val_auc=0.916661
+epoch=070 loss=0.485188 val_auc=0.916806
+epoch=071 loss=0.484617 val_auc=0.916950
+epoch=072 loss=0.484539 val_auc=0.917100
+epoch=073 loss=0.481687 val_auc=0.917235
+epoch=074 loss=0.484248 val_auc=0.917395
+epoch=075 loss=0.481147 val_auc=0.917538
+epoch=076 loss=0.481124 val_auc=0.917688
+epoch=077 loss=0.479350 val_auc=0.917827
+epoch=078 loss=0.480383 val_auc=0.917969
+epoch=079 loss=0.480005 val_auc=0.918095
+epoch=080 loss=0.479491 val_auc=0.918239
+epoch=081 loss=0.480658 val_auc=0.918370
+epoch=082 loss=0.476237 val_auc=0.918498
+epoch=083 loss=0.480570 val_auc=0.918626
+epoch=084 loss=0.476267 val_auc=0.918755
+epoch=085 loss=0.475646 val_auc=0.918877
+epoch=086 loss=0.475941 val_auc=0.919004
+epoch=087 loss=0.476091 val_auc=0.919124
+epoch=088 loss=0.474798 val_auc=0.919250
+epoch=089 loss=0.474669 val_auc=0.919371
+epoch=090 loss=0.475776 val_auc=0.919495
+epoch=091 loss=0.473848 val_auc=0.919620
+epoch=092 loss=0.476342 val_auc=0.919750
+epoch=093 loss=0.473414 val_auc=0.919871
+epoch=094 loss=0.474268 val_auc=0.919992
+epoch=095 loss=0.475292 val_auc=0.920121
+epoch=096 loss=0.471061 val_auc=0.920251
+epoch=097 loss=0.472341 val_auc=0.920372
+epoch=098 loss=0.471284 val_auc=0.920487
+epoch=099 loss=0.473476 val_auc=0.920617
+epoch=100 loss=0.473197 val_auc=0.920728
+
+BEST_EPOCH: 100
+VAL_ROC_AUC: 0.9207280123513386
+VAL_THRESHOLD: 0.305
+VAL_MACRO_F1: 0.9304557587324578
+
+=== J5-C3 PRE-TEST FREEZE ===
+TEST-C used in training = NO
+TEST-C predictions computed = NO
+train files = 50
+train nodes = 86226
+val files = 12
+val nodes = 9415
+best_epoch = 100
+val_roc_auc = 0.9207280123513387
+val_threshold = 0.305
+val_macro_f1 = 0.9304557587324578
+
+MODEL_SHA256 = 00787a6ad095713d6ea3710a1166cdae3bbbdaa21f2208e7a8840b6b092ba6bc
+FREEZE_SHA256 = 65d808b232c58893f3846029093c19bbd3cdfaec28b6147bb2774d42645a21be
+VAL_PREDICTIONS_SHA256 = daec8ef003328f597a7061f796e0006b5609b66cda62c28ede46662fc24519b7
+
+J5C3_PRETEST_FREEZE_OK

@@ -1,0 +1,98 @@
+DEVICE: cuda
+TRAIN benign: 6583
+TRAIN attack: 65830
+pos_weight: 0.10000000149011612
+epoch=001 loss=0.106579 val_auc=0.711447
+epoch=002 loss=0.088167 val_auc=0.721676
+epoch=003 loss=0.084321 val_auc=0.792018
+epoch=004 loss=0.081716 val_auc=0.819450
+epoch=005 loss=0.079482 val_auc=0.828851
+epoch=006 loss=0.078042 val_auc=0.834077
+epoch=007 loss=0.077069 val_auc=0.840725
+epoch=008 loss=0.075436 val_auc=0.845193
+epoch=009 loss=0.074649 val_auc=0.848081
+epoch=010 loss=0.073628 val_auc=0.854380
+epoch=011 loss=0.073212 val_auc=0.860292
+epoch=012 loss=0.072081 val_auc=0.863266
+epoch=013 loss=0.071252 val_auc=0.868305
+epoch=014 loss=0.070747 val_auc=0.871706
+epoch=015 loss=0.070366 val_auc=0.879620
+epoch=016 loss=0.069644 val_auc=0.879514
+epoch=017 loss=0.068646 val_auc=0.881334
+epoch=018 loss=0.068337 val_auc=0.884989
+epoch=019 loss=0.067655 val_auc=0.885296
+epoch=020 loss=0.066787 val_auc=0.887261
+epoch=021 loss=0.065966 val_auc=0.893291
+epoch=022 loss=0.065200 val_auc=0.890260
+epoch=023 loss=0.064516 val_auc=0.890189
+epoch=024 loss=0.063577 val_auc=0.894266
+epoch=025 loss=0.063080 val_auc=0.893813
+epoch=026 loss=0.062856 val_auc=0.895482
+epoch=027 loss=0.061786 val_auc=0.896284
+epoch=028 loss=0.061469 val_auc=0.894986
+epoch=029 loss=0.060976 val_auc=0.896743
+epoch=030 loss=0.060487 val_auc=0.895066
+epoch=031 loss=0.059880 val_auc=0.892730
+epoch=032 loss=0.059728 val_auc=0.895498
+epoch=033 loss=0.059610 val_auc=0.895672
+epoch=034 loss=0.059318 val_auc=0.895418
+epoch=035 loss=0.058935 val_auc=0.894302
+epoch=036 loss=0.058331 val_auc=0.896123
+epoch=037 loss=0.058182 val_auc=0.897451
+epoch=038 loss=0.058007 val_auc=0.900591
+epoch=039 loss=0.057650 val_auc=0.896758
+epoch=040 loss=0.057413 val_auc=0.895207
+epoch=041 loss=0.056926 val_auc=0.893200
+epoch=042 loss=0.057077 val_auc=0.901132
+epoch=043 loss=0.056895 val_auc=0.892778
+epoch=044 loss=0.057027 val_auc=0.891849
+epoch=045 loss=0.056335 val_auc=0.892858
+epoch=046 loss=0.056261 val_auc=0.896528
+epoch=047 loss=0.056046 val_auc=0.894315
+epoch=048 loss=0.056224 val_auc=0.890274
+epoch=049 loss=0.056037 val_auc=0.895646
+epoch=050 loss=0.055801 val_auc=0.895435
+epoch=051 loss=0.055714 val_auc=0.890067
+epoch=052 loss=0.055653 val_auc=0.891228
+epoch=053 loss=0.055188 val_auc=0.893464
+epoch=054 loss=0.055271 val_auc=0.895358
+EARLY_STOP
+
+BEST_EPOCH: 42
+VAL_ROC_AUC: 0.901132370984533
+VAL_THRESHOLD: 0.055
+VAL_MACRO_F1: 0.8189906794253253
+
+=== LOCKED TEST METRICS ===
+seed = 20260916
+best_epoch = 42
+threshold_selected_on_validation = 0.055
+test_accuracy = 0.9292140151515151
+test_balanced_accuracy = 0.6139973958333333
+test_macro_f1 = 0.6662921348314607
+test_mcc = 0.45225368117583825
+test_roc_auc = 0.9203471431025751
+test_pr_auc_attack = 0.990658027295081
+benign_precision = 0.96875
+benign_recall = 0.2287326388888889
+benign_f1 = 0.37008426966292135
+attack_precision = 0.9283467741935484
+attack_recall = 0.9992621527777777
+attack_f1 = 0.9625
+tn = 527
+fp = 1777
+fn = 17
+tp = 23023
+fpr = 0.7712673611111112
+fnr = 0.0007378472222222222
+
+=== TEST ATTACK RECALL BY CATEGORY ===
+DDoS: N=5347 attack_recall=1.000000
+DoS: N=3494 attack_recall=1.000000
+Reconnaissance: N=14199 attack_recall=0.998803
+
+=== INFERENCE LATENCY ===
+{'batch_size': 4096, 'mean_batch_ms': 0.15847300003770215, 'median_batch_ms': 0.14509249967886717, 'mean_us_per_flow': 0.038689697274829626}
+
+MODEL_SHA256: f903a942b602e8baed4cd2c86386827a9df91cf1629a8b26c98ce826273d64c6
+J5_MLP_BASELINE_OK

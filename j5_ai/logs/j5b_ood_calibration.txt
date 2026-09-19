@@ -1,0 +1,39 @@
+=== J5-B OOD GUARD CALIBRATION ===
+Challenge file excluded: data_2.csv
+Challenge rows used in calibration: 0
+
+Calibration N = 38730
+Calibration files = 51
+Benign reference N = 1642
+Features = ['z_pkts', 'z_bytes', 'z_seq', 'z_dur']
+
+=== BENIGN REFERENCE DISTANCE ===
+q=  0.5: 1.144159176
+q= 0.75: 1.856440730
+q=  0.9: 2.737686413
+q= 0.95: 3.408830240
+q=0.975: 4.238812798
+q= 0.99: 6.171683460
+q=0.995: 7.892389630
+q=0.999: 13.593535488
+
+=== PRE-DECLARED OOD THRESHOLDS ===
+benign quantile 0.9: tau_D=2.737686413
+benign quantile 0.95: tau_D=3.408830240
+benign quantile 0.975: tau_D=4.238812798
+benign quantile 0.99: tau_D=6.171683460
+benign quantile 0.995: tau_D=7.892389630
+benign quantile 0.999: tau_D=13.593535488
+
+=== CALIBRATION-SET ROUTING BY DISTANCE ONLY ===
+q=  0.9 | benign_in= 89.95% | attack_in= 87.76%
+q= 0.95 | benign_in= 94.95% | attack_in= 93.70%
+q=0.975 | benign_in= 97.44% | attack_in= 95.66%
+q= 0.99 | benign_in= 98.96% | attack_in= 99.38%
+q=0.995 | benign_in= 99.45% | attack_in=100.00%
+q=0.999 | benign_in= 99.88% | attack_in=100.00%
+
+Saved: /home/rguig/esp/sram_puf_clean/j5_ai/results/j5b/j5b_ood_calibration.json
+SHA256: 4ad9ed5756673edde13f9c837bd4370018827a618b6d2fd203bb739b5b4a5b03
+
+J5B_OOD_CALIBRATION_OK

@@ -1,0 +1,19 @@
+No files changed, compilation skipped
+
+Ran 5 tests for test/LPoPIAttestationVerifier.t.sol:LPoPIAttestationVerifierTest
+[PASS] testExactReplayRejected() (gas: 246330)
+[PASS] testModifiedDeviceIDRejected() (gas: 223140)
+[PASS] testModifiedNonceRejected() (gas: 223123)
+[PASS] testModifiedSessionCommitmentRejected() (gas: 223207)
+[PASS] testValidFirstAttestation() (gas: 244087)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 5.62ms (21.26ms CPU time)
+
+Ran 5 tests for test/Groth16Verifier.t.sol:Groth16VerifierTest
+[PASS] testExactReplayStillCryptographicallyValid() (gas: 427792)
+[PASS] testModifiedDeviceIDRejected() (gas: 216695)
+[PASS] testModifiedNonceRejected() (gas: 216679)
+[PASS] testModifiedSessionCommitmentRejected() (gas: 216779)
+[PASS] testValidProof() (gas: 216705)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 6.71ms (24.63ms CPU time)
+
+Ran 2 test suites in 8.32ms (12.33ms CPU time): 10 tests passed, 0 failed, 0 skipped (10 total tests)

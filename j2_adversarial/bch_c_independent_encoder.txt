@@ -1,0 +1,21 @@
+zero           PASS
+  expected = 000000000000000000000000000000000000
+  actual   = 000000000000000000000000000000000000
+ff             PASS
+  expected = 42ccf4450f0ff432e2cc165010b1e452a234
+  actual   = 42ccf4450f0ff432e2cc165010b1e452a234
+incrementing   PASS
+  expected = c4c67b8286cd8601c7df5bc1b1fa01ffd4fd
+  actual   = c4c67b8286cd8601c7df5bc1b1fa01ffd4fd
+golden         PASS
+  expected = 553bd00d2cf1fa8bb202207f53f62e81915c
+  actual   = 553bd00d2cf1fa8bb202207f53f62e81915c
+walking_msb    PASS
+  expected = e3aa8e6788880e2b93aa1d7818e9167bf32e
+  actual   = e3aa8e6788880e2b93aa1d7818e9167bf32e
+walking_lsb    PASS
+  expected = 2b6bd0545db34c1e01d5296e58c8ed2701ad
+  actual   = 2b6bd0545db34c1e01d5296e58c8ed2701ad
+
+RESULT 6/6
+BCH_C_INDEPENDENT_ENCODER_OK

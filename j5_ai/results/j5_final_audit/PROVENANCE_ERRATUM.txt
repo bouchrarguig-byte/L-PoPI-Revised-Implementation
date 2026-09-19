@@ -1,0 +1,18 @@
+J5 PROVENANCE ERRATUM
+
+Artifact:
+results/j5c3/gatv2/j5c3_pretest_freeze.json
+
+The field:
+"experiment": "J5-B attack-family-shift"
+
+is a descriptive copy/paste labeling error.
+
+The artifact belongs to experiment J5-C3, as established by its
+J5-C3 paths, TEST-C flags, split/model/prediction hashes, and the
+subsequent frozen J5-C3 policy.
+
+No numerical result, model parameter, split, prediction, policy
+parameter, or test result is changed by this erratum.
+
+The original artifact is preserved unchanged for provenance.

@@ -1,0 +1,84 @@
+[01/74] data_1.csv: N=1,000,000 benign=1,993 attack=998,007 attack%=99.80
+[02/74] data_2.csv: N=1,000,000 benign=4,941 attack=995,059 attack%=99.51
+[03/74] data_3.csv: N=1,000,000 benign=107 attack=999,893 attack%=99.99
+[04/74] data_4.csv: N=1,000,000 benign=98 attack=999,902 attack%=99.99
+[05/74] data_5.csv: N=1,000,000 benign=76 attack=999,924 attack%=99.99
+[06/74] data_6.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[07/74] data_7.csv: N=1,000,000 benign=41 attack=999,959 attack%=100.00
+[08/74] data_8.csv: N=1,000,000 benign=27 attack=999,973 attack%=100.00
+[09/74] data_9.csv: N=1,000,000 benign=38 attack=999,962 attack%=100.00
+[10/74] data_10.csv: N=1,000,000 benign=30 attack=999,970 attack%=100.00
+[11/74] data_11.csv: N=1,000,000 benign=40 attack=999,960 attack%=100.00
+[12/74] data_12.csv: N=1,000,000 benign=27 attack=999,973 attack%=100.00
+[13/74] data_13.csv: N=1,000,000 benign=32 attack=999,968 attack%=100.00
+[14/74] data_14.csv: N=1,000,000 benign=37 attack=999,963 attack%=100.00
+[15/74] data_15.csv: N=1,000,000 benign=50 attack=999,950 attack%=100.00
+[16/74] data_16.csv: N=1,000,000 benign=28 attack=999,972 attack%=100.00
+[17/74] data_17.csv: N=1,000,000 benign=35 attack=999,965 attack%=100.00
+[18/74] data_18.csv: N=1,000,000 benign=31 attack=999,969 attack%=100.00
+[19/74] data_19.csv: N=1,000,000 benign=34 attack=999,966 attack%=100.00
+[20/74] data_20.csv: N=1,000,000 benign=24 attack=999,976 attack%=100.00
+[21/74] data_21.csv: N=1,000,000 benign=35 attack=999,965 attack%=100.00
+[22/74] data_22.csv: N=1,000,000 benign=45 attack=999,955 attack%=100.00
+[23/74] data_23.csv: N=1,000,000 benign=38 attack=999,962 attack%=100.00
+[24/74] data_24.csv: N=1,000,000 benign=35 attack=999,965 attack%=100.00
+[25/74] data_25.csv: N=1,000,000 benign=36 attack=999,964 attack%=100.00
+[26/74] data_26.csv: N=1,000,000 benign=24 attack=999,976 attack%=100.00
+[27/74] data_27.csv: N=1,000,000 benign=38 attack=999,962 attack%=100.00
+[28/74] data_28.csv: N=1,000,000 benign=26 attack=999,974 attack%=100.00
+[29/74] data_29.csv: N=1,000,000 benign=32 attack=999,968 attack%=100.00
+[30/74] data_30.csv: N=1,000,000 benign=36 attack=999,964 attack%=100.00
+[31/74] data_31.csv: N=1,000,000 benign=25 attack=999,975 attack%=100.00
+[32/74] data_32.csv: N=1,000,000 benign=36 attack=999,964 attack%=100.00
+[33/74] data_33.csv: N=1,000,000 benign=27 attack=999,973 attack%=100.00
+[34/74] data_34.csv: N=1,000,000 benign=32 attack=999,968 attack%=100.00
+[35/74] data_35.csv: N=1,000,000 benign=102 attack=999,898 attack%=99.99
+[36/74] data_36.csv: N=1,000,000 benign=31 attack=999,969 attack%=100.00
+[37/74] data_37.csv: N=1,000,000 benign=34 attack=999,966 attack%=100.00
+[38/74] data_38.csv: N=1,000,000 benign=29 attack=999,971 attack%=100.00
+[39/74] data_39.csv: N=1,000,000 benign=34 attack=999,966 attack%=100.00
+[40/74] data_40.csv: N=1,000,000 benign=35 attack=999,965 attack%=100.00
+[41/74] data_41.csv: N=1,000,000 benign=31 attack=999,969 attack%=100.00
+[42/74] data_42.csv: N=1,000,000 benign=27 attack=999,973 attack%=100.00
+[43/74] data_43.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[44/74] data_44.csv: N=1,000,000 benign=39 attack=999,961 attack%=100.00
+[45/74] data_45.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[46/74] data_46.csv: N=1,000,000 benign=31 attack=999,969 attack%=100.00
+[47/74] data_47.csv: N=1,000,000 benign=36 attack=999,964 attack%=100.00
+[48/74] data_48.csv: N=1,000,000 benign=25 attack=999,975 attack%=100.00
+[49/74] data_49.csv: N=1,000,000 benign=41 attack=999,959 attack%=100.00
+[50/74] data_50.csv: N=1,000,000 benign=30 attack=999,970 attack%=100.00
+[51/74] data_51.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[52/74] data_52.csv: N=1,000,000 benign=26 attack=999,974 attack%=100.00
+[53/74] data_53.csv: N=1,000,000 benign=34 attack=999,966 attack%=100.00
+[54/74] data_54.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[55/74] data_55.csv: N=1,000,000 benign=36 attack=999,964 attack%=100.00
+[56/74] data_56.csv: N=1,000,000 benign=32 attack=999,968 attack%=100.00
+[57/74] data_57.csv: N=1,000,000 benign=24 attack=999,976 attack%=100.00
+[58/74] data_58.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[59/74] data_59.csv: N=1,000,000 benign=34 attack=999,966 attack%=100.00
+[60/74] data_60.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[61/74] data_61.csv: N=1,000,000 benign=32 attack=999,968 attack%=100.00
+[62/74] data_62.csv: N=1,000,000 benign=28 attack=999,972 attack%=100.00
+[63/74] data_63.csv: N=1,000,000 benign=31 attack=999,969 attack%=100.00
+[64/74] data_64.csv: N=1,000,000 benign=26 attack=999,974 attack%=100.00
+[65/74] data_65.csv: N=1,000,000 benign=35 attack=999,965 attack%=100.00
+[66/74] data_66.csv: N=1,000,000 benign=47 attack=999,953 attack%=100.00
+[67/74] data_67.csv: N=1,000,000 benign=39 attack=999,961 attack%=100.00
+[68/74] data_68.csv: N=1,000,000 benign=28 attack=999,972 attack%=100.00
+[69/74] data_69.csv: N=1,000,000 benign=38 attack=999,962 attack%=100.00
+[70/74] data_70.csv: N=1,000,000 benign=29 attack=999,971 attack%=100.00
+[71/74] data_71.csv: N=1,000,000 benign=28 attack=999,972 attack%=100.00
+[72/74] data_72.csv: N=1,000,000 benign=33 attack=999,967 attack%=100.00
+[73/74] data_73.csv: N=1,000,000 benign=34 attack=999,966 attack%=100.00
+[74/74] data_74.csv: N=370,443 benign=19 attack=370,424 attack%=99.99
+
+=== GLOBAL ===
+files: 74
+rows: 73,370,443
+benign: 9,543
+attack: 73,360,900
+attack fraction: 99.9870%
+
+Saved:
+/home/rguig/esp/sram_puf_clean/j5_ai/results/botiot_file_distribution.csv

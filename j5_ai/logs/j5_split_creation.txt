@@ -1,0 +1,32 @@
+=== FINAL GROUPED SPLIT ===
+
+TRAIN
+files: 52
+rows: 51,370,443
+benign: 6,583
+attack: 51,363,860
+global benign share: 68.983%
+file list:
+data_10.csv, data_11.csv, data_12.csv, data_13.csv, data_16.csv, data_17.csv, data_18.csv, data_2.csv, data_20.csv, data_21.csv, data_23.csv, data_24.csv, data_25.csv, data_26.csv, data_28.csv, data_29.csv, data_30.csv, data_32.csv, data_33.csv, data_34.csv, data_36.csv, data_37.csv, data_38.csv, data_39.csv, data_41.csv, data_42.csv, data_43.csv, data_45.csv, data_48.csv, data_49.csv, data_51.csv, data_53.csv, data_54.csv, data_56.csv, data_57.csv, data_58.csv, data_60.csv, data_61.csv, data_62.csv, data_63.csv, data_64.csv, data_65.csv, data_66.csv, data_67.csv, data_69.csv, data_7.csv, data_70.csv, data_71.csv, data_72.csv, data_73.csv, data_74.csv, data_9.csv
+
+VAL
+files: 11
+rows: 11,000,000
+benign: 656
+attack: 10,999,344
+global benign share: 6.874%
+file list:
+data_14.csv, data_15.csv, data_22.csv, data_27.csv, data_3.csv, data_35.csv, data_4.csv, data_46.csv, data_47.csv, data_5.csv, data_55.csv
+
+TEST
+files: 11
+rows: 11,000,000
+benign: 2,304
+attack: 10,997,696
+global benign share: 24.143%
+file list:
+data_1.csv, data_19.csv, data_31.csv, data_40.csv, data_44.csv, data_50.csv, data_52.csv, data_59.csv, data_6.csv, data_68.csv, data_8.csv
+
+Optimization score: 0.6652349816950653
+Manifest: /home/rguig/esp/sram_puf_clean/j5_ai/results/j5_split_manifest.json
+SHA256: 747d142f5eb6a1b9b829edf776691e0d014d008ad23c9dbdeab3039c60fd0550

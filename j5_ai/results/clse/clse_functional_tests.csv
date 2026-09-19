@@ -1,0 +1,8 @@
+id,description,zk_valid,freshness_valid,risk,expected,observed,pass
+S1,valid ZK + fresh + benign behavior,True,True,0.1,ACCEPT,ACCEPT,True
+S2,invalid ZK + fresh + benign behavior,False,True,0.1,REJECT_CRYPTO,REJECT_CRYPTO,True
+S3,valid ZK + fresh + intermediate risk,True,True,0.5,MONITOR,MONITOR,True
+S4,valid ZK + fresh + suspicious behavior,True,True,0.9,RESTRICT,RESTRICT,True
+S5,invalid ZK + suspicious behavior,False,True,0.9,REJECT_CRYPTO,REJECT_CRYPTO,True
+S6,replayed/stale proof + benign behavior,True,False,0.1,REJECT_FRESHNESS,REJECT_FRESHNESS,True
+S7,replayed/stale proof + suspicious behavior,True,False,0.9,REJECT_FRESHNESS,REJECT_FRESHNESS,True

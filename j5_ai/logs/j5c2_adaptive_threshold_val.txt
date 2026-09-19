@@ -1,0 +1,61 @@
+=== J5-C2 ADAPTIVE THRESHOLD — VAL ONLY ===
+N = 7216
+files = 11
+data_2 present = False
+
+=== J5-B VAL REFERENCE ===
+benign_FAST = 55.792683%
+attack_FAST = 0.990854%
+total_FAST = 5.972838%
+
+=== BEST ADAPTIVE CONFIGS BY SECURITY BUDGET ===
+
+ATTACK FAST <= 0.10%
+NO FEASIBLE CONFIG
+
+ATTACK FAST <= 0.25%
+NO FEASIBLE CONFIG
+
+ATTACK FAST <= 0.50%
+NO FEASIBLE CONFIG
+
+ATTACK FAST <= 0.75%
+NO FEASIBLE CONFIG
+
+ATTACK FAST <= 1.00%
+beta                   0.050000
+min_history            2.000000
+tau_trust              0.500000
+elevated_tau           0.740000
+benign_fast            0.597561
+attack_fast            0.009909
+total_fast             0.063331
+dpi_rate               0.936669
+privileged_fraction    0.036863
+
+ATTACK FAST <= 2.00%
+beta                   0.050000
+min_history            2.000000
+tau_trust              0.500000
+elevated_tau           0.740000
+benign_fast            0.597561
+attack_fast            0.009909
+total_fast             0.063331
+dpi_rate               0.936669
+privileged_fraction    0.036863
+
+=== J5-C2 CANDIDATE UNDER 1% ===
+beta                   0.050000
+min_history            2.000000
+tau_trust              0.500000
+elevated_tau           0.740000
+benign_fast            0.597561
+attack_fast            0.009909
+total_fast             0.063331
+dpi_rate               0.936669
+privileged_fraction    0.036863
+absolute benign FAST gain = 3.963415 percentage points
+relative benign FAST gain = 7.103825%
+
+GRID_SHA256 = c4f0992765daeef4051969cf0380a52a07d1f67928f927d821944a691926d781
+J5C2_ADAPTIVE_VAL_SEARCH_OK

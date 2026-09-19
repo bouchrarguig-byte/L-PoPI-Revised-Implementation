@@ -1,0 +1,35 @@
+=== J3 INPUT ===
+{
+  "k": "514631507721405306298073637848375664226723355710112857507800679889911926255",
+  "deviceID": "1",
+  "nonce": "1001",
+  "enrollmentCommitment": "6105576984148100997313938535153708518444427338464231626758362898858877715403",
+  "sessionCommitment": "11167065929995995387674979222335532309296919600142009452484393719817525303837"
+}
+=== J3 R1CS ===
+[32;22m[INFO]  [39;1msnarkJS[0m: Curve: bn-128
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Wires: 1126
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Constraints: 1122
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Private Inputs: 1
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Public Inputs: 4
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Labels: 1707
+[32;22m[INFO]  [39;1msnarkJS[0m: # of Outputs: 0
+
+=== J3 WITNESS ===
+[32;22m[INFO]  [39;1msnarkJS[0m: WITNESS CHECKING STARTED
+[32;22m[INFO]  [39;1msnarkJS[0m: > Reading r1cs file
+[32;22m[INFO]  [39;1msnarkJS[0m: > Reading witness file
+[32;22m[INFO]  [39;1msnarkJS[0m: ----------------------------
+[32;22m[INFO]  [39;1msnarkJS[0m:   WITNESS CHECK
+[32;22m[INFO]  [39;1msnarkJS[0m:   Curve:          bn128
+[32;22m[INFO]  [39;1msnarkJS[0m:   Vars (wires):   1126
+[32;22m[INFO]  [39;1msnarkJS[0m:   Outputs:        0
+[32;22m[INFO]  [39;1msnarkJS[0m:   Public Inputs:  4
+[32;22m[INFO]  [39;1msnarkJS[0m:   Private Inputs: 1
+[32;22m[INFO]  [39;1msnarkJS[0m:   Labels:         1707
+[32;22m[INFO]  [39;1msnarkJS[0m:   Constraints:    1122
+[32;22m[INFO]  [39;1msnarkJS[0m:   Custom Gates:   false
+[32;22m[INFO]  [39;1msnarkJS[0m: ----------------------------
+[32;22m[INFO]  [39;1msnarkJS[0m: > Checking witness correctness
+[32;22m[INFO]  [39;1msnarkJS[0m: WITNESS IS CORRECT
+[32;22m[INFO]  [39;1msnarkJS[0m: WITNESS CHECKING FINISHED SUCCESSFULLY

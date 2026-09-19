@@ -1,0 +1,7 @@
+{
+  "nodes": 25344,
+  "directed_edges": 100612,
+  "mean_graph_ms": 6.42322569996395,
+  "median_graph_ms": 5.745341500187351,
+  "mean_us_per_node_amortized": 0.2534416706109513
+}

@@ -1,0 +1,60 @@
+=== VAL SCORE DISTRIBUTION ===
+N benign = 656
+N attack = 6560
+
+BENIGN
+q=0.00: 0.000841
+q=0.01: 0.001369
+q=0.05: 0.006670
+q=0.10: 0.010084
+q=0.25: 0.036753
+q=0.50: 0.171849
+q=0.75: 0.873090
+q=0.90: 0.982677
+q=0.95: 0.991450
+q=0.99: 0.991982
+q=1.00: 0.992900
+
+ATTACK
+q=0.00: 0.004219
+q=0.01: 0.417057
+q=0.05: 0.523532
+q=0.10: 0.583293
+q=0.25: 0.702129
+q=0.50: 0.858483
+q=0.75: 0.941790
+q=0.90: 0.969145
+q=0.95: 0.977054
+q=0.99: 0.985628
+q=1.00: 0.993141
+
+=== FAST-PATH SECURITY FRONTIER ===
+attack_FAST<=  0.1% => tau1=0.316896 benign_FAST= 58.08% attack_FAST=  0.08%
+attack_FAST<=  0.5% => tau1=0.375356 benign_FAST= 59.30% attack_FAST=  0.44%
+attack_FAST<=  1.0% => tau1=0.416452 benign_FAST= 59.60% attack_FAST=  0.98%
+attack_FAST<=  2.0% => tau1=0.449599 benign_FAST= 60.06% attack_FAST=  1.51%
+attack_FAST<=  5.0% => tau1=0.514667 benign_FAST= 60.82% attack_FAST=  4.65%
+attack_FAST<= 10.0% => tau1=0.538845 benign_FAST= 61.13% attack_FAST=  5.98%
+attack_FAST<= 15.0% => tau1=0.604306 benign_FAST= 61.59% attack_FAST= 12.50%
+attack_FAST<= 20.0% => tau1=0.657682 benign_FAST= 62.50% attack_FAST= 19.12%
+attack_FAST<= 25.0% => tau1=0.699292 benign_FAST= 63.72% attack_FAST= 24.71%
+
+=== RESTRICTION FRONTIER ===
+benign_RESTRICT<=  0.1% => tau2=0.992906 attack_RESTRICT=  0.05% benign_RESTRICT=  0.00%
+benign_RESTRICT<=  0.5% => tau2=0.992037 attack_RESTRICT=  0.14% benign_RESTRICT=  0.46%
+benign_RESTRICT<=  1.0% => tau2=0.991993 attack_RESTRICT=  0.14% benign_RESTRICT=  0.91%
+benign_RESTRICT<=  2.0% => tau2=0.991854 attack_RESTRICT=  0.15% benign_RESTRICT=  1.98%
+benign_RESTRICT<=  5.0% => tau2=0.991468 attack_RESTRICT=  0.18% benign_RESTRICT=  4.88%
+benign_RESTRICT<= 10.0% => tau2=0.982822 attack_RESTRICT=  1.95% benign_RESTRICT=  9.91%
+benign_RESTRICT<= 15.0% => tau2=0.942243 attack_RESTRICT= 24.79% benign_RESTRICT= 14.94%
+benign_RESTRICT<= 20.0% => tau2=0.920994 attack_RESTRICT= 33.40% benign_RESTRICT= 19.97%
+benign_RESTRICT<= 25.0% => tau2=0.872780 attack_RESTRICT= 46.72% benign_RESTRICT= 25.00%
+
+=== 5% / 5% COMPATIBILITY ===
+maximum feasible tau1 = 0.5235322167069646
+minimum feasible tau2 = 0.9914675838943705
+tau1 < tau2 = True
+DPI rate at boundary = 0.8931541019955654
+DPI workload reduction = 0.10684589800443456
+
+J5_DPI_FEASIBILITY_OK

@@ -1,0 +1,60 @@
+{
+  "selection_protocol": {
+    "selected_on": "validation only",
+    "tau_fast": 0.416452,
+    "validation_security_constraint": "attack fast-path rate approximately <= 1%",
+    "test_threshold_adjustment": false
+  },
+  "test": {
+    "policy": "two_path_cog_gat_dpi_gating",
+    "tau_fast": 0.416452,
+    "threshold_source": "validation_only",
+    "validation_attack_fast_budget": 0.01,
+    "n_total": 25344,
+    "n_fast_path": 7168,
+    "n_dpi": 18176,
+    "fast_path_rate": 0.2828282828282828,
+    "dpi_trigger_rate": 0.7171717171717171,
+    "dpi_workload_reduction": 0.2828282828282829,
+    "n_benign": 2304,
+    "n_attack": 23040,
+    "benign_fast_path_rate": 0.9301215277777778,
+    "benign_dpi_rate": 0.06987847222222222,
+    "attack_fast_path_rate": 0.21809895833333334,
+    "attack_dpi_rate": 0.7819010416666666,
+    "n_benign_fast": 2143,
+    "n_benign_dpi": 161,
+    "n_attack_fast": 5025,
+    "n_attack_dpi": 18015
+  },
+  "attack_category_test": {
+    "DDoS": {
+      "n": 5347,
+      "fast_path_n": 63,
+      "dpi_n": 5284,
+      "fast_path_rate": 0.011782307836169814,
+      "dpi_rate": 0.9882176921638302
+    },
+    "DoS": {
+      "n": 3494,
+      "fast_path_n": 51,
+      "dpi_n": 3443,
+      "fast_path_rate": 0.014596451058958215,
+      "dpi_rate": 0.9854035489410418
+    },
+    "Reconnaissance": {
+      "n": 14199,
+      "fast_path_n": 4911,
+      "dpi_n": 9288,
+      "fast_path_rate": 0.3458694274244665,
+      "dpi_rate": 0.6541305725755335
+    }
+  },
+  "interpretation": {
+    "baseline": "DPI applied to every eligible flow",
+    "fast_path": "Cog-GAT bypasses DPI",
+    "dpi": "flow escalated to Deep Packet Inspection",
+    "dpi_workload_reduction_definition": "1 - N_DPI / N_total",
+    "important_limitation": "flow-count reduction, not measured CPU, energy, or latency reduction"
+  }
+}

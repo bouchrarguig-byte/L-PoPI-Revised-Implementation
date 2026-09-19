@@ -1,0 +1,77 @@
+=== J5-B VALIDATION-ONLY OOD DIAGNOSTIC ===
+TEST data are NOT used.
+GAT VAL = /home/rguig/esp/sram_puf_clean/j5_ai/results/gatv2/gatv2_val_predictions.parquet
+Frozen Cog-GAT: mode=src alpha=0.1 lambda=0.5
+Frozen J5-A tau_fast=0.416452
+
+N = 7216
+benign = 656
+attack = 6560
+
+=== SCORE AUDIT ===
+GAT ROC-AUC     = 0.754560041
+Cog-GAT ROC-AUC = 0.737303642
+
+Cog-GAT AUC difference from frozen J5 = +0.000000000005
+J5 frozen score reconstruction: PASS
+
+=== FROZEN J5-A VAL ROUTING ===
+benign_FAST = 59.6037%
+attack_FAST = 0.9756%
+total_FAST  = 6.3054%
+DPI rate    = 93.6946%
+
+=== COG-GAT UNCERTAINTY QUANTILES ===
+BENIGN
+  q=   0: 0.001682
+  q=0.01: 0.002738
+  q=0.05: 0.013339
+  q= 0.1: 0.016529
+  q=0.25: 0.034916
+  q= 0.5: 0.127597
+  q=0.75: 0.290213
+  q= 0.9: 0.475765
+  q=0.95: 0.633841
+  q=0.99: 0.909147
+  q=   1: 0.996404
+ATTACK
+  q=   0: 0.008438
+  q=0.01: 0.028614
+  q=0.05: 0.045765
+  q= 0.1: 0.061619
+  q=0.25: 0.116409
+  q= 0.5: 0.282498
+  q=0.75: 0.594676
+  q= 0.9: 0.818409
+  q=0.95: 0.906275
+  q=0.99: 0.980226
+  q=   1: 0.999605
+
+=== VALIDATION UNCERTAINTY-GUARD FRONTIER ===
+u<=0.10 | benign_FAST= 30.49% | attack_FAST=  0.02% | total_FAST=  2.79% | DPI= 97.21%
+u<=0.15 | benign_FAST= 34.76% | attack_FAST=  0.05% | total_FAST=  3.20% | DPI= 96.80%
+u<=0.20 | benign_FAST= 40.85% | attack_FAST=  0.05% | total_FAST=  3.76% | DPI= 96.24%
+u<=0.25 | benign_FAST= 44.97% | attack_FAST=  0.05% | total_FAST=  4.13% | DPI= 95.87%
+u<=0.30 | benign_FAST= 47.56% | attack_FAST=  0.05% | total_FAST=  4.37% | DPI= 95.63%
+u<=0.35 | benign_FAST= 50.15% | attack_FAST=  0.05% | total_FAST=  4.60% | DPI= 95.40%
+u<=0.40 | benign_FAST= 51.98% | attack_FAST=  0.05% | total_FAST=  4.77% | DPI= 95.23%
+u<=0.45 | benign_FAST= 54.27% | attack_FAST=  0.05% | total_FAST=  4.98% | DPI= 95.02%
+u<=0.50 | benign_FAST= 56.40% | attack_FAST=  0.05% | total_FAST=  5.17% | DPI= 94.83%
+u<=0.55 | benign_FAST= 57.16% | attack_FAST=  0.06% | total_FAST=  5.25% | DPI= 94.75%
+u<=0.60 | benign_FAST= 57.77% | attack_FAST=  0.08% | total_FAST=  5.32% | DPI= 94.68%
+u<=0.65 | benign_FAST= 58.38% | attack_FAST=  0.14% | total_FAST=  5.43% | DPI= 94.57%
+u<=0.70 | benign_FAST= 58.84% | attack_FAST=  0.29% | total_FAST=  5.61% | DPI= 94.39%
+u<=0.75 | benign_FAST= 59.30% | attack_FAST=  0.44% | total_FAST=  5.79% | DPI= 94.21%
+u<=0.80 | benign_FAST= 59.45% | attack_FAST=  0.79% | total_FAST=  6.13% | DPI= 93.87%
+u<=0.85 | benign_FAST= 59.60% | attack_FAST=  0.98% | total_FAST=  6.31% | DPI= 93.69%
+u<=0.90 | benign_FAST= 59.60% | attack_FAST=  0.98% | total_FAST=  6.31% | DPI= 93.69%
+u<=0.95 | benign_FAST= 59.60% | attack_FAST=  0.98% | total_FAST=  6.31% | DPI= 93.69%
+u<=1.00 | benign_FAST= 59.60% | attack_FAST=  0.98% | total_FAST=  6.31% | DPI= 93.69%
+
+=== VAL ATTACK CATEGORY ROUTING AT J5-A THRESHOLD ===
+DDoS                 N= 1858 | FAST=  0.861% | DPI= 99.139%
+DoS                  N= 4702 | FAST=  1.021% | DPI= 98.979%
+
+Saved: /home/rguig/esp/sram_puf_clean/j5_ai/results/j5b/j5b_val_reconstructed_scores.parquet
+
+J5B_VAL_OOD_DIAGNOSTIC_OK

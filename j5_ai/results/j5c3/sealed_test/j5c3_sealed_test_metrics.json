@@ -1,0 +1,39 @@
+{
+  "adaptive": {
+    "attack_fast": 0.011626607043040804,
+    "attack_fast_n": 104,
+    "benign_fast": 0.8062015503875969,
+    "benign_fast_n": 312,
+    "dpi_rate": 0.9554222031718816,
+    "total_fast": 0.044577796828118306
+  },
+  "adaptive_privileged_fraction": 0.00675096442348907,
+  "baseline": {
+    "attack_fast": 0.011626607043040804,
+    "attack_fast_n": 104,
+    "benign_fast": 0.8062015503875969,
+    "benign_fast_n": 312,
+    "dpi_rate": 0.9554222031718816,
+    "total_fast": 0.044577796828118306
+  },
+  "category_metrics": {
+    "DDoS": {
+      "adaptive_fast": 0.011626607043040804,
+      "baseline_fast": 0.011626607043040804,
+      "n": 8945
+    },
+    "Normal": {
+      "adaptive_fast": 0.8062015503875969,
+      "baseline_fast": 0.8062015503875969,
+      "n": 387
+    }
+  },
+  "evaluation": "newly pre-specified late-file DDoS-dominant TEST-C fold",
+  "experiment": "J5-C3",
+  "model_sha256": "00787a6ad095713d6ea3710a1166cdae3bbbdaa21f2208e7a8840b6b092ba6bc",
+  "no_post_test_retuning": true,
+  "policy_sha256": "8ec219d8fe6031e94f4458cef92aa2c03842747a91d5b75a4505f1176f497899",
+  "test_c_sha256": "fd098dd3c5bdaffc0432101f32f657f505dd4053072054979cdec8c334f2343c",
+  "test_files": 12,
+  "test_rows": 9332
+}

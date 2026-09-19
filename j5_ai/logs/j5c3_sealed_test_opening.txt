@@ -1,0 +1,62 @@
+=== J5-C3 SEALED TEST OPENING ===
+DEVICE = cuda
+
+MODEL_SHA256 = 00787a6ad095713d6ea3710a1166cdae3bbbdaa21f2208e7a8840b6b092ba6bc
+POLICY_SHA256 = 8ec219d8fe6031e94f4458cef92aa2c03842747a91d5b75a4505f1176f497899
+TEST_C_SHA256 = fd098dd3c5bdaffc0432101f32f657f505dd4053072054979cdec8c334f2343c
+Frozen artifact hashes: PASS
+
+=== FROZEN POLICY ===
+Cog alpha = 0.1
+Cog lambda = 0.5
+Baseline tau = 0.461821713918829
+Adaptive base tau = 0.461821713918829
+Adaptive beta = 0.05
+Adaptive min_history = 2
+Adaptive tau_trust = 0.7000000000000002
+Adaptive elevated_tau = 0.8166546330633343
+
+TEST-C OPENED
+nodes = 9332
+files = 12
+benign = 387
+attack = 8945
+directed_edges = 36,872
+
+=== PRIMARY SEALED TEST-C RESULTS ===
+
+BASELINE
+  benign_FAST = 80.620155%
+  attack_FAST = 1.162661%
+  total_FAST  = 4.457780%
+  DPI         = 95.542220%
+  benign FAST count = 312
+  attack FAST count = 104
+
+ADAPTIVE
+  benign_FAST = 80.620155%
+  attack_FAST = 1.162661%
+  total_FAST  = 4.457780%
+  DPI         = 95.542220%
+  benign FAST count = 312
+  attack FAST count = 104
+
+Adaptive benign FAST gain = 0.000000 percentage points
+Adaptive attack FAST change = 0.000000 percentage points
+
+Adaptive privileged fraction = 0.675096%
+
+=== CATEGORY ROUTING ===
+
+DDoS N= 8945
+  BASELINE FAST = 1.162661%
+  ADAPTIVE FAST = 1.162661%
+
+Normal N= 387
+  BASELINE FAST = 80.620155%
+  ADAPTIVE FAST = 80.620155%
+
+PREDICTIONS_SHA256 = e30a24954c5aec4ad625284aadf5c042eb2382fd0a214a9d2950c74fc372b131
+METRICS_SHA256 = b44f65fedb3aef919e38b984af5bbef2de8bc731746613bf6815e04d570f2868
+
+J5C3_SEALED_TEST_OPENED_OK

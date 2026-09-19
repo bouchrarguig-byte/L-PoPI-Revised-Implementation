@@ -1,0 +1,98 @@
+[
+  {
+    "name": "clean",
+    "flips_msb_first": [],
+    "corrupted_packet": "00112233445566778899aabbccddeeff553bd00d2cf1fa8bb202207f53f62e81915c",
+    "decoder_return": 0,
+    "corrected_data": "00112233445566778899aabbccddeeff",
+    "secret_match": true
+  },
+  {
+    "name": "one_data_bit",
+    "flips_msb_first": [
+      0
+    ],
+    "corrupted_packet": "80112233445566778899aabbccddeeff553bd00d2cf1fa8bb202207f53f62e81915c",
+    "decoder_return": 1,
+    "corrected_data": "00112233445566778899aabbccddeeff",
+    "secret_match": true
+  },
+  {
+    "name": "one_ecc_bit",
+    "flips_msb_first": [
+      128
+    ],
+    "corrupted_packet": "00112233445566778899aabbccddeeffd53bd00d2cf1fa8bb202207f53f62e81915c",
+    "decoder_return": 1,
+    "corrected_data": "00112233445566778899aabbccddeeff",
+    "secret_match": true
+  },
+  {
+    "name": "eight_spread",
+    "flips_msb_first": [
+      0,
+      17,
+      34,
+      51,
+      68,
+      85,
+      130,
+      200
+    ],
+    "corrupted_packet": "80116233645576778099aebbccddeeff753bd00d2cf1fa8bb282207f53f62e81915c",
+    "decoder_return": 8,
+    "corrected_data": "00112233445566778899aabbccddeeff",
+    "secret_match": true
+  },
+  {
+    "name": "sixteen_spread",
+    "flips_msb_first": [
+      0,
+      17,
+      34,
+      51,
+      68,
+      85,
+      102,
+      119,
+      136,
+      153,
+      170,
+      187,
+      204,
+      221,
+      238,
+      255
+    ],
+    "corrupted_packet": "80116233645576778099aebbceddefff55bbd04d2cd1fa9bb20a207b53f42e80915c",
+    "decoder_return": 16,
+    "corrected_data": "00112233445566778899aabbccddeeff",
+    "secret_match": true
+  },
+  {
+    "name": "seventeen_spread",
+    "flips_msb_first": [
+      0,
+      16,
+      32,
+      48,
+      64,
+      80,
+      96,
+      112,
+      128,
+      144,
+      160,
+      176,
+      192,
+      208,
+      224,
+      240,
+      256
+    ],
+    "corrupted_packet": "8011a233c455e67708992abb4cdd6effd53b500dacf17a8b3202a07fd3f6ae81115c",
+    "decoder_return": -1,
+    "corrected_data": "8011a233c455e67708992abb4cdd6eff",
+    "secret_match": false
+  }
+]

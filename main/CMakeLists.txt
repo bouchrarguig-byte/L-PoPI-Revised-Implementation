@@ -1,0 +1,10 @@
+idf_component_register(
+    SRCS
+        "sram_puf.c"
+        "puf_fuzzy_extractor.c"
+        "lpofi_bch.c"
+        "lpofi_zk_binding.c"
+    INCLUDE_DIRS
+        "."
+        "../common"
+)

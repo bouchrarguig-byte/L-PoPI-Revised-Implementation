@@ -1,0 +1,15 @@
+COPYING
+MANIFEST.in
+README.md
+setup.py
+bchlib.egg-info/PKG-INFO
+bchlib.egg-info/SOURCES.txt
+bchlib.egg-info/dependency_links.txt
+bchlib.egg-info/top_level.txt
+src/bch.c
+src/bch.h
+src/bchlib.c
+tests/test_chaining.py
+tests/test_consecutive.py
+tests/test_exercise.py
+tests/test_exynos.py

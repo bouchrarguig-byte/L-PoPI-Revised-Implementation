@@ -1,0 +1,29 @@
+{
+  "experiment": "J5-B",
+  "challenge_opened": false,
+  "challenge_file": "data_2.csv",
+  "cognitive_history": {
+    "mode": "src",
+    "alpha": 0.1,
+    "lambda": 0.5
+  },
+  "dpi_policy": {
+    "fast_condition": "cog_score < tau_fast",
+    "validation_attack_fast_budget": 0.01,
+    "tau_fast": 0.3502524895843741
+  },
+  "uncertainty_guard": {
+    "predeclared": true,
+    "limit": 0.7,
+    "condition": "uncertainty <= limit"
+  },
+  "validation": {
+    "n": 7216,
+    "benign_fast_score_only": 0.5579268292682927,
+    "attack_fast_score_only": 0.009908536585365854,
+    "total_fast_score_only": 0.05972838137472284,
+    "benign_fast_with_uncertainty": 0.5564024390243902,
+    "attack_fast_with_uncertainty": 0.00975609756097561,
+    "total_fast_with_uncertainty": 0.05945121951219512
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "seed": 20260916,
+  "best_epoch": 42,
+  "threshold_selected_on_validation": 0.055,
+  "test_accuracy": 0.9292140151515151,
+  "test_balanced_accuracy": 0.6139973958333333,
+  "test_macro_f1": 0.6662921348314607,
+  "test_mcc": 0.45225368117583825,
+  "test_roc_auc": 0.9203471431025751,
+  "test_pr_auc_attack": 0.990658027295081,
+  "benign_precision": 0.96875,
+  "benign_recall": 0.2287326388888889,
+  "benign_f1": 0.37008426966292135,
+  "attack_precision": 0.9283467741935484,
+  "attack_recall": 0.9992621527777777,
+  "attack_f1": 0.9625,
+  "tn": 527,
+  "fp": 1777,
+  "fn": 17,
+  "tp": 23023,
+  "fpr": 0.7712673611111112,
+  "fnr": 0.0007378472222222222
+}

@@ -1,0 +1,90 @@
+
+=== TRAIN ===
+[01/52] data_10.csv: benign=30 attack_candidates=5,000
+[02/52] data_11.csv: benign=40 attack_candidates=5,000
+[03/52] data_12.csv: benign=27 attack_candidates=5,000
+[04/52] data_13.csv: benign=32 attack_candidates=5,000
+[05/52] data_16.csv: benign=28 attack_candidates=5,000
+[06/52] data_17.csv: benign=35 attack_candidates=5,000
+[07/52] data_18.csv: benign=31 attack_candidates=5,000
+[08/52] data_2.csv: benign=4,941 attack_candidates=197,640
+[09/52] data_20.csv: benign=24 attack_candidates=5,000
+[10/52] data_21.csv: benign=35 attack_candidates=5,000
+[11/52] data_23.csv: benign=38 attack_candidates=5,000
+[12/52] data_24.csv: benign=35 attack_candidates=5,000
+[13/52] data_25.csv: benign=36 attack_candidates=5,000
+[14/52] data_26.csv: benign=24 attack_candidates=5,000
+[15/52] data_28.csv: benign=26 attack_candidates=5,000
+[16/52] data_29.csv: benign=32 attack_candidates=5,000
+[17/52] data_30.csv: benign=36 attack_candidates=5,000
+[18/52] data_32.csv: benign=36 attack_candidates=5,000
+[19/52] data_33.csv: benign=27 attack_candidates=5,000
+[20/52] data_34.csv: benign=32 attack_candidates=5,000
+[21/52] data_36.csv: benign=31 attack_candidates=5,000
+[22/52] data_37.csv: benign=34 attack_candidates=5,000
+[23/52] data_38.csv: benign=29 attack_candidates=5,000
+[24/52] data_39.csv: benign=34 attack_candidates=5,000
+[25/52] data_41.csv: benign=31 attack_candidates=5,000
+[26/52] data_42.csv: benign=27 attack_candidates=5,000
+[27/52] data_43.csv: benign=33 attack_candidates=5,000
+[28/52] data_45.csv: benign=33 attack_candidates=5,000
+[29/52] data_48.csv: benign=25 attack_candidates=5,000
+[30/52] data_49.csv: benign=41 attack_candidates=5,000
+[31/52] data_51.csv: benign=33 attack_candidates=5,000
+[32/52] data_53.csv: benign=34 attack_candidates=5,000
+[33/52] data_54.csv: benign=33 attack_candidates=5,000
+[34/52] data_56.csv: benign=32 attack_candidates=5,000
+[35/52] data_57.csv: benign=24 attack_candidates=5,000
+[36/52] data_58.csv: benign=33 attack_candidates=5,000
+[37/52] data_60.csv: benign=33 attack_candidates=5,000
+[38/52] data_61.csv: benign=32 attack_candidates=5,000
+[39/52] data_62.csv: benign=28 attack_candidates=5,000
+[40/52] data_63.csv: benign=31 attack_candidates=5,000
+[41/52] data_64.csv: benign=26 attack_candidates=5,000
+[42/52] data_65.csv: benign=35 attack_candidates=5,000
+[43/52] data_66.csv: benign=47 attack_candidates=5,000
+[44/52] data_67.csv: benign=39 attack_candidates=5,000
+[45/52] data_69.csv: benign=38 attack_candidates=5,000
+[46/52] data_7.csv: benign=41 attack_candidates=5,000
+[47/52] data_70.csv: benign=29 attack_candidates=5,000
+[48/52] data_71.csv: benign=28 attack_candidates=5,000
+[49/52] data_72.csv: benign=33 attack_candidates=5,000
+[50/52] data_73.csv: benign=34 attack_candidates=5,000
+[51/52] data_74.csv: benign=19 attack_candidates=5,000
+[52/52] data_9.csv: benign=38 attack_candidates=5,000
+train: final benign=6,583, attack=65,830, total=72,413
+
+=== VAL ===
+[01/11] data_14.csv: benign=37 attack_candidates=5,000
+[02/11] data_15.csv: benign=50 attack_candidates=5,000
+[03/11] data_22.csv: benign=45 attack_candidates=5,000
+[04/11] data_27.csv: benign=38 attack_candidates=5,000
+[05/11] data_3.csv: benign=107 attack_candidates=5,000
+[06/11] data_35.csv: benign=102 attack_candidates=5,000
+[07/11] data_4.csv: benign=98 attack_candidates=5,000
+[08/11] data_46.csv: benign=31 attack_candidates=5,000
+[09/11] data_47.csv: benign=36 attack_candidates=5,000
+[10/11] data_5.csv: benign=76 attack_candidates=5,000
+[11/11] data_55.csv: benign=36 attack_candidates=5,000
+val: final benign=656, attack=6,560, total=7,216
+
+=== TEST ===
+[01/11] data_1.csv: benign=1,993 attack_candidates=79,720
+[02/11] data_19.csv: benign=34 attack_candidates=5,000
+[03/11] data_31.csv: benign=25 attack_candidates=5,000
+[04/11] data_40.csv: benign=35 attack_candidates=5,000
+[05/11] data_44.csv: benign=39 attack_candidates=5,000
+[06/11] data_50.csv: benign=30 attack_candidates=5,000
+[07/11] data_52.csv: benign=26 attack_candidates=5,000
+[08/11] data_59.csv: benign=34 attack_candidates=5,000
+[09/11] data_6.csv: benign=33 attack_candidates=5,000
+[10/11] data_68.csv: benign=28 attack_candidates=5,000
+[11/11] data_8.csv: benign=27 attack_candidates=5,000
+test: final benign=2,304, attack=23,040, total=25,344
+train: j5_train.parquet rows=72,413 SHA256=cc64bdba710fc22ce7c72ab335622c2734bae33c3657bcf38890294fffb54897
+val: j5_val.parquet rows=7,216 SHA256=f6de76f72933956bf96b3f7ae27c0460c0bcb7a39988a94ac20cd64f79436b80
+test: j5_test.parquet rows=25,344 SHA256=923cbf1fedf5759720748390b1c02079a959b95198e740f225cd20c8d7548f7f
+
+METADATA SHA256: a9ec2f3012821ede076e049794ff9e4c7ef85ebc42d1e83fe015ee34ba7fd1ba
+
+J5_DATASET_BUILD_OK

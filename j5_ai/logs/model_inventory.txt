@@ -1,0 +1,65 @@
+
+FILE: /home/rguig/rt_iot2022_mlp_balanced.pth
+SIZE: 377237 bytes
+MODIFIED: 2025-11-07 00:09:59.265778992 +0100
+2d50f265ab5fa92f186701613ad1d5dfffa9002e88642f920afb0eb6bc533dda  /home/rguig/rt_iot2022_mlp_balanced.pth
+
+FILE: /home/rguig/nf_ton_iot_v2_binary_mlp.pth
+SIZE: 419241 bytes
+MODIFIED: 2025-11-13 11:07:09.149668380 +0100
+5f3017a7121bef408191586635b4f426e74cf5792dca4a98b2cf55cf05e66be6  /home/rguig/nf_ton_iot_v2_binary_mlp.pth
+
+FILE: /home/rguig/code/rt_iot2022_mlp_improved.pth
+SIZE: 392851 bytes
+MODIFIED: 2025-11-24 13:28:26.111392647 +0100
+cba7eaa70e6ef8383c6da50da19499aaeefc3d33490d166c401e919d1fd81f7f  /home/rguig/code/rt_iot2022_mlp_improved.pth
+
+FILE: /home/rguig/nf_unsw_nb15_v2_binary_mlp.pth
+SIZE: 408661 bytes
+MODIFIED: 2025-11-14 11:16:31.813787135 +0100
+c6c7f466b049b1375adab6af5dc56b8ab66afff20b204cfc6453b25ff1fa7fa8  /home/rguig/nf_unsw_nb15_v2_binary_mlp.pth
+
+FILE: /home/rguig/results_ultimate_patched/best_model.pth
+SIZE: 672821 bytes
+MODIFIED: 2025-12-07 23:13:05.483363831 +0100
+61be34f639c03c635de6565f4b7cfa60b702ccc3d329db6a0bad235f5ddefca3  /home/rguig/results_ultimate_patched/best_model.pth
+
+FILE: /home/rguig/rt_iot2022_mlp_improved.pth
+SIZE: 392851 bytes
+MODIFIED: 2025-11-13 09:06:50.438372488 +0100
+b6fa0d14a3557acb011aebdac4aec36b878e408795c88353d4366725997c000d  /home/rguig/rt_iot2022_mlp_improved.pth
+
+FILE: /home/rguig/best_model.pth
+SIZE: 740725 bytes
+MODIFIED: 2025-11-24 14:03:54.856414407 +0100
+d2b0d0c0c802341525d54580931b613c6e47d364e50e2031cb317c58a1611f2e  /home/rguig/best_model.pth
+
+FILE: /home/rguig/best_model.pt
+SIZE: 11446389 bytes
+MODIFIED: 2025-12-25 19:09:03.971157398 +0100
+3682465ce6d6e4cebc97e54c081bb4f846f0292160d7c8249322fb42dc664c9a  /home/rguig/best_model.pt
+
+FILE: /home/rguig/results/my paper CBID results/best_model.pt
+SIZE: 11464053 bytes
+MODIFIED: 2025-12-16 18:25:46.219074481 +0100
+5627b09db322d81b18425c04352a6b4eab43cd9c80355b315481fb7339182e26  /home/rguig/results/my paper CBID results/best_model.pt
+
+FILE: /home/rguig/results/old result /binary_mlp_nfunsw.pth
+SIZE: 408399 bytes
+MODIFIED: 2025-11-20 09:32:47.173296214 +0100
+4dbd2a5332224d08eac89efe85fac336d74e08e9e76414062201a1520390d8e7  /home/rguig/results/old result /binary_mlp_nfunsw.pth
+
+FILE: /home/rguig/results/old result /best_model.pt
+SIZE: 11464053 bytes
+MODIFIED: 2025-12-08 13:54:14.180004091 +0100
+b1f3b80429ff21debf68bf638a0b163e6526069210ade3439e8aa3f753c1a973  /home/rguig/results/old result /best_model.pt
+
+FILE: /home/rguig/results/84/best_model.pt
+SIZE: 11464053 bytes
+MODIFIED: 2025-12-08 12:02:33.331073462 +0100
+99a67d88d326ffa9da2bba8ea378c02731a0bc1b898fe8a883248721e1b6abd5  /home/rguig/results/84/best_model.pt
+
+FILE: /home/rguig/rt_iot2022_mlp.pth
+SIZE: 364713 bytes
+MODIFIED: 2025-11-07 00:06:07.638595390 +0100
+dd3bbe6b0336621167f221bb9e82b2d4b4ffa7d4c124d49016e50b1a23ee660b  /home/rguig/rt_iot2022_mlp.pth

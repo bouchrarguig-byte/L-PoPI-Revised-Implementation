@@ -1,0 +1,57 @@
+=== TOP VALIDATION CONFIGURATIONS ===
+mode  alpha  lambda  threshold  val_macro_f1  val_roc_auc
+ src   0.10     0.5      0.321      0.855310     0.737304
+ src   0.05     0.5      0.320      0.854931     0.735414
+ src   0.05     0.4      0.285      0.854799     0.740365
+ src   0.10     0.4      0.291      0.854661     0.741439
+ src   0.10     0.6      0.335      0.853765     0.733230
+ src   0.20     0.5      0.297      0.853637     0.745547
+ src   0.20     0.6      0.316      0.852739     0.743052
+ src   0.05     0.6      0.388      0.852489     0.730373
+ src   0.05     0.7      0.437      0.852116     0.725935
+ src   0.10     0.7      0.390      0.852107     0.729447
+ src   0.20     0.7      0.324      0.851452     0.740733
+ src   0.10     0.8      0.419      0.850726     0.726098
+ src   0.20     0.4      0.267      0.850328     0.748058
+ src   0.20     0.8      0.321      0.850281     0.738631
+ src   0.05     0.3      0.237      0.850016     0.744997
+
+=== SELECTED ON VALIDATION ONLY ===
+{'mode': 'src', 'alpha': 0.1, 'lambda': 0.5, 'threshold': 0.321, 'val_macro_f1': 0.8553102430089136, 'val_roc_auc': 0.7373036418054729}
+
+=== LOCKED COG-GAT TEST ===
+selection_rule = maximum validation macro-F1; ROC-AUC tie-break
+mode = src
+alpha = 0.1
+lambda = 0.5
+threshold_validation_only = 0.321
+val_macro_f1 = 0.8553102430089136
+val_roc_auc = 0.7373036418054729
+test_accuracy = 0.8369239267676768
+test_balanced_accuracy = 0.8265190972222223
+test_macro_f1 = 0.6895765385963976
+test_mcc = 0.4531004228077579
+test_roc_auc = 0.8922090883608218
+test_pr_auc_attack = 0.9813517342419447
+benign_precision = 0.33608173507797096
+benign_recall = 0.8138020833333334
+benign_f1 = 0.47570721806418875
+attack_precision = 0.9782949658487224
+attack_recall = 0.8392361111111111
+attack_f1 = 0.9034458591286064
+tn = 1875
+fp = 429
+fn = 3704
+tp = 19336
+fpr = 0.18619791666666666
+fnr = 0.1607638888888889
+
+=== TEST ATTACK RECALL BY CATEGORY ===
+DDoS: N=5347 attack_recall=0.997195
+DoS: N=3494 attack_recall=0.993990
+Reconnaissance: N=14199 attack_recall=0.741672
+SHA256 validation_ablation_grid.csv e087f373583678014c9dcab228cc9ab81d445161d07d58d2dc673ec481e1cf39
+SHA256 cog_gat_test_metrics.json f731d9a7c0fa13963a98787c5d7a79added5e90cce8fcec3ff0bb2c8cfb4968f
+SHA256 cog_gat_test_predictions.parquet 83cda89e39d73b39b0be7cc3739b6783c5b0fa5d843ca3763cccf0e85a536b91
+
+J5_COG_GAT_ABLATION_OK

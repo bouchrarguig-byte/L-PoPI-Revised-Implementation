@@ -1,0 +1,26 @@
+=== J5-B DPI POLICY CALIBRATION ===
+Challenge data_2 used = NO
+Original J5 TEST used = NO
+mode = src
+alpha = 0.1
+lambda = 0.5
+attack_FAST_budget = 0.01
+
+=== FROZEN SCORE-ONLY POLICY ===
+tau_fast = 0.350252489584
+benign_FAST = 55.792683%
+attack_FAST = 0.990854%
+total_FAST = 5.972838%
+DPI = 94.027162%
+
+=== PREDECLARED UNCERTAINTY GUARD ===
+u_limit = 0.7
+benign_FAST = 55.640244%
+attack_FAST = 0.975610%
+total_FAST = 5.945122%
+DPI = 94.054878%
+
+POLICY_SHA256 = 4f9c26e8e9f98e69a50bb2d399a411f6f3bf5d9eac7927f1de613e2a7e0216b9
+VAL_COG_SHA256 = e0821c8d8a9f91caa3db15c61976d5a61e0be9963a722dffd90b9947f6c21a5b
+
+J5B_DPI_POLICY_FROZEN_OK

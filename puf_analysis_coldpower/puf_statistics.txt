@@ -1,0 +1,59 @@
+ESP32 SRAM-PUF EXPERIMENTAL ANALYSIS
+======================================================================
+
+Experimental configuration
+----------------------------------------------------------------------
+Number of captures: 30
+Regions analyzed: [1]
+Region size: 256 bytes
+Region size: 2048 bits
+Enrollment reference: Capture 1
+Capture type: RESET captures
+
+IMPORTANT LIMITATION
+----------------------------------------------------------------------
+The experiment evaluates intra-device stability under repeated cold-power captures.
+It does not establish inter-device uniqueness because only one physical ESP32 was evaluated.
+
+======================================================================
+REGION 1
+======================================================================
+
+BIT-LEVEL RELIABILITY
+----------------------------------------------------------------------
+Mean reliability: 96.1442%
+Median reliability: 100.0000%
+Minimum reliability: 50.0000%
+Maximum reliability: 100.0000%
+
+Bits >= 90%: 1816 (88.67%)
+Bits >= 95%: 1720 (83.98%)
+Bits >= 97%: 1643 (80.22%)
+Bits >= 99%: 1643 (80.22%)
+Bits < 90%: 232 (11.33%)
+
+PAIRWISE HAMMING DISTANCE
+----------------------------------------------------------------------
+Mean: 113.5655
+Median: 114.0000
+Standard deviation: 9.3763
+Minimum: 86
+Maximum: 141
+95th percentile: 128.0000
+99th percentile: 134.6600
+
+PAIRWISE BER
+----------------------------------------------------------------------
+Mean: 5.5452%
+Median: 5.5664%
+Standard deviation: 0.4578%
+Minimum: 4.1992%
+Maximum: 6.8848%
+95th percentile: 6.2500%
+99th percentile: 6.5752%
+
+REFERENCE CAPTURE BER
+----------------------------------------------------------------------
+Mean BER vs Capture 1: 5.2132%
+Maximum BER vs Capture 1: 6.1035%
+

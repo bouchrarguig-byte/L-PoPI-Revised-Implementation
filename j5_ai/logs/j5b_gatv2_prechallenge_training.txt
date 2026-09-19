@@ -1,0 +1,128 @@
+DEVICE: cuda
+J5-B TRAIN exclusion: data_2.csv | removed=33,683
+train: nodes=38,730 directed_edges=153,076 files=51
+val: nodes=7,216 directed_edges=28,184 files=11
+CLASS_WEIGHTS: [1.0, 0.04427307844161987]
+epoch=001 loss=0.717220 val_auc=0.415550
+epoch=002 loss=0.693846 val_auc=0.514374
+epoch=003 loss=0.661521 val_auc=0.576846
+epoch=004 loss=0.635306 val_auc=0.621344
+epoch=005 loss=0.607656 val_auc=0.652257
+epoch=006 loss=0.589242 val_auc=0.668236
+epoch=007 loss=0.573071 val_auc=0.678613
+epoch=008 loss=0.552422 val_auc=0.685688
+epoch=009 loss=0.536662 val_auc=0.690802
+epoch=010 loss=0.524066 val_auc=0.696425
+epoch=011 loss=0.504567 val_auc=0.700437
+epoch=012 loss=0.492548 val_auc=0.703552
+epoch=013 loss=0.479819 val_auc=0.708023
+epoch=014 loss=0.465307 val_auc=0.712990
+epoch=015 loss=0.471026 val_auc=0.717575
+epoch=016 loss=0.453932 val_auc=0.722171
+epoch=017 loss=0.444330 val_auc=0.725281
+epoch=018 loss=0.442853 val_auc=0.727332
+epoch=019 loss=0.437740 val_auc=0.728249
+epoch=020 loss=0.423566 val_auc=0.729442
+epoch=021 loss=0.423642 val_auc=0.730161
+epoch=022 loss=0.421430 val_auc=0.730236
+epoch=023 loss=0.410916 val_auc=0.730392
+epoch=024 loss=0.406847 val_auc=0.730659
+epoch=025 loss=0.406559 val_auc=0.731071
+epoch=026 loss=0.396740 val_auc=0.731535
+epoch=027 loss=0.393348 val_auc=0.732026
+epoch=028 loss=0.384299 val_auc=0.732544
+epoch=029 loss=0.384799 val_auc=0.733059
+epoch=030 loss=0.378254 val_auc=0.733579
+epoch=031 loss=0.380590 val_auc=0.734108
+epoch=032 loss=0.371262 val_auc=0.734658
+epoch=033 loss=0.371345 val_auc=0.735191
+epoch=034 loss=0.365367 val_auc=0.735680
+epoch=035 loss=0.362074 val_auc=0.736248
+epoch=036 loss=0.358723 val_auc=0.736815
+epoch=037 loss=0.357661 val_auc=0.737386
+epoch=038 loss=0.350112 val_auc=0.737938
+epoch=039 loss=0.347298 val_auc=0.738507
+epoch=040 loss=0.350938 val_auc=0.739050
+epoch=041 loss=0.348415 val_auc=0.739580
+epoch=042 loss=0.342053 val_auc=0.740075
+epoch=043 loss=0.342656 val_auc=0.740537
+epoch=044 loss=0.330652 val_auc=0.741039
+epoch=045 loss=0.335496 val_auc=0.741506
+epoch=046 loss=0.340125 val_auc=0.741992
+epoch=047 loss=0.336735 val_auc=0.742496
+epoch=048 loss=0.328845 val_auc=0.743045
+epoch=049 loss=0.322225 val_auc=0.743562
+epoch=050 loss=0.326475 val_auc=0.744059
+epoch=051 loss=0.329330 val_auc=0.744507
+epoch=052 loss=0.321900 val_auc=0.744964
+epoch=053 loss=0.317297 val_auc=0.745450
+epoch=054 loss=0.318461 val_auc=0.745939
+epoch=055 loss=0.315319 val_auc=0.746480
+epoch=056 loss=0.316903 val_auc=0.747045
+epoch=057 loss=0.317850 val_auc=0.747584
+epoch=058 loss=0.313068 val_auc=0.748121
+epoch=059 loss=0.315015 val_auc=0.748667
+epoch=060 loss=0.314873 val_auc=0.749205
+epoch=061 loss=0.318955 val_auc=0.749704
+epoch=062 loss=0.311015 val_auc=0.750219
+epoch=063 loss=0.304254 val_auc=0.750719
+epoch=064 loss=0.308663 val_auc=0.751234
+epoch=065 loss=0.303109 val_auc=0.751772
+epoch=066 loss=0.303102 val_auc=0.752290
+epoch=067 loss=0.307729 val_auc=0.752836
+epoch=068 loss=0.305700 val_auc=0.753390
+epoch=069 loss=0.295752 val_auc=0.753994
+epoch=070 loss=0.303014 val_auc=0.754637
+epoch=071 loss=0.302940 val_auc=0.755260
+epoch=072 loss=0.303249 val_auc=0.755933
+epoch=073 loss=0.292516 val_auc=0.756606
+epoch=074 loss=0.293947 val_auc=0.757276
+epoch=075 loss=0.296054 val_auc=0.757954
+epoch=076 loss=0.293376 val_auc=0.758650
+epoch=077 loss=0.295373 val_auc=0.759357
+epoch=078 loss=0.288948 val_auc=0.760081
+epoch=079 loss=0.293495 val_auc=0.760808
+epoch=080 loss=0.294076 val_auc=0.761543
+epoch=081 loss=0.290437 val_auc=0.762267
+epoch=082 loss=0.288719 val_auc=0.763017
+epoch=083 loss=0.289288 val_auc=0.763773
+epoch=084 loss=0.292320 val_auc=0.764578
+epoch=085 loss=0.286130 val_auc=0.765360
+epoch=086 loss=0.288485 val_auc=0.766163
+epoch=087 loss=0.288756 val_auc=0.766932
+epoch=088 loss=0.286157 val_auc=0.767745
+epoch=089 loss=0.282302 val_auc=0.768561
+epoch=090 loss=0.280244 val_auc=0.769312
+epoch=091 loss=0.283551 val_auc=0.770109
+epoch=092 loss=0.285612 val_auc=0.770902
+epoch=093 loss=0.278956 val_auc=0.771720
+epoch=094 loss=0.281386 val_auc=0.772515
+epoch=095 loss=0.282940 val_auc=0.773296
+epoch=096 loss=0.285425 val_auc=0.774044
+epoch=097 loss=0.278515 val_auc=0.774803
+epoch=098 loss=0.278176 val_auc=0.775592
+epoch=099 loss=0.281403 val_auc=0.776437
+epoch=100 loss=0.280475 val_auc=0.777213
+
+BEST_EPOCH: 100
+VAL_ROC_AUC: 0.7772129219958357
+VAL_THRESHOLD: 0.29800000000000004
+VAL_MACRO_F1: 0.7634828799566924
+
+=== J5-B PRE-CHALLENGE FREEZE ===
+data_2 used in training = NO
+original J5 TEST used = NO
+train files = 51
+train nodes = 38730
+val files = 11
+val nodes = 7216
+best_epoch = 100
+val_roc_auc = 0.7772129219958357
+val_threshold = 0.29800000000000004
+val_macro_f1 = 0.7634828799566924
+
+MODEL_SHA256 = 62abe9e985cadb5c4a5c09c76e3bd4736b0600e69428e32207856bd7db851211
+FREEZE_SHA256 = 9a3b2a8cdf0357464fdf84e42844138beba26f0b9a0258099bd65925063546b8
+VAL_PREDICTIONS_SHA256 = 10259fbf6a2a104f726149ee53de7aa85eedd378c75ff34f29866dfadcf36871
+
+J5B_PRECHALLENGE_FREEZE_OK

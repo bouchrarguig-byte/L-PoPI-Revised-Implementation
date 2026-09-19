@@ -1,0 +1,6 @@
+{
+  "batch_size": 4096,
+  "mean_batch_ms": 0.15847300003770215,
+  "median_batch_ms": 0.14509249967886717,
+  "mean_us_per_flow": 0.038689697274829626
+}

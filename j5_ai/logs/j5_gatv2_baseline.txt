@@ -1,0 +1,146 @@
+DEVICE: cuda
+train: nodes=72,413 directed_edges=287,344 files=52
+val: nodes=7,216 directed_edges=28,184 files=11
+test: nodes=25,344 directed_edges=100,612 files=11
+CLASS_WEIGHTS: [1.0, 0.10000000149011612]
+epoch=001 loss=0.713307 val_auc=0.407735
+epoch=002 loss=0.693995 val_auc=0.499093
+epoch=003 loss=0.658700 val_auc=0.554178
+epoch=004 loss=0.642481 val_auc=0.594382
+epoch=005 loss=0.623093 val_auc=0.626110
+epoch=006 loss=0.604641 val_auc=0.646483
+epoch=007 loss=0.592226 val_auc=0.661280
+epoch=008 loss=0.574595 val_auc=0.673549
+epoch=009 loss=0.567364 val_auc=0.681336
+epoch=010 loss=0.555024 val_auc=0.687593
+epoch=011 loss=0.547897 val_auc=0.693796
+epoch=012 loss=0.534947 val_auc=0.702310
+epoch=013 loss=0.529337 val_auc=0.709576
+epoch=014 loss=0.520118 val_auc=0.715829
+epoch=015 loss=0.516129 val_auc=0.720185
+epoch=016 loss=0.511556 val_auc=0.723079
+epoch=017 loss=0.502608 val_auc=0.724655
+epoch=018 loss=0.498325 val_auc=0.725660
+epoch=019 loss=0.495190 val_auc=0.726440
+epoch=020 loss=0.494530 val_auc=0.727070
+epoch=021 loss=0.490068 val_auc=0.727618
+epoch=022 loss=0.490090 val_auc=0.728142
+epoch=023 loss=0.481951 val_auc=0.728597
+epoch=024 loss=0.482010 val_auc=0.729043
+epoch=025 loss=0.482986 val_auc=0.729441
+epoch=026 loss=0.477772 val_auc=0.729821
+epoch=027 loss=0.474397 val_auc=0.730193
+epoch=028 loss=0.473933 val_auc=0.730499
+epoch=029 loss=0.469842 val_auc=0.730826
+epoch=030 loss=0.472226 val_auc=0.731100
+epoch=031 loss=0.474332 val_auc=0.731458
+epoch=032 loss=0.471675 val_auc=0.731795
+epoch=033 loss=0.472044 val_auc=0.732107
+epoch=034 loss=0.468548 val_auc=0.732448
+epoch=035 loss=0.467293 val_auc=0.732741
+epoch=036 loss=0.465672 val_auc=0.733071
+epoch=037 loss=0.463878 val_auc=0.733396
+epoch=038 loss=0.464305 val_auc=0.733698
+epoch=039 loss=0.461901 val_auc=0.734010
+epoch=040 loss=0.464267 val_auc=0.734343
+epoch=041 loss=0.468415 val_auc=0.734671
+epoch=042 loss=0.465199 val_auc=0.735009
+epoch=043 loss=0.465089 val_auc=0.735359
+epoch=044 loss=0.462508 val_auc=0.735692
+epoch=045 loss=0.460632 val_auc=0.736039
+epoch=046 loss=0.461597 val_auc=0.736385
+epoch=047 loss=0.456640 val_auc=0.736724
+epoch=048 loss=0.460324 val_auc=0.737035
+epoch=049 loss=0.458397 val_auc=0.737378
+epoch=050 loss=0.456489 val_auc=0.737714
+epoch=051 loss=0.457035 val_auc=0.738064
+epoch=052 loss=0.457451 val_auc=0.738411
+epoch=053 loss=0.453591 val_auc=0.738759
+epoch=054 loss=0.457156 val_auc=0.739103
+epoch=055 loss=0.455848 val_auc=0.739485
+epoch=056 loss=0.454725 val_auc=0.739874
+epoch=057 loss=0.454576 val_auc=0.740256
+epoch=058 loss=0.450381 val_auc=0.740637
+epoch=059 loss=0.451268 val_auc=0.741020
+epoch=060 loss=0.452797 val_auc=0.741409
+epoch=061 loss=0.453374 val_auc=0.741787
+epoch=062 loss=0.447071 val_auc=0.742187
+epoch=063 loss=0.446798 val_auc=0.742565
+epoch=064 loss=0.444479 val_auc=0.742937
+epoch=065 loss=0.447761 val_auc=0.743312
+epoch=066 loss=0.448054 val_auc=0.743690
+epoch=067 loss=0.446375 val_auc=0.744072
+epoch=068 loss=0.447391 val_auc=0.744459
+epoch=069 loss=0.447322 val_auc=0.744821
+epoch=070 loss=0.447346 val_auc=0.745190
+epoch=071 loss=0.447790 val_auc=0.745552
+epoch=072 loss=0.443468 val_auc=0.745912
+epoch=073 loss=0.443344 val_auc=0.746273
+epoch=074 loss=0.441275 val_auc=0.746628
+epoch=075 loss=0.445697 val_auc=0.746985
+epoch=076 loss=0.443193 val_auc=0.747307
+epoch=077 loss=0.441804 val_auc=0.747631
+epoch=078 loss=0.444208 val_auc=0.747965
+epoch=079 loss=0.439543 val_auc=0.748277
+epoch=080 loss=0.442253 val_auc=0.748578
+epoch=081 loss=0.436556 val_auc=0.748885
+epoch=082 loss=0.441866 val_auc=0.749195
+epoch=083 loss=0.439717 val_auc=0.749509
+epoch=084 loss=0.438267 val_auc=0.749814
+epoch=085 loss=0.437398 val_auc=0.750125
+epoch=086 loss=0.436281 val_auc=0.750402
+epoch=087 loss=0.437932 val_auc=0.750698
+epoch=088 loss=0.439473 val_auc=0.750994
+epoch=089 loss=0.432759 val_auc=0.751280
+epoch=090 loss=0.436694 val_auc=0.751577
+epoch=091 loss=0.435696 val_auc=0.751872
+epoch=092 loss=0.437755 val_auc=0.752169
+epoch=093 loss=0.436491 val_auc=0.752461
+epoch=094 loss=0.435704 val_auc=0.752762
+epoch=095 loss=0.434759 val_auc=0.753053
+epoch=096 loss=0.437154 val_auc=0.753365
+epoch=097 loss=0.430716 val_auc=0.753668
+epoch=098 loss=0.433366 val_auc=0.753960
+epoch=099 loss=0.435858 val_auc=0.754265
+epoch=100 loss=0.431203 val_auc=0.754559
+
+BEST_EPOCH: 100
+VAL_ROC_AUC: 0.7545593443262938
+VAL_THRESHOLD: 0.265
+VAL_MACRO_F1: 0.7953091538127637
+
+=== LOCKED TEST METRICS ===
+seed = 20260916
+best_epoch = 100
+threshold_selected_on_validation = 0.265
+test_accuracy = 0.875
+test_balanced_accuracy = 0.724609375
+test_macro_f1 = 0.684963231358831
+test_mcc = 0.3810101186440115
+test_roc_auc = 0.8852703235767505
+test_pr_auc_attack = 0.9819642119838469
+benign_precision = 0.3712753277711561
+benign_recall = 0.5407986111111112
+benign_f1 = 0.4402826855123675
+attack_precision = 0.9518828451882845
+attack_recall = 0.9084201388888888
+attack_f1 = 0.9296437772052945
+tn = 1246
+fp = 1058
+fn = 2110
+tp = 20930
+fpr = 0.4592013888888889
+fnr = 0.0915798611111111
+test_nodes = 25344
+test_directed_edges = 100612
+
+=== TEST ATTACK RECALL BY CATEGORY ===
+DDoS: N=5347 attack_recall=0.997195
+DoS: N=3494 attack_recall=0.979966
+Reconnaissance: N=14199 attack_recall=0.857384
+
+=== INFERENCE LATENCY ===
+{'nodes': 25344, 'directed_edges': 100612, 'mean_graph_ms': 7.067179160003434, 'median_graph_ms': 6.440121500418172, 'mean_us_per_node_amortized': 0.27885018781579207}
+
+MODEL_SHA256: c36641075a754a7f0c2b1bad4493bcfb9b4cb4e0283c6e7729148fbcd28943ab
+J5_GATV2_BASELINE_OK

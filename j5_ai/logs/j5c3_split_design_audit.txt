@@ -1,0 +1,150 @@
+=== J5-C3 SPLIT DESIGN AUDIT ===
+Rows = 104973
+Files = 74
+Range = 1 .. 74
+
+======================================================================
+CANDIDATE: TRAIN-C data_1..data_50, VAL-C data_51..data_62, TEST-C data_63..data_74
+
+TRAIN-C
+ files = 50
+ rows  = 86226
+ benign = 8778
+ attack = 77448
+ categories:
+category
+DDoS              11033
+DoS               28362
+Normal             8778
+Reconnaissance    38013
+Theft                40
+
+VAL-C
+ files = 12
+ rows  = 9415
+ benign = 378
+ attack = 9037
+ categories:
+category
+DDoS      9037
+Normal     378
+
+TEST-C
+ files = 12
+ rows  = 9332
+ benign = 387
+ attack = 8945
+ categories:
+category
+DDoS      8945
+Normal     387
+
+======================================================================
+CANDIDATE: TRAIN-C data_1..data_48, VAL-C data_49..data_61, TEST-C data_62..data_74
+
+TRAIN-C
+ files = 48
+ rows  = 84609
+ benign = 8707
+ attack = 75902
+ categories:
+category
+DDoS               9487
+DoS               28362
+Normal             8707
+Reconnaissance    38013
+Theft                40
+
+VAL-C
+ files = 13
+ rows  = 10297
+ benign = 421
+ attack = 9876
+ categories:
+category
+DDoS      9876
+Normal     421
+
+TEST-C
+ files = 13
+ rows  = 10067
+ benign = 415
+ attack = 9652
+ categories:
+category
+DDoS      9652
+Normal     415
+
+======================================================================
+CANDIDATE: TRAIN-C data_1..data_52, VAL-C data_53..data_63, TEST-C data_64..data_74
+
+TRAIN-C
+ files = 52
+ rows  = 87969
+ benign = 8837
+ attack = 79132
+ categories:
+category
+DDoS              12717
+DoS               28362
+Normal             8837
+Reconnaissance    38013
+Theft                40
+
+VAL-C
+ files = 11
+ rows  = 8404
+ benign = 350
+ attack = 8054
+ categories:
+category
+DDoS      8054
+Normal     350
+
+TEST-C
+ files = 11
+ rows  = 8600
+ benign = 356
+ attack = 8244
+ categories:
+category
+DDoS      8244
+Normal     356
+
+======================================================================
+CANDIDATE: TRAIN-C data_1..data_46, VAL-C data_47..data_60, TEST-C data_61..data_74
+
+TRAIN-C
+ files = 46
+ rows  = 83223
+ benign = 8646
+ attack = 74577
+ categories:
+category
+DDoS               8162
+DoS               28362
+Normal             8646
+Reconnaissance    38013
+Theft                40
+
+VAL-C
+ files = 14
+ rows  = 10910
+ benign = 450
+ attack = 10460
+ categories:
+category
+DDoS      10460
+Normal      450
+
+TEST-C
+ files = 14
+ rows  = 10840
+ benign = 447
+ attack = 10393
+ categories:
+category
+DDoS      10393
+Normal      447
+
+J5C3_SPLIT_DESIGN_AUDIT_OK

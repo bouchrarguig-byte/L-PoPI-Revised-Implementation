@@ -1,0 +1,45 @@
+{
+  "comparison": [
+    "global Cog-GAT threshold baseline",
+    "causal adaptive-trust threshold policy"
+  ],
+  "counts": {
+    "test_c": {
+      "attack": 8945,
+      "benign": 387,
+      "files": 12,
+      "rows": 9332
+    },
+    "train_c": {
+      "attack": 77448,
+      "benign": 8778,
+      "files": 50,
+      "rows": 86226
+    },
+    "val_c": {
+      "attack": 9037,
+      "benign": 378,
+      "files": 12,
+      "rows": 9415
+    }
+  },
+  "experiment": "J5-C3",
+  "limitations_declared_before_training": [
+    "TEST-C contains only Normal and DDoS within this controlled cohort.",
+    "J5-C3 therefore evaluates a late-file/distribution shift, not held-out Reconnaissance or universal OOD generalization.",
+    "The underlying 74 source files were used in earlier J5 experiments; TEST-C is a newly pre-specified evaluation fold, not a previously unseen external dataset."
+  ],
+  "primary_policy_objective": "Maximize benign Fast-Path rate on VAL-C subject to attack Fast-Path rate <= 1%.",
+  "purpose": "Controlled late-file DDoS-dominant evaluation of baseline versus adaptive DPI gating.",
+  "selection_rule": "No model predictions were used to choose the 50/12/12 block split.",
+  "source_population": "Previously constructed 104,973-flow controlled BoT-IoT cohort; this is a new deterministic repartition, not a new external dataset.",
+  "split_rule": {
+    "ordering": "numeric data_i.csv index",
+    "test_c": "data_63.csv through data_74.csv",
+    "train_c": "data_1.csv through data_50.csv",
+    "unit": "source_file",
+    "val_c": "data_51.csv through data_62.csv"
+  },
+  "status": "split-frozen-before-training",
+  "test_opening_rule": "TEST-C predictions and performance must not be computed until the model, Cog mechanism, baseline policy, adaptive policy, and their artifact hashes have been frozen."
+}

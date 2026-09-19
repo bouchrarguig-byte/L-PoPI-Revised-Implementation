@@ -1,0 +1,50 @@
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_01.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=1[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_02.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=1[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_03.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=1[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_04.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=2[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_05.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=1[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_06.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=2[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_07.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=1[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_08.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=3[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_09.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=5[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m
+
+FILE,j2_adversarial/bch_c_fe_cold_power_10/trial_10.txt
+[0;32mI (410) PUF_FE: BCH_C_FE,decoder_errors=0[0m
+[0;32mI (410) PUF_FE: BCH_C_FE,commitment=PASS[0m
+[0;32mI (410) SRAM_PUF: PUF_REPRODUCTION,PASS[0m

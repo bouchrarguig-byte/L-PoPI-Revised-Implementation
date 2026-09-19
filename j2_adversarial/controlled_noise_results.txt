@@ -1,0 +1,41 @@
+================================================================================
+L-PoPI J2.2 -- SYNTHETIC CONTROLLED-NOISE ROBUSTNESS
+================================================================================
+Captures            : 021-030 (10 held-out captures)
+Selected bits       : 1664
+Group size          : 13
+Trials per capture  : 100
+Trials per rate     : 1000
+RNG seed            : 20260913
+
+Baseline capture 021: PASS
+Baseline capture 022: PASS
+Baseline capture 023: PASS
+Baseline capture 024: PASS
+Baseline capture 025: PASS
+Baseline capture 026: PASS
+Baseline capture 027: PASS
+Baseline capture 028: PASS
+Baseline capture 029: PASS
+Baseline capture 030: PASS
+
+Baseline reconstruction: 10/10
+
+Noise   0.00% | flips=   0 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   0.25% | flips=   4 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   0.50% | flips=   8 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   1.00% | flips=  17 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   2.00% | flips=  33 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   5.00% | flips=  83 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise  10.00% | flips= 166 | success= 985/1000 |  98.500% | 95% CI [ 97.540,  99.089]
+Noise  15.00% | flips= 250 | success= 832/1000 |  83.200% | 95% CI [ 80.757,  85.389]
+Noise  20.00% | flips= 333 | success= 383/1000 |  38.300% | 95% CI [ 35.337,  41.352]
+Noise  25.00% | flips= 416 | success=  25/1000 |   2.500% | 95% CI [  1.699,   3.665]
+Noise  30.00% | flips= 499 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  35.00% | flips= 582 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  40.00% | flips= 666 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  50.00% | flips= 832 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+
+CSV written to: j2_adversarial/controlled_noise_results.csv
+
+IMPORTANT: these results characterize synthetic independent bit-flip injection on selected SRAM-PUF bits. They are not physical environmental BER measurements.

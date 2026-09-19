@@ -1,0 +1,40 @@
+L-PoPI BCH-C FUZZY EXTRACTOR -- ADVERSARIAL FIRMWARE VALIDATION
+
+baseline:
+decoder_errors=1
+commitment=PASS
+PUF_REPRODUCTION=PASS
+
+helper_8:
+deterministic helper Hamming distance=8
+decoder_errors=8
+commitment=PASS
+PUF_REPRODUCTION=PASS
+
+helper_17:
+deterministic helper Hamming distance=17
+decoder=FAIL
+PUF_REPRODUCTION=FAIL
+error=ESP_ERR_INVALID_CRC
+
+salt_1bit:
+salt Hamming distance=1
+decoder_errors=2
+commitment=FAIL
+PUF_REPRODUCTION=FAIL
+error=ESP_ERR_INVALID_CRC
+
+commitment_1bit:
+commitment Hamming distance=1
+decoder_errors=3
+commitment=FAIL
+PUF_REPRODUCTION=FAIL
+error=ESP_ERR_INVALID_CRC
+
+INTERPRETATION:
+Correctable helper perturbations are not necessarily rejected.
+The deterministic 17-bit helper perturbation was rejected in this trial;
+this is not a claim that every error pattern above t=16 is rejected.
+Salt and commitment perturbations independently caused final
+key-validation failure in the tested trials.
+The helper data itself is not claimed to provide authenticated integrity.

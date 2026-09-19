@@ -1,0 +1,160 @@
+{
+  "experiment": "L-PoPI BCH held-out reconstruction",
+  "enrollment": "captures 001-020",
+  "holdout": "captures 021-030",
+  "stable_pool_source": "same 1664 enrollment-only selected indexes used by repetition-13 baseline",
+  "benchmark_rng_seed": 20260913,
+  "benchmark_secret_note": "Deterministic secret used only for reproducible ECC comparison; not a production enrollment method.",
+  "results": [
+    {
+      "name": "BCH-A",
+      "m": 8,
+      "t": 8,
+      "n": 255,
+      "ecc_bits": 64,
+      "ecc_bytes": 8,
+      "secret_bits": 128,
+      "puf_bits_used": 192,
+      "stable_pool_size": 1664,
+      "successes": 10,
+      "trials": 10,
+      "per_capture": [
+        {
+          "capture": 21,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 22,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 23,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 24,
+          "raw_errors": 1,
+          "decoder_reported_errors": 1,
+          "success": true
+        },
+        {
+          "capture": 25,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 26,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 27,
+          "raw_errors": 1,
+          "decoder_reported_errors": 1,
+          "success": true
+        },
+        {
+          "capture": 28,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 29,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 30,
+          "raw_errors": 1,
+          "decoder_reported_errors": 1,
+          "success": true
+        }
+      ]
+    },
+    {
+      "name": "BCH-C",
+      "m": 9,
+      "t": 16,
+      "n": 511,
+      "ecc_bits": 144,
+      "ecc_bytes": 18,
+      "secret_bits": 128,
+      "puf_bits_used": 272,
+      "stable_pool_size": 1664,
+      "successes": 10,
+      "trials": 10,
+      "per_capture": [
+        {
+          "capture": 21,
+          "raw_errors": 1,
+          "decoder_reported_errors": 1,
+          "success": true
+        },
+        {
+          "capture": 22,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 23,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 24,
+          "raw_errors": 2,
+          "decoder_reported_errors": 2,
+          "success": true
+        },
+        {
+          "capture": 25,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 26,
+          "raw_errors": 0,
+          "decoder_reported_errors": 0,
+          "success": true
+        },
+        {
+          "capture": 27,
+          "raw_errors": 1,
+          "decoder_reported_errors": 1,
+          "success": true
+        },
+        {
+          "capture": 28,
+          "raw_errors": 1,
+          "decoder_reported_errors": 1,
+          "success": true
+        },
+        {
+          "capture": 29,
+          "raw_errors": 2,
+          "decoder_reported_errors": 2,
+          "success": true
+        },
+        {
+          "capture": 30,
+          "raw_errors": 2,
+          "decoder_reported_errors": 2,
+          "success": true
+        }
+      ]
+    }
+  ]
+}

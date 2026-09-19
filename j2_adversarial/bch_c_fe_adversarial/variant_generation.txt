@@ -1,0 +1,6 @@
+baseline         82b3cdb7f96c76e945660c1b79b8408c96ce0261c55322e496bf86961ce1a88b  j2_adversarial/bch_c_fe_adversarial/puf_enrollment_baseline.h
+helper_8         8542b6baf24f88d3d7a3cab5339a09793ff36b14d0042bd642cb9c02ab25f50c  j2_adversarial/bch_c_fe_adversarial/puf_enrollment_helper_8.h
+helper_17        c7d15774de6e1c4b484ceceb730bbe88a2cb394ab803a49f3431c761fcbb68bf  j2_adversarial/bch_c_fe_adversarial/puf_enrollment_helper_17.h
+salt_1bit        4a3c3fcf539a1f05b5ebe4f7594a5e97248c46952e866924851337993883cd6b  j2_adversarial/bch_c_fe_adversarial/puf_enrollment_salt_1bit.h
+commitment_1bit  f1c795df664355412a1febb6e79636cbd342b8cc0f5a7f9dcc9920405c571420  j2_adversarial/bch_c_fe_adversarial/puf_enrollment_commitment_1bit.h
+BCH_C_ADVERSARIAL_VARIANTS_OK

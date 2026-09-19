@@ -1,0 +1,82 @@
+==================================================================================
+L-PoPI J2 -- BCH SYNTHETIC CONTROLLED-NOISE ROBUSTNESS
+==================================================================================
+Enrollment captures : 001-020
+Held-out captures   : 021-030
+Stable-cell pool    : 1664 bits
+Secret size         : 128 bits
+Trials/capture/rate : 100
+Trials/rate/scheme  : 1000
+RNG seed            : 20260913
+
+----------------------------------------------------------------------------------
+BCH-A
+----------------------------------------------------------------------------------
+m              : 8
+t              : 8
+ecc_bits       : 64
+ecc_bytes      : 8
+PUF bits used  : 192
+
+Baseline capture 021: PASS | decoder=0
+Baseline capture 022: PASS | decoder=0
+Baseline capture 023: PASS | decoder=0
+Baseline capture 024: PASS | decoder=1
+Baseline capture 025: PASS | decoder=0
+Baseline capture 026: PASS | decoder=0
+Baseline capture 027: PASS | decoder=1
+Baseline capture 028: PASS | decoder=0
+Baseline capture 029: PASS | decoder=0
+Baseline capture 030: PASS | decoder=1
+Baseline reconstruction: 10/10
+
+Noise   0.00% | flips=  0 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   0.25% | flips=  0 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   0.50% | flips=  1 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   1.00% | flips=  2 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   2.00% | flips=  4 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   5.00% | flips= 10 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  10.00% | flips= 19 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  15.00% | flips= 29 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  20.00% | flips= 38 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  25.00% | flips= 48 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  30.00% | flips= 58 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+
+----------------------------------------------------------------------------------
+BCH-C
+----------------------------------------------------------------------------------
+m              : 9
+t              : 16
+ecc_bits       : 144
+ecc_bytes      : 18
+PUF bits used  : 272
+
+Baseline capture 021: PASS | decoder=1
+Baseline capture 022: PASS | decoder=0
+Baseline capture 023: PASS | decoder=0
+Baseline capture 024: PASS | decoder=2
+Baseline capture 025: PASS | decoder=0
+Baseline capture 026: PASS | decoder=0
+Baseline capture 027: PASS | decoder=1
+Baseline capture 028: PASS | decoder=1
+Baseline capture 029: PASS | decoder=2
+Baseline capture 030: PASS | decoder=2
+Baseline reconstruction: 10/10
+
+Noise   0.00% | flips=  0 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   0.25% | flips=  1 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   0.50% | flips=  1 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   1.00% | flips=  3 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   2.00% | flips=  5 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise   5.00% | flips= 14 | success=1000/1000 | 100.000% | 95% CI [ 99.617, 100.000]
+Noise  10.00% | flips= 27 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  15.00% | flips= 41 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  20.00% | flips= 54 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  25.00% | flips= 68 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+Noise  30.00% | flips= 82 | success=   0/1000 |   0.000% | 95% CI [  0.000,   0.383]
+
+==================================================================================
+CSV written to: j2_adversarial/bch_controlled_noise_results.csv
+
+IMPORTANT: synthetic independent bit-flip injection only. These noise levels are not physical environmental BER measurements.
+==================================================================================

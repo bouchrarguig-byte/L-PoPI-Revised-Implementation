@@ -1,0 +1,33 @@
+{
+  "adaptive": {
+    "base_tau": 0.461821713918829,
+    "beta": 0.05,
+    "elevated_tau": 0.8166546330633343,
+    "min_history": 2,
+    "tau_trust": 0.7000000000000002,
+    "val_attack_fast": 0.007303308620117296,
+    "val_benign_fast": 0.8465608465608465,
+    "val_privileged_fraction": 0.020074349442379184,
+    "val_total_fast": 0.040998406797663305
+  },
+  "baseline": {
+    "tau_fast": 0.461821713918829,
+    "val_attack_fast": 0.007303308620117296,
+    "val_benign_fast": 0.8465608465608465,
+    "val_total_fast": 0.040998406797663305
+  },
+  "cog": {
+    "alpha": 0.1,
+    "history": "causal prior source scores only",
+    "lambda": 0.5,
+    "state_reset": "per source_file"
+  },
+  "experiment": "J5-C3",
+  "model_sha256": "00787a6ad095713d6ea3710a1166cdae3bbbdaa21f2208e7a8840b6b092ba6bc",
+  "security_budget_attack_fast": 0.01,
+  "split_manifest_sha256": "140cac38ff2ba8496c03bdacba8e14482264335a24b15507f485d2c60ec0c56c",
+  "status": "FROZEN_BEFORE_TEST_C",
+  "test_c_rule": "No policy parameter may be changed after TEST-C is opened.",
+  "test_c_sealed_sha256": "fd098dd3c5bdaffc0432101f32f657f505dd4053072054979cdec8c334f2343c",
+  "val_predictions_sha256": "daec8ef003328f597a7061f796e0006b5609b66cda62c28ede46662fc24519b7"
+}

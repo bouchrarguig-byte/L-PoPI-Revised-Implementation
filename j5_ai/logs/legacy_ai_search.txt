@@ -1,0 +1,69 @@
+./balanced_cog_gat_results.csv
+./best_model.pt
+./best_model.pth
+./cog_gat_evaluation_log.csv
+./cog_gat_experimental_results.csv
+./cog_gat_methodology_results.png
+./cog_gat_performance_plot.png
+./cog_gat_separated_results.png
+./Desktop/linux data/conference fes/A Granular Zero-Trust Cog-GAT Strategy in IoT.pdf
+./Desktop/linux data/conference fes/A Granular Zero-Trust Cog-GAT Strategy in IoT.pptx
+./Desktop/linux data/conference fes/tinywow_A Granular Zero-Trust Cog-GAT Strategy in IoT_89693716.pdf
+./Downloads/A Granular Zero-Trust Cog-GAT-IA-TEST.pdf
+./Downloads/A Granular Zero-Trust Cog-GAT.pdf
+./Downloads/A Granular Zero-Trust Cog-GAT-similarité.pdf
+./Downloads/A Granular Zero-Trust Cog-GAT Strategy in IoT.pptx
+./Downloads/BoT-IoT.zip
+./Downloads/Cog-GAT-IA-test.pdf
+./Downloads/cog_gat_methodology_results.png
+./Downloads/Cog-GAT.pdf
+./Downloads/Cog-GAT-similarité.pdf
+./Downloads/Cog_GAT_version2 (10).pdf
+./Downloads/Cog_GAT_version2 (11).pdf
+./Downloads/Cog_GAT_version2 (12).pdf
+./Downloads/Cog_GAT_version2 (13).pdf
+./Downloads/Cog_GAT_version2 (14).pdf
+./Downloads/Cog_GAT_version2 (15).pdf
+./Downloads/Cog_GAT_version2 (16).pdf
+./Downloads/Cog_GAT_version2 (17).pdf
+./Downloads/Cog_GAT_version2 (18).pdf
+./Downloads/Cog_GAT_version2 (19).pdf
+./Downloads/Cog_GAT_version2 (1).pdf
+./Downloads/Cog_GAT_version2 (20).pdf
+./Downloads/Cog_GAT_version2 (21).pdf
+./Downloads/Cog_GAT_version2 (22).pdf
+./Downloads/Cog_GAT_version2 (23).pdf
+./Downloads/Cog_GAT_version2 (24).pdf
+./Downloads/Cog_GAT_version2 (25).pdf
+./Downloads/Cog_GAT_version2 (26).pdf
+./Downloads/Cog_GAT_version2 (27).pdf
+./Downloads/Cog_GAT_version2 (28).pdf
+./Downloads/Cog_GAT_version2 (29).pdf
+./Downloads/Cog_GAT_version2 (2).pdf
+./Downloads/Cog_GAT_version2 (30).pdf
+./Downloads/Cog_GAT_version2 (31).pdf
+./Downloads/Cog_GAT_version2 (32).pdf
+./Downloads/Cog_GAT_version2 (33).pdf
+./Downloads/Cog_GAT_version2 (34).pdf
+./Downloads/Cog_GAT_version2 (35).pdf
+./Downloads/Cog_GAT_version2 (36).pdf
+./Downloads/Cog_GAT_version2 (3).pdf
+./Downloads/Cog_GAT_version2 (4).pdf
+./Downloads/Cog_GAT_version2 (5).pdf
+./Downloads/Cog_GAT_version2 (6).pdf
+./Downloads/Cog_GAT_version2 (7).pdf
+./Downloads/Cog_GAT_version2 (8).pdf
+./Downloads/Cog_GAT_version2 (9).pdf
+./Downloads/Cog_GAT_version2.pdf
+./Downloads/Securing Decentralized IoT_ Cog-GAT & L-PoPI.pdf
+./Downloads/Securing DePIN_ Cog-GAT & L-PoPI.pdf
+./esp/esp-idf/tools/ble/lib_gatt.py
+./final_bot_iot_results.png
+./IDS/Edge-IIoTset-dataset/DNN-EdgeIIoT-dataset.csv
+./IDS/Edge-IIoTset-dataset/ML-EdgeIIoT-dataset.csv
+./IDS/MQTTset/Data/FINAL_CSV/mqttdataset_reduced.csv
+./results/84/best_model.pt
+./results/my paper CBID results/best_model.pt
+./results/old result /best_model.pt
+./results_ultimate_patched/best_model.pth
+./smote_cog_gat_results.csv

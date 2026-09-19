@@ -1,0 +1,128 @@
+=== J5-C CONFIRMATORY AVAILABILITY AUDIT ===
+
+Manifest keys: ['seed', 'group_unit', 'target_file_counts', 'optimization_target', 'splits']
+
+=== TRAIN ===
+files = 52
+rows  = 72413
+file list:
+  data_10.csv
+  data_11.csv
+  data_12.csv
+  data_13.csv
+  data_16.csv
+  data_17.csv
+  data_18.csv
+  data_2.csv
+  data_20.csv
+  data_21.csv
+  data_23.csv
+  data_24.csv
+  data_25.csv
+  data_26.csv
+  data_28.csv
+  data_29.csv
+  data_30.csv
+  data_32.csv
+  data_33.csv
+  data_34.csv
+  data_36.csv
+  data_37.csv
+  data_38.csv
+  data_39.csv
+  data_41.csv
+  data_42.csv
+  data_43.csv
+  data_45.csv
+  data_48.csv
+  data_49.csv
+  data_51.csv
+  data_53.csv
+  data_54.csv
+  data_56.csv
+  data_57.csv
+  data_58.csv
+  data_60.csv
+  data_61.csv
+  data_62.csv
+  data_63.csv
+  data_64.csv
+  data_65.csv
+  data_66.csv
+  data_67.csv
+  data_69.csv
+  data_7.csv
+  data_70.csv
+  data_71.csv
+  data_72.csv
+  data_73.csv
+  data_74.csv
+  data_9.csv
+categories:
+category
+Reconnaissance    23814
+DDoS              21810
+DoS               20166
+Normal             6583
+Theft                40
+
+=== VAL ===
+files = 11
+rows  = 7216
+file list:
+  data_14.csv
+  data_15.csv
+  data_22.csv
+  data_27.csv
+  data_3.csv
+  data_35.csv
+  data_4.csv
+  data_46.csv
+  data_47.csv
+  data_5.csv
+  data_55.csv
+categories:
+category
+DoS       4702
+DDoS      1858
+Normal     656
+
+=== TEST ===
+files = 11
+rows  = 25344
+file list:
+  data_1.csv
+  data_19.csv
+  data_31.csv
+  data_40.csv
+  data_44.csv
+  data_50.csv
+  data_52.csv
+  data_59.csv
+  data_6.csv
+  data_68.csv
+  data_8.csv
+categories:
+category
+Reconnaissance    14199
+DDoS               5347
+DoS                3494
+Normal             2304
+
+=== OVERLAP AUDIT ===
+TRAIN ∩ VAL: 0 []
+TRAIN ∩ TEST: 0 []
+VAL ∩ TEST: 0 []
+
+=== EXPERIMENTAL PROVENANCE ===
+J5-B model-fitting files = 51
+J5-C2 tuning files = 11
+previously observed result files = 12
+
+=== STRICT UNUSED CANDIDATES ===
+count = 0
+[]
+
+CONCLUSION: NO STRICTLY INDEPENDENT CONFIRMATORY FILE REMAINS IN THE CURRENT CONTROLLED SPLIT.
+
+J5C_CONFIRMATORY_AVAILABILITY_AUDIT_OK

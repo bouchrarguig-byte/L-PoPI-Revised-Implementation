@@ -1,0 +1,16 @@
+BCH-C firmware enrollment generated
+region            : 1
+region bytes      : 256
+selected bits     : 272
+index range       : 0 .. 332
+index SHA256      : d0539bb28c7d2846847bccee4c8cce8018fa361477976a39c1abb3871e39f015
+secret            : 306177bec0d7aa1abaca6a44531dfcff
+ECC               : 985a63fe0a4330d1c25ffca40be55eb65fd0
+codeword          : 306177bec0d7aa1abaca6a44531dfcff985a63fe0a4330d1c25ffca40be55eb65fd0
+helper            : fdd2a67ab1328e9a303b9fcdf38af3c6ff531ddc0a87c86f623776157b167ed73d61
+salt              : 746e5286fa8ec168bf44b63b3226bed6eb0e0a822b0db503da7b1538c7d3fbc3
+derived key       : 4dbf7ac35ec536844b7324ada3a37e6d701e5f9d6da53e33c100322d70a01f60
+commitment        : 2327671d3c300887788a83d1c6ed6cd4b0c0b460dc7359d95109b924c8e9e84e
+JSON              : j2_adversarial/bch_c_firmware_enrollment.json
+header            : main/puf_enrollment_bch_c_region1.h
+BCH_C_FIRMWARE_ENROLLMENT_GENERATED

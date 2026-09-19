@@ -1,0 +1,5 @@
+=== L-PoPI OPTIMIZED REPLAY-GUARD TEST ===
+T1 cryptographic verification N1: PASS
+T2 first protocol submission: { accepted: true, reason: 'VALID_FRESH_ATTESTATION' }
+T3 exact replay: { accepted: false, reason: 'NONCE_ALREADY_USED' }
+T4 old proof with modified nonce: EXPECTED_FAIL

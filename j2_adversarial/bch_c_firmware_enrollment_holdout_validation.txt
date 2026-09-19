@@ -1,0 +1,21 @@
+==============================================================================
+L-PoPI BCH-C FIRMWARE ENROLLMENT -- HELD-OUT VALIDATION
+==============================================================================
+source             : j2_adversarial/bch_c_firmware_enrollment.json
+held-out captures  : 021-030
+selected bits      : 272
+packet bytes       : 34
+
+Capture 021: PASS | raw_errors= 1 | decoder=1 | secret=PASS | commitment=PASS
+Capture 022: PASS | raw_errors= 0 | decoder=0 | secret=PASS | commitment=PASS
+Capture 023: PASS | raw_errors= 0 | decoder=0 | secret=PASS | commitment=PASS
+Capture 024: PASS | raw_errors= 2 | decoder=2 | secret=PASS | commitment=PASS
+Capture 025: PASS | raw_errors= 0 | decoder=0 | secret=PASS | commitment=PASS
+Capture 026: PASS | raw_errors= 0 | decoder=0 | secret=PASS | commitment=PASS
+Capture 027: PASS | raw_errors= 1 | decoder=1 | secret=PASS | commitment=PASS
+Capture 028: PASS | raw_errors= 1 | decoder=1 | secret=PASS | commitment=PASS
+Capture 029: PASS | raw_errors= 2 | decoder=2 | secret=PASS | commitment=PASS
+Capture 030: PASS | raw_errors= 2 | decoder=2 | secret=PASS | commitment=PASS
+
+BCH_C_HEADER_HOLDOUT,10/10,PASS
+BCH_C_FIRMWARE_ENROLLMENT_OFFLINE_OK
