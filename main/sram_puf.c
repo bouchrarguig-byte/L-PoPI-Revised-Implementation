@@ -115,6 +115,17 @@ void app_main(void)
         }
     }
 
+#if LPOFI_PUF_DEBUG_CAPTURE
+    /*
+     * The SRAM bytes were captured by bootloader_before_init().
+     * Re-emit the cached early-boot handoff after USB-UART enumeration
+     * so a host collector can receive a true cold-power capture.
+     * This does NOT re-read SRAM.
+     */
+    vTaskDelay(pdMS_TO_TICKS(3000));
+    print_puf_capture();
+#endif
+
     esp_err_t err = lpofi_puf_reproduce_key(
         (const uint8_t *)s_puf_handoff.raw_region,
         (size_t)s_puf_handoff.region_bytes,
