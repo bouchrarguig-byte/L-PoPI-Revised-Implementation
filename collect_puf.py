@@ -583,27 +583,28 @@ def main():
 
         print()
         print("=" * 72)
-        print(
-            "POWER CYCLE REQUIRED"
-        )
+        print("POWER CYCLE REQUIRED")
         print("=" * 72)
+        print("Disconnect ESP32 USB power NOW.")
 
-        print(
-            "1. Disconnect ESP32 USB power."
-        )
-        print(
-            "2. Wait 5–10 seconds."
-        )
-        print(
-            "3. Reconnect USB."
-        )
+        # Wait until the USB serial device really disappears.
+        while os.path.exists(PORT):
+            time.sleep(0.1)
 
-        input(
-            "Press ENTER after reconnecting "
-            "the ESP32..."
-        )
+        print("[+] Power-off detected.")
+        print("[+] Waiting exactly 10 seconds...")
+        time.sleep(10)
 
         capture_number += 1
+
+        print()
+        print(
+            f"[+] Ready for capture "
+            f"{capture_number}/{NUM_CAPTURES}"
+        )
+        print("[+] Reconnect ESP32 USB NOW.")
+        # The next loop iteration opens the serial port as soon
+        # as it appears, before the delayed retransmission.
 
     # ========================================================
     # Final statistics
