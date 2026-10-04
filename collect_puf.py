@@ -211,11 +211,16 @@ def read_capture(ser, capture_number):
 
     started = False
     regions = {}
+    rx_buffer = bytearray()
 
     while time.monotonic() < deadline:
 
         try:
-            line = ser.readline()
+            waiting = ser.in_waiting
+
+            chunk = ser.read(
+                waiting if waiting > 0 else 1
+            )
 
         except (serial.SerialException, OSError):
 
@@ -231,121 +236,120 @@ def read_capture(ser, capture_number):
 
             return None, "disconnect"
 
-        if not line:
+        if not chunk:
             time.sleep(0.01)
             continue
 
-        text = line.decode(
-            "ascii",
-            errors="replace"
-        ).strip()
+        rx_buffer.extend(chunk)
 
-        if text == "PUF_CAPTURE_START":
+        while b"\n" in rx_buffer:
 
-            started = True
-
-            print("[+] PUF capture started")
-
-            continue
-
-        if not started:
-            continue
-
-        # ----------------------------------------------------
-        # Region declaration
-        # ----------------------------------------------------
-
-        match = re.match(
-            r"PUF_REGION_START,(\d+),(0x[0-9A-Fa-f]+),(\d+)",
-            text
-        )
-
-        if match:
-
-            region = int(match.group(1))
-            address = match.group(2)
-            size = int(match.group(3))
-
-            print(
-                f"[+] Region {region}: "
-                f"{address}, {size} bytes"
+            raw_line, _, remainder = (
+                rx_buffer.partition(b"\n")
             )
 
-            continue
+            rx_buffer = bytearray(remainder)
 
-        # ----------------------------------------------------
-        # Region data
-        # ----------------------------------------------------
+            text = raw_line.decode(
+                "ascii",
+                errors="replace"
+            ).strip()
 
-        if text.startswith("PUF_DATA,"):
+            if text == "PUF_CAPTURE_START":
 
-            parts = text.split(",", 2)
+                started = True
+                regions = {}
 
-            if len(parts) != 3:
+                print("[+] PUF capture started")
+                continue
+
+            if not started:
+                continue
+
+            match = re.match(
+                r"PUF_REGION_START,"
+                r"(\d+),"
+                r"(0x[0-9A-Fa-f]+),"
+                r"(\d+)",
+                text
+            )
+
+            if match:
+
+                region = int(match.group(1))
+                address = match.group(2)
+                size = int(match.group(3))
 
                 print(
-                    "[!] Invalid PUF_DATA line"
+                    f"[+] Region {region}: "
+                    f"{address}, {size} bytes"
                 )
 
                 continue
 
-            region = int(parts[1])
-            hex_data = parts[2].strip()
+            if text.startswith("PUF_DATA,"):
 
-            try:
-                data = bytes.fromhex(hex_data)
+                parts = text.split(",", 2)
 
-            except ValueError:
+                if len(parts) != 3:
+                    print(
+                        "[!] Invalid PUF_DATA line"
+                    )
+                    continue
 
-                print(
-                    f"[!] Invalid hexadecimal data "
-                    f"for region {region}"
-                )
+                try:
+                    region = int(parts[1])
+                    data = bytes.fromhex(
+                        parts[2].strip()
+                    )
 
-                return None, "invalid_data"
+                except (ValueError, IndexError):
 
-            if len(data) != REGION_SIZE:
+                    print(
+                        "[!] Invalid PUF_DATA payload"
+                    )
+                    continue
 
-                print(
-                    f"[!] Region {region}: "
-                    f"expected {REGION_SIZE} bytes, "
-                    f"received {len(data)}"
-                )
+                if len(data) != REGION_SIZE:
 
-                return None, "invalid_size"
+                    print(
+                        f"[!] Region {region}: "
+                        f"expected {REGION_SIZE} bytes, "
+                        f"received {len(data)}"
+                    )
 
-            regions[region] = data
+                    continue
 
-            print(
-                f"[+] Region {region}: "
-                f"{len(data)} bytes received"
-            )
-
-            continue
-
-        # ----------------------------------------------------
-        # End of capture
-        # ----------------------------------------------------
-
-        if text == "PUF_CAPTURE_END":
-
-            print("[+] PUF capture completed")
-
-            missing = [
-                r for r in PUF_REGIONS
-                if r not in regions
-            ]
-
-            if missing:
+                regions[region] = data
 
                 print(
-                    "[!] Missing regions:",
-                    missing
+                    f"[+] Region {region}: "
+                    f"{len(data)} bytes received"
                 )
 
-                return None, "missing_region"
+                continue
 
-            return regions, "success"
+            if text == "PUF_CAPTURE_END":
+
+                missing = [
+                    r for r in PUF_REGIONS
+                    if r not in regions
+                ]
+
+                if missing:
+
+                    print(
+                        "[!] Incomplete retransmission; "
+                        "waiting for next copy."
+                    )
+
+                    started = False
+                    regions = {}
+                    continue
+
+                print("[+] PUF capture completed")
+
+                return regions, "success"
 
     print(
         f"[!] Timeout waiting for capture "

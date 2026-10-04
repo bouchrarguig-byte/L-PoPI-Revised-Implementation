@@ -122,8 +122,18 @@ void app_main(void)
      * so a host collector can receive a true cold-power capture.
      * This does NOT re-read SRAM.
      */
-    vTaskDelay(pdMS_TO_TICKS(3000));
-    print_puf_capture();
+    /*
+     * The SRAM response was captured once by bootloader_before_init().
+     * Re-transmit the same cached response several times so the host
+     * cannot miss it during USB-UART enumeration.
+     * No SRAM re-read occurs here.
+     */
+    vTaskDelay(pdMS_TO_TICKS(1000));
+
+    for (int tx = 0; tx < 8; ++tx) {
+        print_puf_capture();
+        vTaskDelay(pdMS_TO_TICKS(500));
+    }
 #endif
 
     esp_err_t err = lpofi_puf_reproduce_key(
