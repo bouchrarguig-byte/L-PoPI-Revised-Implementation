@@ -64,7 +64,7 @@ read -p "Appuyez sur ENTREE lorsque la carte est débranchée..."
 
 cd "$DEST"
 
-"$PY" "$REPO/collect_puf.py" 2>&1 | tee collection.log
+"$PY" -u "$REPO/collect_puf.py" 2>&1 | tee collection.log
 
 if [ -d puf_results ]; then
     sha256sum puf_results/capture_*.txt > SHA256SUMS.txt
