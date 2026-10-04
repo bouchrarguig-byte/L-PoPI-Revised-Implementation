@@ -152,4 +152,79 @@ void bootloader_before_init(void)
 
 void bootloader_after_init(void)
 {
+#if LPOFI_PUF_DEBUG_CAPTURE
+
+    /*
+     * Region 1 was captured exactly once in bootloader_before_init().
+     * Wait for the CP2102/host serial connection to enumerate, then
+     * retransmit the cached response. No SRAM re-read occurs here.
+     */
+
+    if (puf_handoff->magic != LPOFI_PUF_HANDOFF_MAGIC ||
+        puf_handoff->version != LPOFI_PUF_HANDOFF_VERSION ||
+        puf_handoff->region_id != LPOFI_PUF_SOURCE_REGION ||
+        puf_handoff->region_bytes != LPOFI_PUF_HANDOFF_REGION_BYTES ||
+        puf_handoff->crc32 != lpofi_puf_handoff_crc(puf_handoff)) {
+
+        esp_rom_printf(
+            "PUF_BOOTLOADER_HANDOFF_INVALID\r\n"
+        );
+
+        return;
+    }
+
+    /* Allow USB-UART enumeration on the host. */
+    esp_rom_delay_us(2000000);
+
+    for (int tx = 0; tx < 8; ++tx) {
+
+        esp_rom_printf(
+            "PUF_CAPTURE_START\r\n"
+        );
+
+        esp_rom_printf(
+            "PUF_REGIONS,1\r\n"
+        );
+
+        esp_rom_printf(
+            "PUF_REGION_SIZE,%d\r\n",
+            REGION_SIZE
+        );
+
+        esp_rom_printf(
+            "PUF_REGION_START,%d,0x%08X,%d\r\n",
+            LPOFI_PUF_SOURCE_REGION,
+            (unsigned int)
+                region_addresses[LPOFI_PUF_SOURCE_REGION],
+            REGION_SIZE
+        );
+
+        esp_rom_printf(
+            "PUF_DATA,%d,",
+            LPOFI_PUF_SOURCE_REGION
+        );
+
+        for (int i = 0; i < REGION_SIZE; ++i) {
+            esp_rom_printf(
+                "%02X",
+                (unsigned int)
+                    puf_handoff->raw_region[i]
+            );
+        }
+
+        esp_rom_printf("\r\n");
+
+        esp_rom_printf(
+            "PUF_REGION_END,%d\r\n",
+            LPOFI_PUF_SOURCE_REGION
+        );
+
+        esp_rom_printf(
+            "PUF_CAPTURE_END\r\n"
+        );
+
+        esp_rom_delay_us(500000);
+    }
+
+#endif
 }
