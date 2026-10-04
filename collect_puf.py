@@ -146,23 +146,45 @@ def wait_for_port():
 
         if os.path.exists(PORT):
 
-            try:
+            # Give the USB-UART device a short time to stabilize
+            # before opening it.
+            time.sleep(1.0)
 
+            if not os.path.exists(PORT):
+                continue
+
+            ser = None
+
+            try:
                 ser = serial.Serial(
-                    PORT,
-                    BAUD,
-                    timeout=0.2
+                    port=None,
+                    baudrate=BAUD,
+                    timeout=0.2,
+                    rtscts=False,
+                    dsrdtr=False,
                 )
 
-                print("[+] Serial port connected")
+                # Avoid host-side DTR/RTS transitions causing
+                # an unintended ESP32 reset.
+                ser.dtr = False
+                ser.rts = False
+                ser.port = PORT
+                ser.open()
 
-                # Clear stale data.
-                
+                print(
+                    "[+] Serial port connected "
+                    "(DTR/RTS disabled)"
+                )
 
                 return ser
 
-            except serial.SerialException:
-                pass
+            except (serial.SerialException, OSError):
+
+                try:
+                    if ser is not None:
+                        ser.close()
+                except Exception:
+                    pass
 
         time.sleep(0.5)
 
@@ -497,9 +519,36 @@ def main():
                 f"failed: {status}"
             )
 
+            print()
+            print("=" * 72)
+            print("FAILED ATTEMPT NOT COUNTED")
+            print("=" * 72)
+
             print(
-                "[+] Waiting for the ESP32 "
-                "to reconnect..."
+                "Disconnect ESP32 USB power NOW."
+            )
+
+            # A failed UART acquisition is never accepted as
+            # a PUF sample. Require a fresh cold-power cycle
+            # before retrying the same capture number.
+            while os.path.exists(PORT):
+                time.sleep(0.1)
+
+            print("[+] Power-off detected.")
+            print(
+                "[+] Waiting exactly 10 seconds..."
+            )
+
+            time.sleep(10)
+
+            print()
+            print(
+                f"[+] Retry capture "
+                f"{capture_number}/{NUM_CAPTURES}"
+            )
+
+            print(
+                "[+] Reconnect ESP32 USB NOW."
             )
 
             continue
