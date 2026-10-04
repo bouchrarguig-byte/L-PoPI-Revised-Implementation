@@ -140,9 +140,9 @@ def wait_for_port():
         f"(timeout {RECONNECT_TIMEOUT}s)..."
     )
 
-    deadline = time.time() + RECONNECT_TIMEOUT
+    deadline = time.monotonic() + RECONNECT_TIMEOUT
 
-    while time.time() < deadline:
+    while time.monotonic() < deadline:
 
         if os.path.exists(PORT):
 
@@ -159,9 +159,10 @@ def wait_for_port():
                 ser = serial.Serial(
                     port=None,
                     baudrate=BAUD,
-                    timeout=0.2,
+                    timeout=0,
                     rtscts=False,
                     dsrdtr=False,
+                    exclusive=True,
                 )
 
                 # Avoid host-side DTR/RTS transitions causing
@@ -206,12 +207,12 @@ def read_capture(ser, capture_number):
 
     print("[+] Waiting for PUF_CAPTURE_START")
 
-    deadline = time.time() + CAPTURE_TIMEOUT
+    deadline = time.monotonic() + CAPTURE_TIMEOUT
 
     started = False
     regions = {}
 
-    while time.time() < deadline:
+    while time.monotonic() < deadline:
 
         try:
             line = ser.readline()
@@ -231,6 +232,7 @@ def read_capture(ser, capture_number):
             return None, "disconnect"
 
         if not line:
+            time.sleep(0.01)
             continue
 
         text = line.decode(
