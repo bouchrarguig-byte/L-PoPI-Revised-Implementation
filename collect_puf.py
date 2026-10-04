@@ -159,7 +159,7 @@ def wait_for_port():
                 ser = serial.Serial(
                     port=None,
                     baudrate=BAUD,
-                    timeout=0,
+                    timeout=0.1,
                     rtscts=False,
                     dsrdtr=False,
                     exclusive=True,
