@@ -1,0 +1,10 @@
+device=D1
+git_commit=8670f38
+date_start=2026-10-05T18:23:40+00:00
+region=1
+address=0x3FFF2000
+region_bytes=256
+captures=30
+enrollment=001-020
+heldout=021-030
+date_end=2026-10-05T18:31:23+00:00

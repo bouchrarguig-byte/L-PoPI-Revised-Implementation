@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering
+\caption{Multi-device SRAM-PUF characterization under the frozen 20/10 enrollment--held-out protocol.}
+\label{tab:multidevice_puf}
+\begin{tabular}{lcccccccc}
+\hline
+Device & Rev. & Rel. (\%) & Uniformity (\%) & Held-out BER (\%) & Perfect cells & BCH err. mean & BCH err. max & FE \\
+\hline
+D0 & v3.0 & 95.84 & 48.93 & 4.36 & 1659 & 0.50 & 2 & 10/10 \\
+D1 & v3.1 & 95.79 & 50.29 & 4.38 & 1634 & 0.70 & 4 & 10/10 \\
+D2 & v3.1 & 96.05 & 49.51 & 4.28 & 1659 & 1.00 & 3 & 10/10 \\
+D3 & v3.1 & 95.69 & 50.73 & 4.80 & 1647 & 1.50 & 3 & 10/10 \\
+D4 & v3.1 & 95.99 & 48.44 & 4.22 & 1655 & 0.80 & 3 & 10/10 \\
+D5 & v3.1 & 95.45 & 51.22 & 4.95 & 1607 & 0.80 & 3 & 10/10 \\
+\hline
+\end{tabular}
+\end{table*}
+
+\begin{table}[t]
+\centering
+\caption{Inter-device uniqueness of enrollment templates.}
+\label{tab:puf_uniqueness}
+\begin{tabular}{lccc}
+\hline
+Cohort & Pairs & Mean HD (\%) & Range (\%) \\
+\hline
+D1--D5 (rev v3.1) & 10 & 49.22 & 48.10--50.93 \\
+D0--D5 (extended) & 15 & 49.09 & 47.75--50.98 \\
+\hline
+\end{tabular}
+\end{table}

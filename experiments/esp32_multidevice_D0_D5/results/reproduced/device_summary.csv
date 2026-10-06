@@ -1,0 +1,7 @@
+device,revision,captures,acquisition_retries_not_counted,all_capture_reliability_percent,template_uniformity_percent,heldout_raw_ber_mean_percent,heldout_raw_ber_min_percent,heldout_raw_ber_max_percent,perfect_stable_cells_20_of_20,enrollment_template_ties,bch_error_mean,bch_error_max,fe_heldout_pass
+D0,v3.0,30,0,95.8447,48.9258,4.3555,3.3691,4.8828,1659,7,0.5000,2,10/10
+D1,v3.1,30,0,95.7926,50.2930,4.3799,3.8086,5.0781,1634,13,0.7000,4,10/10
+D2,v3.1,30,1,96.0547,49.5117,4.2773,3.6621,4.7363,1659,16,1.0000,3,10/10
+D3,v3.1,30,2,95.6868,50.7324,4.7998,4.1016,5.2246,1647,17,1.5000,3,10/10
+D4,v3.1,30,3,95.9945,48.4375,4.2188,3.6133,4.5410,1655,11,0.8000,3,10/10
+D5,v3.1,30,0,95.4492,51.2207,4.9512,4.5410,5.3223,1607,8,0.8000,3,10/10

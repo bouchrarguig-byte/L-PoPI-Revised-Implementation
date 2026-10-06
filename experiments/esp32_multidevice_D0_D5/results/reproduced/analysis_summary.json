@@ -1,0 +1,77 @@
+{
+  "protocol": {
+    "devices": 6,
+    "valid_captures": 180,
+    "enrollment": "001-020",
+    "heldout": "021-030",
+    "region_bits": 2048,
+    "selected_bch_bits": 272,
+    "firmware_commit": "8670f38"
+  },
+  "six_device_means": {
+    "reliability_percent_mean": 95.80375000000001,
+    "reliability_percent_sample_sd": 0.21933795613162585,
+    "uniformity_percent_mean": 49.853516666666664,
+    "uniformity_percent_sample_sd": 1.0786446892590098,
+    "heldout_raw_ber_device_mean_percent": 4.497083333333333,
+    "heldout_raw_ber_device_mean_sample_sd": 0.302451129385669
+  },
+  "uniqueness": {
+    "primary_D1_D5": {
+      "N": 5,
+      "pairs": 10,
+      "mean_percent": 49.21875,
+      "sample_sd_percent": 1.0193011507318797,
+      "min_percent": 48.095703,
+      "max_percent": 50.927734
+    },
+    "extended_D0_D5": {
+      "N": 6,
+      "pairs": 15,
+      "mean_percent": 49.0885416,
+      "sample_sd_percent": 1.0721027460265582,
+      "min_percent": 47.753906,
+      "max_percent": 50.976562
+    }
+  },
+  "genuine_heldout": {
+    "N": 60,
+    "mean_ber_percent": 4.497070316666667,
+    "sample_sd_percent": 0.43484962378787606,
+    "min_percent": 3.369141,
+    "max_percent": 5.322266
+  },
+  "fuzzy_extractor": {
+    "heldout_passes": 60,
+    "heldout_total": 60,
+    "corrected_error_min": 0,
+    "corrected_error_max": 4,
+    "decoder_t": 16
+  },
+  "common_mask": {
+    "perfect_positions_across_all_six": 547,
+    "mask_size": 272,
+    "heldout_passes": 60,
+    "heldout_total": 60,
+    "corrected_error_max": 4
+  },
+  "bit_aliasing": {
+    "devices": 6,
+    "mean_bit_aliasing_percent": 49.853515625,
+    "exactly_50_percent_positions": 606,
+    "exactly_50_percent_fraction": 0.2958984375,
+    "positions_33_33_to_66_67_inclusive": 1528,
+    "positions_33_33_to_66_67_fraction": 0.74609375,
+    "all_zero_positions": 37,
+    "all_one_positions": 33,
+    "count_histogram": {
+      "0": 37,
+      "1": 236,
+      "2": 442,
+      "3": 606,
+      "4": 480,
+      "5": 214,
+      "6": 33
+    }
+  }
+}

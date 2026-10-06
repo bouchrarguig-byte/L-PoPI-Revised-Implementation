@@ -1,0 +1,763 @@
+========================================================================
+L-POPI AUTOMATED SRAM PUF COLLECTOR
+========================================================================
+Port: /dev/ttyUSB0
+Captures requested: 30
+Regions per capture: 1
+Bytes per region: 256
+
+IMPORTANT:
+After every successful capture, perform a COMPLETE POWER CYCLE.
+Do NOT simply press the ESP32 reset button.
+
+Press ENTER to start...[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 1/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_001.txt
+    Region 1: HD=0/2048, BER=0.0000%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 2/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 2/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_002.txt
+    Region 1: HD=109/2048, BER=5.3223%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 3/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 3/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_003.txt
+    Region 1: HD=126/2048, BER=6.1523%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 4/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 4/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_004.txt
+    Region 1: HD=105/2048, BER=5.1270%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 5/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 5/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_005.txt
+    Region 1: HD=109/2048, BER=5.3223%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 6/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 6/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_006.txt
+    Region 1: HD=109/2048, BER=5.3223%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 7/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 7/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_007.txt
+    Region 1: HD=123/2048, BER=6.0059%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 8/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 8/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_008.txt
+    Region 1: HD=126/2048, BER=6.1523%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 9/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 9/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[!] Timeout waiting for capture #9
+[!] Capture 9 failed: timeout
+
+========================================================================
+FAILED ATTEMPT NOT COUNTED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Retry capture 9/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 9/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_009.txt
+    Region 1: HD=113/2048, BER=5.5176%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 10/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 10/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_010.txt
+    Region 1: HD=142/2048, BER=6.9336%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 11/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 11/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_011.txt
+    Region 1: HD=113/2048, BER=5.5176%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 12/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 12/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_012.txt
+    Region 1: HD=114/2048, BER=5.5664%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 13/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 13/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_013.txt
+    Region 1: HD=117/2048, BER=5.7129%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 14/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 14/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_014.txt
+    Region 1: HD=130/2048, BER=6.3477%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 15/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 15/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_015.txt
+    Region 1: HD=117/2048, BER=5.7129%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 16/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 16/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_016.txt
+    Region 1: HD=127/2048, BER=6.2012%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 17/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 17/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_017.txt
+    Region 1: HD=120/2048, BER=5.8594%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 18/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 18/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_018.txt
+    Region 1: HD=114/2048, BER=5.5664%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 19/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 19/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_019.txt
+    Region 1: HD=113/2048, BER=5.5176%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 20/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 20/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_020.txt
+    Region 1: HD=113/2048, BER=5.5176%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 21/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 21/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_021.txt
+    Region 1: HD=128/2048, BER=6.2500%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 22/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 22/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_022.txt
+    Region 1: HD=116/2048, BER=5.6641%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 23/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 23/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_023.txt
+    Region 1: HD=117/2048, BER=5.7129%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 24/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 24/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_024.txt
+    Region 1: HD=108/2048, BER=5.2734%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 25/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 25/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_025.txt
+    Region 1: HD=100/2048, BER=4.8828%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 26/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 26/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_026.txt
+    Region 1: HD=112/2048, BER=5.4688%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 27/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 27/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_027.txt
+    Region 1: HD=120/2048, BER=5.8594%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 28/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 28/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_028.txt
+    Region 1: HD=113/2048, BER=5.5176%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 29/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 29/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_029.txt
+    Region 1: HD=124/2048, BER=6.0547%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+POWER CYCLE REQUIRED
+========================================================================
+Disconnect ESP32 USB power NOW.
+[+] Power-off detected.
+[+] Waiting exactly 10 seconds...
+
+[+] Ready for capture 30/30
+[+] Reconnect ESP32 USB NOW.
+[+] Waiting for /dev/ttyUSB0 (timeout 30s)...
+[+] Serial port connected (DTR/RTS disabled)
+
+========================================================================
+CAPTURE 30/30
+========================================================================
+[+] Waiting for PUF_CAPTURE_START
+[+] PUF capture started
+[+] Region 1: 0x3FFF2000, 256 bytes
+[+] Region 1: 256 bytes received
+[+] PUF capture completed
+[+] Raw capture saved: puf_results/capture_030.txt
+    Region 1: HD=118/2048, BER=5.7617%
+[+] CSV updated: puf_results/puf_measurements.csv
+
+========================================================================
+FINAL PUF STATISTICS
+========================================================================
+
+REGION 1
+Samples: 30
+HD vs Capture #1:
+  0, 109, 126, 105, 109, 109, 123, 126, 113, 142, 113, 114, 117, 130, 117, 127, 120, 114, 113, 113, 128, 116, 117, 108, 100, 112, 120, 113, 124, 118
+Average HD vs #1: 113.20 / 2048
+Average BER vs #1: 5.5273%
+Pairwise average HD: 115.51/2048
+Pairwise minimum HD: 84/2048
+Pairwise maximum HD: 142/2048
+Pairwise mean BER: 5.6403%
+Average bit reliability: 96.0547%
+Bit-1 bias: 49.6191%
+
+========================================================================
+COLLECTION FINISHED
+========================================================================
+Results directory: /REDACTED_LOCAL_PATH/D2/puf_results

@@ -1,0 +1,7 @@
+device,chip_family,revision,role,captures,enrollment,heldout,region,address,region_bytes,firmware_commit
+D0,ESP32-D0WDQ6-V3,v3.0,extended_historical,30,001-020,021-030,1,0x3FFF2000,256,8670f38
+D1,ESP32-D0WD-V3,v3.1,primary_homogeneous,30,001-020,021-030,1,0x3FFF2000,256,8670f38
+D2,ESP32-D0WD-V3,v3.1,primary_homogeneous,30,001-020,021-030,1,0x3FFF2000,256,8670f38
+D3,ESP32-D0WD-V3,v3.1,primary_homogeneous,30,001-020,021-030,1,0x3FFF2000,256,8670f38
+D4,ESP32-D0WD-V3,v3.1,primary_homogeneous,30,001-020,021-030,1,0x3FFF2000,256,8670f38
+D5,ESP32-D0WD-V3,v3.1,primary_homogeneous,30,001-020,021-030,1,0x3FFF2000,256,8670f38
