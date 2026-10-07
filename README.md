@@ -1,316 +1,222 @@
 # L-PoPI — Revised Implementation and Reproducibility Artifacts
 
-This repository contains the implementation and experimental artifacts supporting the revised evaluation of L-PoPI.
+This repository contains the implementation and experimental artifacts supporting the revised manuscript:
 
-The repository accompanies the revised manuscript:
-
-**L-PoPI: Cross-Layer Physical, Zero-Knowledge, and Behavioral Attestation for DePIN IoT**
+**L-PoPI: Cross-Layer Physical-to-EVM Attestation for DePIN IoT**
 
 ## Scope
 
-The revised evaluation is organized around five complementary experimental components:
+L-PoPI is evaluated as a cross-layer physical-to-EVM attestation framework linking:
 
-- **Physical SRAM-PUF characterization**
-- **BCH-C fuzzy extraction and physical key reproduction**
-- **Physical fuzzy-extractor-to-zero-knowledge binding and Groth16 evaluation**
-- **EVM verification, freshness, replay protection, and gas evaluation**
-- **Behavioral Cog-GAT/autoencoder evaluation and risk-adaptive DPI gating**
+- early-boot ESP32 SRAM-PUF acquisition;
+- BCH-C fuzzy extraction and key reproduction;
+- fuzzy-extractor-derived BN254/Groth16/Poseidon binding;
+- freshness-aware EVM verification and replay rejection.
 
-The physical SRAM-PUF, fuzzy-extractor, zero-knowledge, and EVM components form the experimentally linked physical-to-ledger attestation path.
+A Cognitive Graph Attention Network (Cog-GAT)/autoencoder branch is evaluated separately as a complementary post-attestation risk layer. It does not replace or bypass the physical/cryptographic attestation path.
 
-The behavioral-security component is evaluated separately and is intended to complement, rather than replace, cryptographic attestation.
+The repository separates measurements by experimental environment rather than combining them into an artificial single latency figure.
 
-The repository does **not** claim a single physically continuous end-to-end deployment integrating all experimental components.
+## Public reproducibility release
 
----
+The six-device SRAM-PUF validation is frozen in the release:
 
-## Physical SRAM-PUF Characterization
+**Tag:** `r1-multidevice-validation-2026-10-06`  
+**Release:** https://github.com/bouchrarguig-byte/L-PoPI-Revised-Implementation/releases/tag/r1-multidevice-validation-2026-10-06  
+**Frozen release commit:** `0708a4ef7cc3bbbac9d4e864198ed966edddf7a7`
 
-### Platform
+The cold-power acquisition firmware used for the final D0-D5 campaign was frozen at:
 
-- ESP32
-- 4 MB flash
-- CPU frequency: 160 MHz
-- ESP-IDF experimental environment
-- SRAM capture region: `0x3FFF2000`
-- Capture size: 256 bytes / 2,048 bits
+**Firmware commit:** `8670f38`
 
-SRAM is captured through an early boot hook before normal application initialization.
+The release contains the anonymized raw SRAM captures, acquisition protocol, integrity manifests, analysis scripts, reproduced results, and BCH-C replay artifacts.
 
-### Cold-Power Experiment
+## Physical SRAM-PUF characterization
 
-Thirty cold-power captures were collected.
+### Original integrated ESP32 campaign
 
-The first 20 captures were used for enrollment, and captures 21–30 were held out for evaluation.
+The original integrated campaign used one ESP32 board and 30 cold-power acquisitions from a 256-byte SRAM region captured through an early-boot hook.
 
-Observed results include:
+Observed raw SRAM-PUF results included:
 
-- mean per-bit reliability: 96.1442%
-- median per-bit reliability: 100%
-- 1,643 / 2,048 cells with reliability >= 97%
-- pairwise BER mean: 5.5452%
-- pairwise BER maximum: 6.8848%
+- mean per-bit reliability: **96.14%**;
+- mean pairwise intra-device BER: **5.55%**;
+- enrollment-selected held-out BER: **0.33%**;
+- BCH-C key reproduction: **10/10 prospective held-out trials**;
+- corrected errors: **0–5**, with BCH correction capability `t = 16`.
 
-For the enrollment-selected stable cells, the held-out BER was:
+The 0.33% value refers only to enrollment-selected stable cells and is not the raw SRAM-PUF BER.
 
-- mean: 0.3335%
-- maximum: 0.7743%
+### Six-device follow-up campaign
 
-The 0.3335% value refers specifically to enrollment-selected cells and must not be interpreted as the raw SRAM-PUF BER.
+To directly evaluate inter-device differentiation on physical hardware, a separate campaign collected:
 
-### Limitations
+- **6 physical ESP32 boards (D0-D5)**;
+- **30 cold-power acquisitions per board**;
+- **180/180 valid captures**;
+- captures **1–20** for enrollment;
+- captures **21–30** held out for evaluation.
 
-The physical characterization was performed on one ESP32 prototype.
+The homogeneous rev-v3.1 cohort D1-D5 produced:
 
-Population-level uniqueness, inter-device Hamming distance, bit aliasing, and environmental temperature/voltage/aging characterization are not claimed.
+- **N = 5 devices**;
+- **10 independent device pairs**;
+- mean inter-device normalized Hamming distance: **49.2188%**;
+- observed range: approximately **48.10–50.93%**.
 
----
+The extended D0-D5 cohort produced:
 
-## BCH-C Fuzzy Extractor
+- **N = 6 devices**;
+- **15 independent device pairs**;
+- mean inter-device normalized Hamming distance: **49.0885%**;
+- observed range: approximately **47.75–50.98%**.
 
-The revised fuzzy-extractor backend uses a shortened BCH configuration:
+Across the six boards:
 
-- `m = 9`
-- `t = 16`
-- `n = 511`
-- 144 parity bits
-- 16-byte secret
-- shortened codeword: 272 bits
+- mean raw per-bit reliability: approximately **95.80%**;
+- all **60/60 held-out BCH-C reconstructions succeeded**;
+- only **0–4 errors** were corrected per 272-bit shortened BCH packet;
+- a common-mask stress test also produced **60/60 successful reconstructions**;
+- **547** enrollment-stable positions were common to all six devices.
 
-The helper construction combines enrollment-selected SRAM-PUF bits with the BCH codeword.
+These results constitute a **six-device pilot characterization** of physical ESP32 uniqueness and reproducibility; they are not presented as a large-scale population proof.
 
-Successful reproduction additionally requires the derived-key commitment check.
+## BCH-C fuzzy extractor
 
-### Prospective Physical Cold-Power Validation
+The evaluated fuzzy-extractor backend uses a shortened BCH configuration:
 
-Ten prospectively recorded cold-power trials were evaluated using the frozen enrollment/helper configuration.
+- `m = 9`;
+- `t = 16`;
+- `n = 511`;
+- `128` data bits;
+- `144` parity bits;
+- shortened packet length: `272` bits.
 
-Decoder error counts:
+For the linear `[272,128]` helper construction, the helper-data exposure is bounded by the `144` parity/coset bits rather than by the full serialized helper length. The revised manuscript therefore uses the conditional leakage bound
 
-`1, 1, 1, 2, 1, 2, 1, 3, 5, 0`
+`I(R_S ; W | S) <= 144 bits`
 
-Results:
+and the corresponding conditional min-entropy reduction bound.
 
-- 10 / 10 BCH decoding successes
-- 10 / 10 commitment checks passed
-- 10 / 10 key reproductions passed
-- corrected errors: 0–5
-- mean corrected errors: 1.7
-- BCH correction capability: `t = 16`
+The public selected-cell set, helper data, HKDF salt, and final key commitment are treated separately in the security analysis. The commitment acts as a candidate verifier and is not counted as extra secret entropy.
 
-These results characterize the evaluated ESP32 prototype only.
+The deterministic benchmark secret retained in the repository is a reproducibility fixture for conformance testing; it is not a production secret-generation procedure.
 
-### Adversarial Checks
+## Physical fuzzy-extractor-to-zero-knowledge binding
 
-The repository also contains controlled helper-data, salt, and commitment perturbation experiments.
+The fuzzy-extractor-derived key is deterministically mapped into the BN254 scalar field using domain-separated HKDF-based rejection sampling.
 
-Important interpretation:
-
-- correctable helper-data perturbations can still decode successfully;
-- helper data are therefore not described as universally authenticated;
-- salt or commitment perturbations were rejected by the final key validation in the tested experiments.
-
-Synthetic independent bit-flip experiments are provided separately and must not be interpreted as physical BER measurements.
-
----
-
-## Physical Fuzzy-Extractor-to-Zero-Knowledge Binding
-
-The fuzzy-extractor-derived key is deterministically mapped to the BN254 scalar field using domain-separated HKDF-based rejection sampling.
-
-The resulting scalar is used as the private witness of the Groth16 circuit.
+The resulting scalar is used as the private witness of the Groth16 attestation circuit.
 
 The evaluated circuit uses:
 
-### Private input
+- private witness: `k`;
+- public inputs: `deviceID`, `nonce`, `enrollmentCommitment`, `sessionCommitment`;
+- enrollment commitment: `C_E = Poseidon(k, deviceID)`;
+- session commitment: `C_S = Poseidon(C_E, nonce)`;
+- **1,034 constraints**.
 
-- `k`
+Cross-implementation vectors in `j3_cross_layer/` bind the reproduced FE key to the Groth16 witness representation.
 
-### Public inputs
+## Groth16 host benchmark
 
-- `deviceID`
-- `nonce`
-- `enrollmentCommitment`
-- `sessionCommitment`
+For steady-state host runs after initialization:
 
-### Commitments
+- witness generation: approximately **24.14 ms** mean;
+- proof generation: approximately **64.37 ms** mean;
+- proof verification: approximately **10.11 ms** mean.
 
-- `C_E = Poseidon(k, deviceID)`
-- `C_S = Poseidon(C_E, nonce)`
+These are host-side measurements and are not presented as ESP32 proving times.
 
-The evaluated circuit contains:
+## EVM verification, freshness, and replay protection
 
-- 1,038 wires
-- 4 public inputs
-- 1 private input
-- 1,034 constraints
+The final fuzzy-extractor-derived proof path was evaluated with the Solidity verifier and stateful freshness wrapper.
 
-A physical ESP32 run was also used to verify cross-implementation agreement of the fuzzy-extractor-to-BN254 derivation.
+Representative measurements include:
 
-This demonstrates deterministic cross-layer binding; it is **not** presented as a production-secure witness transport mechanism.
+- verifier-only proof verification: **215,569 gas**;
+- first stateful attestation: **241,121 gas**;
+- subsequent stateful attestation: **212,179 gas**;
+- stale replay rejection: **3,241 gas**.
 
-### Host Benchmark
+Replay protection is provided by protocol state and monotonic freshness checking rather than by Groth16 alone.
 
-For runs 2–30, after treating the first run as initialization/warm-up:
+The Foundry regression suite includes valid FE-derived proofs, sequential attestations, and replay/stale-proof rejection tests.
 
-- witness mean: 24.137 ms
-- witness median: 23.538 ms
-- proving mean: 64.367 ms
-- proving median: 64.156 ms
-- verification mean: 10.108 ms
-- verification median: 10.084 ms
+## Behavioral post-attestation evaluation
 
-These are host-side measurements. They are not ESP32 proving times.
+The Cog-GAT/autoencoder component is evaluated as a **separate gateway-side post-attestation risk extension**.
 
----
+The behavioral experiments use controlled BoT-IoT train/validation/test partitions and report classification and risk-gating metrics. Cryptographic proof failure, public-input mismatch, or stale freshness state remains a hard rejection condition before behavioral evidence is considered.
 
-## EVM Verification, Freshness, and Replay Protection
+For cryptographically valid sessions, behavioral risk can influence post-attestation actions such as monitoring, challenge, restriction, quarantine, or adaptive DPI intensity.
 
-The final fuzzy-extractor-derived Groth16 proof was evaluated with the actual verifier and stateful freshness wrapper.
+Behavioral measurements are not used to claim correctness of the physical-to-EVM attestation path.
 
-Final gas measurements using `gasleft()` instrumentation:
+## Scoped compositional security argument
 
-- verifier-only fuzzy-extractor-derived proof: 215,569 gas
-- first stateful verification: 241,121 gas
-- subsequent stateful verification: 212,179 gas
-- stale replay rejection: 3,241 gas
+The revised manuscript provides a scoped compositional security argument for the physical-to-EVM path under explicit assumptions covering:
 
-Replay rejection is provided by protocol state and nonce tracking; it is not an intrinsic property of Groth16.
+- FE reproduction/security;
+- commitment binding;
+- Groth16 knowledge soundness;
+- freshness/state enforcement;
+- public-context binding;
+- separation of the behavioral post-attestation branch from the hard cryptographic gate.
 
-Historical optimization experiments are retained separately from the final fuzzy-extractor-derived measurement path.
+The argument is intentionally scoped to the stated adversarial model and does not reinterpret physical side-channel compromise, invasive extraction, blockchain consensus failure, or compromised witness transport as cryptographic guarantees of the attestation construction.
 
----
-
-## Behavioral Evaluation and Adaptive DPI
-
-The behavioral experiments use BoT-IoT data with disjoint CSV-file groups for training, validation, and testing.
-
-The controlled cohort retains all available benign records and applies deterministic attack undersampling. No SMOTE is used.
-
-Reported metrics include:
-
-- accuracy
-- balanced accuracy
-- macro-F1
-- MCC
-- ROC-AUC
-- benign recall
-- attack recall
-- false-positive rate
-- false-negative rate
-
-The repository includes MLP, GATv2, and causal-history Cog-GAT experiments, together with autoencoder-based reconstruction evidence.
-
-The behavioral model is not used as a substitute for cryptographic authentication.
-
-Cryptographic proof or freshness failure remains a hard rejection condition. Behavioral risk is evaluated after the hard cryptographic gate and can drive additional monitoring, challenge, restriction, or quarantine decisions.
-
-The controlled evaluation shows trade-offs rather than universal superiority of one behavioral model.
-
-### Adaptive DPI Gating
-
-The repository includes validation-selected DPI-gating experiments and distribution-shift tests.
-
-The reported DPI reductions refer to flow-count reduction in the evaluated cohorts. They must not be interpreted as direct energy measurements.
-
-The late-file challenge is an internal BoT-IoT split and is not claimed to be an external or pristine dataset.
-
-The experiments show that DPI-gating effectiveness depends on attack-family coverage and distribution shift.
-
----
-
-## Cross-Layer Acceptance Policy
-
-The evaluated L-PoPI policy treats hardware-backed cryptographic validity and freshness as hard prerequisites.
-
-A failed proof, public-input mismatch, or stale nonce is rejected before behavioral evidence is considered.
-
-Behavioral evidence therefore cannot rescue an invalid cryptographic attestation.
-
-For cryptographically valid sessions, behavioral risk can influence post-authentication actions such as:
-
-- monitoring,
-- challenge,
-- restriction,
-- quarantine,
-- adaptive DPI intensity.
-
-This separation preserves the role of the physical and cryptographic trust path while allowing behavioral evidence to provide complementary runtime risk information.
-
----
-
-## Repository Organization
+## Repository organization
 
 Key directories include:
 
 ```text
-main/                    ESP32 SRAM-PUF and fuzzy-extractor firmware
-puf_analysis*/           Physical SRAM-PUF analysis
-puf_results*/            Physical capture artifacts
-j2_adversarial/          BCH-C, physical fuzzy-extractor, and adversarial validation
-j3_cross_layer/          Fuzzy-extractor-to-zero-knowledge binding artifacts
-j3_zk/                   Circom, Groth16, and EVM experiments
-j5_ai/                   Behavioral AI, CLSE, and adaptive DPI experiments
+main/                                   ESP32 SRAM-PUF and fuzzy-extractor firmware
+experiments/esp32_multidevice_D0_D5/   Six-device cold-power campaign and replay analysis
+puf_analysis*/                          Earlier physical SRAM-PUF analysis artifacts
+puf_results*/                           Earlier physical capture artifacts
+j2_adversarial/                         BCH-C and adversarial validation
+j3_cross_layer/                         FE-to-BN254/Groth16 binding artifacts
+j3_zk/                                  Circom, Groth16, Foundry, and EVM experiments
+j5_ai/                                  Behavioral AI and adaptive-DPI experiments
 ```
 
-The `j2_*`, `j3_*`, and `j5_*` directory names are retained as internal artifact identifiers for reproducibility and compatibility with the existing experimental scripts. They are not manuscript-stage labels.
+## Reproducing the D0-D5 analysis
 
----
+From the repository root:
 
-## Reproducibility Scope
+```bash
+python3 experiments/esp32_multidevice_D0_D5/analysis/analyze_multidevice.py
+```
 
-The repository separates evidence according to the environment in which it was measured:
+Expected summary:
 
-- physical ESP32 measurements for SRAM-PUF acquisition and fuzzy-extractor reconstruction;
-- host-side measurements for Groth16 witness generation, proving, and verification;
-- EVM/Foundry measurements for verifier, freshness, replay, and gas evaluation;
-- BoT-IoT-based controlled experiments for behavioral and DPI-gating evaluation.
+```text
+PASS: 180 captures analyzed
+Primary D1-D5 uniqueness: 49.2188% (10 pairs)
+Extended D0-D5 uniqueness: 49.0885% (15 pairs)
+FE held-out: 60/60; max corrected errors=4/16
+Common-mask stress test: 60/60; perfect common cells=547
+```
 
-Measurements from different environments are not summed into a fabricated end-to-end latency or energy figure.
+Integrity manifests are included in the experiment directory.
 
-The repository does not claim:
+## Evidence boundaries
 
-- population-level PUF uniqueness from the single evaluated ESP32;
-- environmental temperature, voltage, or aging robustness;
-- production-secure witness transport;
-- on-device ESP32 Groth16 proving;
-- production gateway capacity;
-- measured energy per attestation;
-- universal behavioral-model superiority;
-- external-dataset behavioral generalization;
-- a formal compositional security proof;
-- end-to-end post-quantum security.
+The repository supports the claims reported in the revised manuscript within the measured environments. In particular:
 
----
+- the D0-D5 experiment is a six-device ESP32 pilot, not a large-scale manufacturing-population study;
+- host Groth16 timings are not ESP32 proving timings;
+- EVM gas measurements are not device-energy measurements;
+- behavioral results are controlled gateway-side evaluations, not a substitute for cryptographic attestation;
+- synthetic perturbation tests are stress/conformance tests, not physical BER measurements.
 
-## Artifact Interpretation
-
-Physical, synthetic, host-side cryptographic, EVM, and behavioral measurements should be interpreted within their respective experimental boundaries.
-
-In particular:
-
-- synthetic bit-flip sweeps are stress tests, not physical BER measurements;
-- correctable helper-data perturbations are not necessarily rejected by the BCH decoder;
-- final key validation is distinct from error correction;
-- Groth16 verification does not itself provide replay protection;
-- freshness is enforced by protocol state;
-- behavioral evidence does not replace cryptographic authentication;
-- adaptive DPI reduction is a flow-count metric, not an energy measurement.
-
----
+These boundaries are part of the measurement definition and prevent cross-environment results from being over-interpreted.
 
 ## Citation
 
 If you use this repository, please cite the accompanying manuscript:
 
-**L-PoPI: Cross-Layer Physical, Zero-Knowledge, and Behavioral Attestation for DePIN IoT**
+**L-PoPI: Cross-Layer Physical-to-EVM Attestation for DePIN IoT**
 
-Citation metadata will be updated after publication.
-
----
-
-## Repository Status
-
-This repository contains the implementation and reproducibility artifacts associated with the revised manuscript.
-
-For peer-review reproducibility, a specific Git commit should be cited in the manuscript and Response to Reviewers after this README revision is committed.
+Citation metadata can be updated after publication.
