@@ -1,0 +1,33 @@
+{
+  "status": "FROZEN_FOR_PROSPECTIVE_LIVE_GATEWAY",
+  "extractor": {
+    "argus_version": "5.0.4",
+    "ra_version": "5.0.4",
+    "argus_binary": "tools/argus5/src/argus/bin/argus",
+    "ra_binary": "tools/argus5/src/clients/bin/ra",
+    "flow_type": "Bidirectional",
+    "flow_key": "CLASSIC_5_TUPLE",
+    "network_record_filter": "proto != man"
+  },
+  "equivalence_evidence": {
+    "pcaps": 20,
+    "exact_oriented_matches": 20,
+    "canonical_matches": 20,
+    "mismatches": 0,
+    "network_records_v3": 34,
+    "network_records_v5": 34,
+    "management_records_v3": 40,
+    "management_records_v5": 0,
+    "mean_latency_v3_ms": 1027.9250173499918,
+    "mean_latency_v5_ms": 437.50713074999794,
+    "speedup": 2.3495046025601187,
+    "latency_reduction_percent": 57.43783609062276
+  },
+  "scientific_note": "Argus 5.0.4 produced exactly the same oriented network-flow records and pkts/bytes/dur values as Argus 3.0.8.2 across all audited PCAP windows after excluding Argus management records (proto=man).",
+  "sha256": {
+    "argus": "7d35d1073b211b9beb38509e9338b1582c2378e7946a6b7fd1478143478f9d49",
+    "ra": "76bd39504adf1d1f78fad10aa008c6986a606cef01d01ee41d5fe7df2155ccd8",
+    "equivalence_audit": "07b2a84043d5eb42aa37be7403eb0abaaa4eadfc8da65f5e5330ac21c3ccabc4"
+  },
+  "frozen_utc": "2026-10-08T15:28:38.600522+00:00"
+}

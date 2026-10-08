@@ -1,0 +1,21 @@
+{
+  "session_id": "20261008T165513Z",
+  "updated_utc": "2026-10-08T17:00:54.577324+00:00",
+  "threshold": 0.512,
+  "alpha": 0.1,
+  "lambda": 0.8,
+  "windows": 320,
+  "nonempty_windows": 319,
+  "empty_windows": 1,
+  "flows": 319,
+  "normal_flows": 319,
+  "risk_flows": 0,
+  "risk_fraction": 0.0,
+  "mean_argus_ra_ms": 427.25187191874454,
+  "mean_ml_inference_ms": 10.439820924989363,
+  "mean_decision_after_window_close_ms": 445.14426124685514,
+  "elapsed_session_s": 341.0856198040001,
+  "causal_sources_in_state": 1,
+  "policy_changed_during_session": false,
+  "live_training": false
+}

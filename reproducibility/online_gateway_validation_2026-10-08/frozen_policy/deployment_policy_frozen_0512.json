@@ -1,0 +1,71 @@
+{
+  "policy_status": "FROZEN_FOR_PROSPECTIVE_LIVE_GATEWAY_EVALUATION",
+  "scientific_role": "Validation-derived deployment operating point for the prospective 1-s stateful online gateway experiment. This does not replace the original locked-test policy.",
+  "selection_provenance": {
+    "training_data_used": "TRAIN only",
+    "threshold_data_used": "VALIDATION only",
+    "live_traffic_used_for_training": false,
+    "live_traffic_used_for_threshold_selection": false,
+    "important_disclosure": "The original locked-test result for threshold 0.444 had already been observed before this deployment-oriented validation audit. Therefore threshold 0.512 must not be described as pre-specified before any TEST observation.",
+    "locked_test_reused_for_0512_selection": false,
+    "locked_test_must_not_be_retuned_at_0512": true
+  },
+  "window_seconds": 1.0,
+  "features": [
+    "pkts",
+    "bytes",
+    "dur"
+  ],
+  "model": {
+    "architecture": "GATv2",
+    "checkpoint": "j5_ai/results/online_windowed/best_online_gatv2.pt",
+    "scaler": "j5_ai/results/online_windowed/online_train_only_scaler.joblib"
+  },
+  "coggat": {
+    "mode": "src",
+    "alpha": 0.1,
+    "lambda": 0.8,
+    "threshold": 0.512
+  },
+  "validation_metrics_at_0512": {
+    "tn": 622,
+    "fp": 34,
+    "fn": 1537,
+    "tp": 5023,
+    "fpr": 0.051829268292682924,
+    "benign_recall": 0.948170731707317,
+    "attack_recall": 0.7657012195121952,
+    "fnr": 0.2342987804878049,
+    "macro_f1": 0.6533427232186064,
+    "balanced_accuracy": 0.8569359756097561
+  },
+  "per_source_validation_summary": {
+    "number_of_source_files": 11,
+    "fpr_min": 0.0,
+    "fpr_max": 0.135135,
+    "attack_recall_min": 0.593698,
+    "attack_recall_max": 0.876006,
+    "interpretation": "Performance varies across source files; threshold 0.512 is treated as an operational validation-derived point, not as a universally calibrated threshold."
+  },
+  "threshold_sensitivity_note": "Validation scores are concentrated near this operating region. Increasing the threshold from 0.512 to 0.513 reduced FPR from approximately 5.18% to 2.29% but also reduced attack recall from approximately 76.57% to 60.99%. No further threshold adaptation is permitted using live evaluation data.",
+  "prospective_evaluation_rules": {
+    "threshold_locked_before_live_experiment": true,
+    "no_live_retraining": true,
+    "no_live_threshold_tuning": true,
+    "report_all_windows": true,
+    "report_normal_and_risk_decisions": true,
+    "report_latency": true,
+    "report_throughput": true,
+    "report_cpu": true,
+    "report_ram": true
+  },
+  "sha256": {
+    "best_online_gatv2.pt": "d5b26f5853c7eadff60288221ac4996b672dd6f679350dc7fec9e6803660fbe8",
+    "online_train_only_scaler.joblib": "39431769f1ed4c6fbd49281b4260b9a523239cc1f241802725f51b80279de5dd",
+    "online_policy.json": "651590689a53d4c64a3b22b1286a93cf03420a9023d04dd37011c482b5cafe12",
+    "online_gatv2_val_predictions.parquet": "6bb180c2a7c886e9829388fde801b066ae892fa343fdd5cd26f7758c5e9316da",
+    "threshold_robustness_validation.csv": "475fb66e0856ce79ab3c4635bc97fc5c086959b797370f9e18175d555bf3302a",
+    "per_source_validation_threshold_0512.csv": "9f4ae1106e2576343dc0c4551d90645712bdff3e8685e7a482642d832bddfe46"
+  },
+  "freeze_timestamp_utc": "2026-10-07T18:27:50.672006+00:00"
+}

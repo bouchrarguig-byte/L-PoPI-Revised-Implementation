@@ -1,0 +1,4 @@
+run,session_id,threshold,alpha,lambda,session_windows,session_flows,normal_flows,risk_flows,risk_fraction,mean_argus_ra_ms,mean_ml_inference_ms,mean_decision_after_window_close_ms,policy_changed,live_training
+run01,20261008T160902Z,0.512,0.1,0.8,293,292,292,0,0.0,454.3166002081831,10.907212006861405,473.05424751880054,False,False
+run02,20261008T165513Z,0.512,0.1,0.8,320,319,319,0,0.0,427.25187191874454,10.439820924989363,445.14426124685514,False,False
+run03,20261008T171254Z,0.512,0.1,0.8,291,290,290,0,0.0,388.14159558077125,9.097458759436503,403.78118567011734,False,False

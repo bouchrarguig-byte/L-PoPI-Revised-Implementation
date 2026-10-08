@@ -1,0 +1,4 @@
+run,raw_receiver_rows,pre_experiment_rows,experiment_messages,seq_min,seq_max,sequence_continuous,missing_seq_count,duplicate_seq_count,warmup_messages,baseline_messages,variation_messages,burst_messages
+run01,869,9,860,0,859,True,0,0,20,121,120,599
+run02,861,0,861,0,860,True,0,0,21,119,120,601
+run03,860,0,860,0,859,True,0,0,20,120,120,600

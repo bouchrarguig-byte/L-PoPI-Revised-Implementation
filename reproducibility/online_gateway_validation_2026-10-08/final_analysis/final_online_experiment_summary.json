@@ -1,0 +1,21 @@
+{
+  "runs": 3,
+  "policy": {
+    "threshold": 0.512,
+    "alpha": 0.1,
+    "lambda": 0.8,
+    "live_training": false,
+    "retuning_during_live_experiment": false
+  },
+  "receiver_experiment_messages_total": 2581,
+  "receiver_missing_sequences_total": 0,
+  "receiver_duplicate_sequences_total": 0,
+  "pcap_files_total": 906,
+  "processed_windows_total": 904,
+  "unprocessed_pcaps_total": 2,
+  "all_gateway_flows_total": 901,
+  "all_gateway_risk_total": 0,
+  "published_phase_flows": 798,
+  "published_phase_risk": 0,
+  "experimental_windows_for_latency": 798
+}

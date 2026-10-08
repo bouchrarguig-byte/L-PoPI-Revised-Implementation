@@ -1,0 +1,15 @@
+L-PoPI prospective online gateway experiment
+Original ESP32 firmware provenance
+
+Experimental firmware SHA-256:
+30895801db44d6cca8121ec75626a32ffeb8ca7ba5ec583b5c13523681e08102
+
+The original firmware used in Runs 01-03 contained local Wi-Fi
+credentials and is therefore not redistributed publicly.
+
+The public firmware copy differs from the experimental source only
+in the redaction of WIFI_SSID and WIFI_PASSWORD values.
+
+All experimental timing, traffic-generation parameters, UDP ports,
+payload construction, phase sequencing, and experiment logic are
+preserved unchanged.

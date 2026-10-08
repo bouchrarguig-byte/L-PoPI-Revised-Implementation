@@ -1,0 +1,4 @@
+run,pcap_files,processed_windows,unprocessed_pcaps,unprocessed_names,processed_missing_file,remaining_part_files,flow_rows,complete
+run01,294,293,1,window_20261008T161752.pcap,0,0,292,False
+run02,321,320,1,window_20261008T170054.pcap,0,0,319,False
+run03,291,291,0,,0,0,290,True

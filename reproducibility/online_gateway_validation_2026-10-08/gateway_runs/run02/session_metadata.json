@@ -1,0 +1,41 @@
+{
+  "session_id": "20261008T165513Z",
+  "started_utc": "2026-10-08T16:55:13.486422+00:00",
+  "interface": "wlp113s0",
+  "pcap_dir": "/home/rguig/L-PoPI-Revised-Implementation/j5_ai/results/online_windowed/live_pcaps/esp32_run02",
+  "window_seconds": 1.0,
+  "features": [
+    "pkts",
+    "bytes",
+    "dur"
+  ],
+  "coggat": {
+    "mode": "src",
+    "alpha": 0.1,
+    "lambda": 0.8,
+    "threshold": 0.512
+  },
+  "device": "cuda",
+  "gpu": "Quadro RTX 5000",
+  "torch": "2.14.0+cu130",
+  "model_warmup_before_measurement": true,
+  "model_warmup_iterations": 3,
+  "model_warmup_ms": 191.31160599954455,
+  "model_sha256": "d5b26f5853c7eadff60288221ac4996b672dd6f679350dc7fec9e6803660fbe8",
+  "scaler_sha256": "39431769f1ed4c6fbd49281b4260b9a523239cc1f241802725f51b80279de5dd",
+  "deployment_policy_sha256": "95e4c4ee9a7835198fd043b0c865f885e26dd16606479be38ecd092b46372eab",
+  "extractor_policy_sha256": "0da67cba67f17055ab519be334ead21f20d5c9d514b0f60a805c072cde107b53",
+  "argus_version": "5.0.4",
+  "ra_version": "5.0.4",
+  "argus_binary": "/home/rguig/L-PoPI-Revised-Implementation/tools/argus5/src/argus/bin/argus",
+  "ra_binary": "/home/rguig/L-PoPI-Revised-Implementation/tools/argus5/src/clients/bin/ra",
+  "argus_sha256": "7d35d1073b211b9beb38509e9338b1582c2378e7946a6b7fd1478143478f9d49",
+  "ra_sha256": "76bd39504adf1d1f78fad10aa008c6986a606cef01d01ee41d5fe7df2155ccd8",
+  "network_record_filter": "proto != man",
+  "prospective_rules": {
+    "threshold_locked_before_capture": true,
+    "live_training": false,
+    "live_threshold_tuning": false,
+    "test_reused": false
+  }
+}

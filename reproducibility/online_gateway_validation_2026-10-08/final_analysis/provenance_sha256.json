@@ -1,0 +1,49 @@
+{
+  "run01": {
+    "receiver_sha256": "cf552af123d964612ec0548c7a25849367032f4e72c7e82870d8650eec6431b4",
+    "window_metrics_sha256": "dd1d8a806342099235d0ce1d5aa3f60aefa74159b2f7a8fddb8a7df1ca32ad25",
+    "flow_decisions_sha256": "4b867a4d4383f463e5c8670424320ede6f56d549f8202b19c53b8c2aaf57c919",
+    "session_summary_sha256": "0c7f0142d8b79b0df21ac47faa1611c994c6cb7fb92d3f47bae76bc4a24d01e8",
+    "session_metadata_sha256": "e5ec7c7f670489a8b06c5d7001ce0848b688480dabeaae8012da69ca293a6228"
+  },
+  "run02": {
+    "receiver_sha256": "41cfe1531b90d494535598acc599415513cba669846dd83a864f919596473072",
+    "window_metrics_sha256": "4d8a048f313753658447d2e5ca899ed4f5f710a151cf2bcff0e6807b5c6bb1dd",
+    "flow_decisions_sha256": "01909907a2aeafc2bb8c3387ebaed876b5355481ba1c795fdcf83274b06ba9e3",
+    "session_summary_sha256": "9ff9186dddff9c78e6e64ee602878734f6470a648632385148b4b2fe353a3910",
+    "session_metadata_sha256": "a21f9d217460a01b567f1c455e99d61657bd16360a14edd9cb0d0ac5b0fe7f28"
+  },
+  "run03": {
+    "receiver_sha256": "2179f4d05deac6770643a32d02f7eb0abb6d883e21262d744135bf50085a595d",
+    "window_metrics_sha256": "d51ae2aae7f13a632ea5ee4c27a52bfc08063e085cacc87956cc56437a598d60",
+    "flow_decisions_sha256": "d2dd02ada042f04bce419a1ff166aad062cb4f21aa8e5eee45f80d9bd4ea7568",
+    "session_summary_sha256": "c1be3be81b2d26dab56decaf0f8420b2cb0eb3f3b584cdf57df7e605eee062e0",
+    "session_metadata_sha256": "d55a754d74967aad1a5a4f8caf9e251d8b2cc2651aacfb4d3e7abb045faa5cda"
+  },
+  "frozen_artifacts": {
+    "model": {
+      "path": "/home/rguig/L-PoPI-Revised-Implementation/j5_ai/results/online_windowed/best_online_gatv2.pt",
+      "sha256": "d5b26f5853c7eadff60288221ac4996b672dd6f679350dc7fec9e6803660fbe8"
+    },
+    "scaler": {
+      "path": "/home/rguig/L-PoPI-Revised-Implementation/j5_ai/results/online_windowed/online_train_only_scaler.joblib",
+      "sha256": "39431769f1ed4c6fbd49281b4260b9a523239cc1f241802725f51b80279de5dd"
+    },
+    "policy": {
+      "path": "/home/rguig/L-PoPI-Revised-Implementation/j5_ai/results/online_windowed/deployment_policy_frozen_0512.json",
+      "sha256": "95e4c4ee9a7835198fd043b0c865f885e26dd16606479be38ecd092b46372eab"
+    },
+    "extractor_policy": {
+      "path": "/home/rguig/L-PoPI-Revised-Implementation/j5_ai/results/online_windowed/deployment_extractor_frozen_argus5.json",
+      "sha256": "0da67cba67f17055ab519be334ead21f20d5c9d514b0f60a805c072cde107b53"
+    },
+    "argus5": {
+      "path": "/home/rguig/L-PoPI-Revised-Implementation/tools/argus5/src/argus/bin/argus",
+      "sha256": "7d35d1073b211b9beb38509e9338b1582c2378e7946a6b7fd1478143478f9d49"
+    },
+    "ra5": {
+      "path": "/home/rguig/L-PoPI-Revised-Implementation/tools/argus5/src/clients/bin/ra",
+      "sha256": "76bd39504adf1d1f78fad10aa008c6986a606cef01d01ee41d5fe7df2155ccd8"
+    }
+  }
+}
